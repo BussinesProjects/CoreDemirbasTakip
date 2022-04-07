@@ -1,4 +1,5 @@
 ﻿using DemirbasTakipSistemi.Interface;
+using DemirbasTakipSistemi.Models;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -8,44 +9,49 @@ using System.Threading.Tasks;
 
 namespace DemirbasTakipSistemi.Repositories
 {
-    public class Repository<TEntity> : IRepository<TEntity> where TEntity : class
+    public class Repository<TEntity> /*: IRepository<TEntity>*/ where TEntity : class 
     {
-        protected readonly DbContext Context;
+        Context c= new  Context();
 
-        public Repository(DbContext context)
-        {
-            this.Context = context;
-        }
-        public async Task AddAsync(TEntity entity)
-        {
-            await Context.Set<TEntity>().AddAsync(entity);
-        }
 
-        
-        public IEnumerable<TEntity> Find(Expression<Func<TEntity, bool>> predicate)
+        public async Task<TEntity> Add(TEntity entity)
         {
-            return Context.Set<TEntity>().Where(predicate);
+            c.Set<TEntity>().Add(entity);
+            await c.SaveChangesAsync();
+            return entity;
         }
 
-        public async Task<IEnumerable<TEntity>> GetAllAsync()
+        public async Task<TEntity> Delete(int id)
         {
-            return await Context.Set<TEntity>().ToListAsync();
+            var entity = await c.Set<TEntity>().FindAsync(id);
+            if (entity == null)
+            {
+                return entity;
+            }
+
+            c.Set<TEntity>().Remove(entity);
+            await c.SaveChangesAsync();
+
+            return entity;
         }
 
-        public ValueTask<TEntity> GetByIdAsync(int id)
+        public async Task<TEntity> Get(int id)
         {
-            return Context.Set<TEntity>().FindAsync(id);
+            return await c.Set<TEntity>().FindAsync(id);
         }
 
-        public void Remove(TEntity entity)
+        public async Task<List<TEntity>> GetAll()
         {
-            Context.Set<TEntity>().Remove(entity);
+           var list= await c.Set<TEntity>().ToListAsync();
+            return list;
         }
 
-        public void UpdateAsync(TEntity entity)
+        public async Task<TEntity> Update(TEntity entity)
         {
-            
-            Context.Set<TEntity>().Update(entity);
+            c.Entry(entity).State = EntityState.Modified;
+            await c.SaveChangesAsync();
+            return entity;
         }
+
     }
 }
