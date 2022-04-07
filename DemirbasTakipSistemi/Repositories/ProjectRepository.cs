@@ -4,11 +4,12 @@ using DemirbasTakipSistemi.Models.DataModel;
 
 namespace DemirbasTakipSistemi.Repositories
 {
-    public class PersonRepository : Repository<Person>, IPersonRepository
+    public class ProjectRepository : Repository<Project>, IProjectRepository
     {
-        public PersonRepository(Context context)
+        public ProjectRepository(Context context)
           : base(context)
         {
         }
+    
     }
 }

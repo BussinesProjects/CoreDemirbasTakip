@@ -4,9 +4,9 @@ using DemirbasTakipSistemi.Models.DataModel;
 
 namespace DemirbasTakipSistemi.Repositories
 {
-    public class PersonRepository : Repository<Person>, IPersonRepository
+    public  class CategoryRepository:Repository<Category>, ICategoryRepository
     {
-        public PersonRepository(Context context)
+        public CategoryRepository(Context context)
           : base(context)
         {
         }
