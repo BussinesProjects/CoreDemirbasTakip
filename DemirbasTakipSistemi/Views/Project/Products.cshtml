@@ -1,0 +1,239 @@
+﻿
+@{
+    ViewBag.Title = "Products";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Products</h2>
+
+
+<!-- Styles -->
+<link href="~/Content/assets/css/lib/font-awesome.min.css" rel="stylesheet">
+<link href="~/Content/assets/css/lib/themify-icons.css" rel="stylesheet">
+<link href="~/Content/assets/css/lib/data-table/buttons.bootstrap.min.css" rel="stylesheet" />
+<link href="~/Content/assets/css/lib/menubar/sidebar.css" rel="stylesheet">
+<link href="~/Content/assets/css/lib/helper.css" rel="stylesheet">
+<link href="~/Content/assets/css/lib/sweetalert/sweetalert.css" rel="stylesheet">
+
+
+<div class="content-wrap">
+    <div class="main">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-8 p-r-0 title-margin-right">
+                    <div class="page-header">
+                        <div class="page-title">
+                            <h1>ÜRÜN TAKİP SİSTEMİ | <span>Proje Adı </span></h1>
+                        </div>
+                    </div>
+                </div>
+                <!-- /# column -->
+                <div class="col-lg-4 p-l-0 title-margin-left">
+                    <div class="page-header">
+                        <div class="page-title">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item">  <a href="#myModal" data-toggle="modal" title="Compose" class="btn-flat  btn-success ">EKLE</a>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                <!-- /# column -->
+            </div>
+            <!-- /# row -->
+            <section id="main-content">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card">
+                            <div class="bootstrap-data-table-panel">
+                                <div class="table-responsive">
+                                    <table id="bootstrap-data-table-export" class="table table-striped table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th>Seri Numarası</th>
+                                                <th>Marka</th>
+                                                <th>Model</th>
+                                                <th>Tedarikçi</th> 
+                                                <th>Adet</th>
+                                                <th>Tarih</th>
+                                                <th>İletişim</th>
+                                                <th>Garanti Baş.</th>
+                                                <th>Garanti Bit.</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Seri Numarası</td>
+                                                <td>Marka</td>
+                                                <td>Model</td>
+                                                <td>Tedarikçi</td>
+                                                <td>Adet</td>
+                                                <td>Tarih</td>
+                                                <td>İletişim</td>
+                                                <td>Garanti Baş.</td>
+                                                <td>Garanti Bit.</td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /# card -->
+                    </div>
+                    <!-- /# column -->
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+
+<!-- sidebar -->
+<div aria-hidden="true" role="dialog" tabindex="-1" id="myModal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content text-left">
+            <div class="modal-header">
+                <h4 class="Sub-heading">Yeni Demirbaş</h4>
+                <button aria-hidden="true" data-dismiss="modal" class="close" type="button"><i class="ti-close"></i></button>
+
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="form-group">
+
+                                <label class="col-lg-4 control-label">Proje Kodu</label>
+                                <div class="col-lg-8">
+
+                                    <input type="text" class="form-control" value="proje kodu">
+                                </div>
+                            </div>
+                            <div class="form-group">
+
+                                <label class="col-lg-4 control-label">Ürün Seri Numarası</label>
+                                <div class="col-lg-8">
+
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="form-group">
+
+                                <label class="col-lg-4 control-label">Ürün Markası</label>
+                                <div class="col-lg-8">
+
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="form-group">
+
+                                <label class="col-lg-4 control-label">Ürün Modeli</label>
+                                <div class="col-lg-8">
+
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="form-group">
+
+                                <label class="col-lg-4 control-label">Ürün Adedi</label>
+                                <div class="col-lg-8">
+
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-lg-4 control-label">Ürün Fotoğrafı</label>
+                                <div class="col-lg-8">
+                                    <input class="form-control" type="file">
+                                </div>
+                            </div>
+
+
+
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label class="col-lg-4 control-label">Garanti Başlangıç Tarihi</label>
+                                <div class="col-lg-8">
+
+                                    <input class="form-control" type="date">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-lg-4 control-label">Garanti Bitiş Tarihi</label>
+                                <div class="col-lg-8">
+
+                                    <input class="form-control" type="date">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-lg-4 control-label">İletişim</label>
+                                <div class="col-lg-8">
+
+                                    <input class="form-control" type="text" placeholder="İletişim bilgisi giriniz...">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-lg-4 control-label">Özellikler</label>
+                                <div class="col-lg-8">
+
+                                    <textarea class="form-control" rows="3"></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group">
+
+                                <label class="col-lg-4 control-label">Ürün Tedarikçisi</label>
+                                <div class="col-lg-8">
+
+                                    <input type="text" class="form-control" value="tübitak">
+                                </div>
+                            </div>
+                           
+                        </div>
+                       
+
+                        </div>
+
+                    <div class="row">
+
+                     
+
+
+                        <div class="form-group">
+                            <div class="col-lg-offset-7 col-lg-5">
+                                @*<span class="btn green fileinput-button">
+                    <i class="fa fa-plus fa fa-white"></i>
+                    <span>Attachment</span>
+                    <input type="file" name="files[]" multiple="">
+                </span>*@
+                                <button class="btn btn-danger" type="submit"> Listeye Dön </button>
+                                <button class="btn btn-primary" type="submit"> Ekle </button>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </form>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+
+<!-- bootstrap -->
+<!-- scripit init-->
+<script src="~/Content/assets/js/lib/data-table/datatables.min.js"></script>
+<script src="~/Content/assets/js/lib/data-table/dataTables.buttons.min.js"></script>
+<script src="~/Content/assets/js/lib/sweetalert/sweetalert.min.js"></script>
+<script src="~/Content/assets/js/lib/sweetalert/sweetalert.init.js"></script>
+
+<script src="~/Content/assets/js/lib/data-table/buttons.flash.min.js"></script>
+<script src="~/Content/assets/js/lib/data-table/jszip.min.js"></script>
+<script src="~/Content/assets/js/lib/data-table/pdfmake.min.js"></script>
+<script src="~/Content/assets/js/lib/data-table/vfs_fonts.js"></script>
+<script src="~/Content/assets/js/lib/data-table/buttons.html5.min.js"></script>
+<script src="~/Content/assets/js/lib/data-table/buttons.print.min.js"></script>
+<script src="~/Content/assets/js/lib/data-table/datatables-init.js"></script>

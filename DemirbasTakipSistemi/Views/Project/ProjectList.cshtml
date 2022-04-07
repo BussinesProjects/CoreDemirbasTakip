@@ -1,0 +1,265 @@
+﻿
+@{
+    ViewBag.Title = "ProjectList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<!-- Styles -->
+<link href="~/Content/assets/css/lib/font-awesome.min.css" rel="stylesheet">
+<link href="~/Content/assets/css/lib/themify-icons.css" rel="stylesheet">
+<link href="~/Content/assets/css/lib/data-table/buttons.bootstrap.min.css" rel="stylesheet" />
+<link href="~/Content/assets/css/lib/menubar/sidebar.css" rel="stylesheet">
+<link href="~/Content/assets/css/lib/helper.css" rel="stylesheet">
+<link href="~/Content/assets/css/lib/sweetalert/sweetalert.css" rel="stylesheet">
+
+
+<div class="content-wrap">
+    <div class="main">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-8 p-r-0 title-margin-right">
+                    <div class="page-header">
+                        <div class="page-title">
+                            <h1>ÜRÜN TAKİP SİSTEMİ | <span>Proje Ürün Listesi</span></h1>
+                        </div>
+                    </div>
+                </div>
+                <!-- /# column -->
+                <div class="col-lg-4 p-l-0 title-margin-left">
+                    <div class="page-header">
+                        <div class="page-title">
+                            <ol class="breadcrumb">
+                              
+                                    @*<button class="" href="#myModal" data-toggle="modal"></button>*@
+                                <li class="breadcrumb-item">  
+                                <button class="btn-flat  btn-success  ti-plus" data-toggle="modal" data-target="#myModal">EKLE</button>
+                                </li>
+
+
+                             
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                <!-- /# column -->
+            </div>
+
+            <!-- /# row -->
+            <section id="main-content">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card">
+                            <div class="bootstrap-data-table-panel">
+                                <div class="table-responsive">
+                                    <table id="bootstrap-data-table-export" class="table table-striped table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th></th>
+                                                <th>Durum</th>
+                                                <th>Proje Adı</th>
+                                                <th>Proje Kodu</th>
+                                                <th>Müşteri</th>
+                                                <th>Proje Tarihi</th>
+                                                <th>Ürün Kaydı</th>
+                                                <th>İşlem</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td> <a href="~/Project/Products" style="color:blue">Ürünler</a> </td>
+                                                <td>Seri Numarası</td>
+                                                <td>Sorumlu</td>
+                                                <td>Kategori</td>
+                                                <td>Marka</td>
+                                                <td>Kayıt Tarihi</td>
+                                                <td>Adet</td>
+                                                <td>
+                                                    <button class="btn-flat  btn-warning ti-pencil" onclick="location.href='@Url.Action("ProjectUpdate", "Project")';return false;"></button>
+                                                    <button class="btn-flat btn-danger  sweet-confirm ti-trash "></button>
+
+
+
+                                                </td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /# card -->
+                    </div>
+                    <!-- /# column -->
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+<div aria-hidden="true" role="dialog" tabindex="-1" id="myModal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content text-left">
+            <div class="modal-header">
+                <h4 class="Sub-heading">Yeni Proje</h4>
+                <button aria-hidden="true" data-dismiss="modal" class="close" type="button"><i class="ti-close"></i></button>
+
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-lg-3 control-label">Proje Kodu</label>
+                        <div class="col-lg-9">
+
+                            <input type="text" class="form-control" placeholder="Proje Kodu">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-3 control-label">Proje Müşterisi</label>
+                        <div class="col-lg-9">
+
+
+                            <input type="text" class="form-control" placeholder="Proje Müşterisi">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-3 control-label">Proje Adı</label>
+                        <div class="col-lg-9">
+                            <input type="text" class="form-control" placeholder="Proje Adı">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-3 control-label">Proje Tarihi</label>
+                        <div class="col-lg-9">
+                            <input type="date" class="form-control" placeholder="Proje Tarihi">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-3 control-label">Adedi</label>
+                        <div class="col-lg-9">
+                            <select class="form-control">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </div>
+                    </div>
+
+                   
+                    <div class="form-group">
+                        <div class="col-lg-offset-6 col-lg-6">
+                            @*<span class="btn green fileinput-button">
+                                    <i class="fa fa-plus fa fa-white"></i>
+                                    <span>Attachment</span>
+                                    <input type="file" name="files[]" multiple="">
+                                </span>*@
+                            <button class="btn btn-danger" type="submit"> Listeye Dön </button>
+                            <button class="btn btn-primary" type="submit"> Ekle </button>
+                        </div>
+                    </div>
+
+
+
+                </form>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+
+<div aria-hidden="true" role="dialog" tabindex="-1" id="updateModal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content text-left">
+            <div class="modal-header">
+                <h4 class="Sub-heading">Yeni Proje</h4>
+                <button aria-hidden="true" data-dismiss="modal" class="close" type="button"><i class="ti-close"></i></button>
+
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-lg-3 control-label">Proje Kodu</label>
+                        <div class="col-lg-9">
+
+                            <input type="text" class="form-control" placeholder="Proje Kodu">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-3 control-label">Proje Müşterisi</label>
+                        <div class="col-lg-9">
+
+
+                            <input type="text" class="form-control" placeholder="Proje Müşterisi">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-3 control-label">Proje Adı</label>
+                        <div class="col-lg-9">
+                            <input type="text" class="form-control" placeholder="Proje Adı">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-3 control-label">Proje Tarihi</label>
+                        <div class="col-lg-9">
+                            <input type="date" class="form-control" placeholder="Proje Tarihi">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-3 control-label">Adedi</label>
+                        <div class="col-lg-9">
+                            <select class="form-control">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-lg-3 control-label">Ürün Fotoğrafı</label>
+                        <div class="col-lg-9">
+
+                            <input class="form-control" type="file">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-lg-offset-8 col-lg-4">
+                            @*<span class="btn green fileinput-button">
+                                    <i class="fa fa-plus fa fa-white"></i>
+                                    <span>Attachment</span>
+                                    <input type="file" name="files[]" multiple="">
+                                </span>*@
+                            <button class="btn btn-danger" type="submit"> Listeye Dön </button>
+                            <button class="btn btn-primary" type="submit"> Ekle </button>
+                        </div>
+                    </div>
+
+
+
+                </form>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- sidebar -->
+<!-- bootstrap -->
+<!-- scripit init-->
+<script src="~/Content/assets/js/lib/data-table/datatables.min.js"></script>
+<script src="~/Content/assets/js/lib/data-table/dataTables.buttons.min.js"></script>
+<script src="~/Content/assets/js/lib/sweetalert/sweetalert.min.js"></script>
+<script src="~/Content/assets/js/lib/sweetalert/sweetalert.init.js"></script>
+
+<script src="~/Content/assets/js/lib/data-table/buttons.flash.min.js"></script>
+<script src="~/Content/assets/js/lib/data-table/jszip.min.js"></script>
+<script src="~/Content/assets/js/lib/data-table/pdfmake.min.js"></script>
+<script src="~/Content/assets/js/lib/data-table/vfs_fonts.js"></script>
+<script src="~/Content/assets/js/lib/data-table/buttons.html5.min.js"></script>
+<script src="~/Content/assets/js/lib/data-table/buttons.print.min.js"></script>
+<script src="~/Content/assets/js/lib/data-table/datatables-init.js"></script>

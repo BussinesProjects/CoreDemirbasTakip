@@ -1,0 +1,195 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Via Teknoloji - Demirbaş</title>
+  
+    <link href="~/Content/assets/css/lib/calendar2/pignose.calendar.min.css" rel="stylesheet">
+    <link href="~/Content/assets/css/lib/chartist/chartist.min.css" rel="stylesheet">
+    <link href="~/Content/assets/css/lib/font-awesome.min.css" rel="stylesheet">
+    <link href="~/Content/assets/css/lib/themify-icons.css" rel="stylesheet">
+    <link href="~/Content/assets/css/lib/owl.carousel.min.css" rel="stylesheet" />
+    <link href="~/Content/assets/css/lib/owl.theme.default.min.css" rel="stylesheet" />
+    <link href="~/Content/assets/css/lib/weather-icons.css" rel="stylesheet" />
+    <link href="~/Content/assets/css/lib/menubar/sidebar.css" rel="stylesheet">
+    <link href="~/Content/assets/css/lib/bootstrap.min.css" rel="stylesheet">
+    <link href="~/Content/assets/css/lib/helper.css" rel="stylesheet">
+    <link href="~/Content/assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="sidebar sidebar-hide-to-small sidebar-shrink sidebar-gestures">
+        <div class="nano">
+            <div class="nano-content">
+
+                <div class="logo" @*class="col-md-12 text-center"*@>
+                    <a href="index.html">
+                        <img src="~/Content/images/via.png" alt="" class="img-responsive" /> <span></span>
+                    </a>
+                </div>
+
+
+                <ul>
+
+                    <li><a href="~/Product/ProductList"><i class="ti-list"></i> Demirbaş Listesi</a></li>
+                    <li><a href="~/Project/ProjectList"><i class="ti-layout-accordion-list"></i> Proje - Ürün Listesi</a></li>
+                    <li><a href="~/Category/CategoryList"><i class="ti-layout-grid2"></i>Ürün Kategorileri</a></li>
+                    <li><a href="app-widget-card.html"><i class="ti-id-badge"></i>Personel Listesi</a></li>
+                    <li><a href="app-widget-card.html"><i class="ti-panel"></i>Sistem Paneli</a></li>
+                    <li><a href="app-widget-card.html"><i class="ti-settings"></i>Hesap Ayarları</a></li>
+                    <li><a><i class="ti-close"></i>Çıkış</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- /# sidebar -->
+
+
+    <div class="header">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="float-left">
+                        <div class="hamburger sidebar-toggle">
+                            <span class="line"></span>
+                            <span class="line"></span>
+                            <span class="line"></span>
+                        </div>
+                    </div>
+                    <div class="float-right">
+
+                        <div class="dropdown dib">
+                            <div class="header-icon" data-toggle="dropdown">
+                                <span class="user-avatar">
+                                    Sümeyye
+                                    <i class="ti-angle-down f-s-10"></i>
+                                </span>
+                                <div class="drop-down dropdown-profile dropdown-menu dropdown-menu-right">
+                                    <div class="dropdown-content-heading">
+                                        <span>Sümeyye Kula</span>
+                                    </div>
+                                    <div class="dropdown-content-body">
+                                        <ul>
+
+                                            <li>
+                                                <a href="#">
+                                                    <i class="ti-settings"></i>
+                                                    <span>Setting</span>
+                                                </a>
+                                            </li>
+
+
+
+                                            <li>
+                                                <a href="#">
+                                                    <i class="ti-power-off"></i>
+                                                    <span>Logout</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="content-wrap">
+        <div class="main">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-8 p-r-0 title-margin-right">
+                        <div class="page-header">
+                            <div class="page-title">
+                                <h1>
+                                    Hello,
+                                    <span>Welcome Here</span>
+                                </h1>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /# column -->
+                    <div class="col-lg-4 p-l-0 title-margin-left">
+                        <div class="page-header">
+                            <div class="page-title">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item">
+                                        <a href="#">Dashboard</a>
+                                    </li>
+                                    <li class="breadcrumb-item active">App-Profile</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /# column -->
+                </div>
+                <!-- /# row -->
+                <section id="main-content">
+                    <div class="row">
+                        <div class="col-lg-12">
+                           
+                                @RenderBody()
+                          
+                        </div>
+                    </div>
+                    <!-- /# row -->
+                   
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="footer">
+                                <p>
+                                    2018 © Admin Board. -
+                                    <a href="#">example.com</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <!-- Common -->
+    <script src="~/Content/assets/js/lib/jquery.min.js"></script>
+    <script src="~/Content/assets/js/lib/jquery.nanoscroller.min.js"></script>
+    <!-- nano scroller -->
+    <script src="~/Content/assets/js/lib/menubar/sidebar.js"></script>
+    <script src="~/Content/assets/js/lib/preloader/pace.min.js"></script>
+    <!-- sidebar -->
+
+    <script src="~/Content/assets/js/lib/bootstrap.min.js"></script>
+    <script src="~/Content/assets/js/scripts.js"></script>
+    <!-- bootstrap -->
+
+    <script src="~/Content/assets/js/lib/calendar-2/moment.latest.min.js"></script>
+    <script src="~/Content/assets/js/lib/calendar-2/pignose.calendar.min.js"></script>
+    <script src="~/Content/assets/js/lib/calendar-2/pignose.init.js"></script>
+
+
+    <script src="~/Content/assets/js/lib/weather/jquery.simpleWeather.min.js"></script>
+    <script src="~/Content/assets/js/lib/weather/weather-init.js"></script>
+    <script src="~/Content/assets/js/lib/circle-progress/circle-progress.min.js"></script>
+    <script src="~/Content/assets/js/lib/circle-progress/circle-progress-init.js"></script>
+    <script src="~/Content/assets/js/lib/chartist/chartist.min.js"></script>
+    <script src="~/Content/assets/js/lib/sparklinechart/jquery.sparkline.min.js"></script>
+    <script src="~/Content/assets/js/lib/sparklinechart/sparkline.init.js"></script>
+    <script src="~/Content/assets/js/lib/owl-carousel/owl.carousel.min.js"></script>
+    <script src="~/Content/assets/js/lib/owl-carousel/owl.carousel-init.js"></script>
+
+</body>
+
+</html>
