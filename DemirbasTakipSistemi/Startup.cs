@@ -28,8 +28,7 @@ namespace DemirbasTakipSistemi
         public void ConfigureServices(IServiceCollection services)
 
         {
-            //services.AddDbContext<Context>(options => options.UseSqlServer(Configuration.GetConnectionString("Context")));
-            //services.AddScoped<ICategoryRepository,CategoryRepository>();
+        
             services.AddControllersWithViews();
 
            

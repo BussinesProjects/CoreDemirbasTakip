@@ -30,7 +30,7 @@ namespace DemirbasTakipSistemi.Controllers
         }
         public ActionResult CategoryList()
         {
-            var list = categoryRepository.GetAll();
+            var list = categoryRepository.TList();
             return View();
         }
         public ActionResult CategoryDelete()

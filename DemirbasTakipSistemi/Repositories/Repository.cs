@@ -9,48 +9,49 @@ using System.Threading.Tasks;
 
 namespace DemirbasTakipSistemi.Repositories
 {
-    public class Repository<TEntity> /*: IRepository<TEntity>*/ where TEntity : class 
+    public class Repository<T> where T : class, new()
     {
-        Context c= new  Context();
-
-
-        public async Task<TEntity> Add(TEntity entity)
+        Context context = new Context();
+        public List<T> TList()
         {
-            c.Set<TEntity>().Add(entity);
-            await c.SaveChangesAsync();
-            return entity;
+
+            return context.Set<T>().ToList();
         }
 
-        public async Task<TEntity> Delete(int id)
+        public void TAdd(T paramater)
         {
-            var entity = await c.Set<TEntity>().FindAsync(id);
-            if (entity == null)
-            {
-                return entity;
-            }
+            context.Set<T>().Add(paramater);
+            context.SaveChanges();
 
-            c.Set<TEntity>().Remove(entity);
-            await c.SaveChangesAsync();
-
-            return entity;
         }
 
-        public async Task<TEntity> Get(int id)
+        public void TDelete(T paramater)
         {
-            return await c.Set<TEntity>().FindAsync(id);
+
+            context.Set<T>().Remove(paramater);
+            context.SaveChanges();
+
         }
 
-        public async Task<List<TEntity>> GetAll()
+        public void TUpdate(T paramater)
         {
-           var list= await c.Set<TEntity>().ToListAsync();
-            return list;
+
+            context.Set<T>().Update(paramater);
+            context.SaveChanges();
+
         }
 
-        public async Task<TEntity> Update(TEntity entity)
+        public T TGet(int id)
         {
-            c.Entry(entity).State = EntityState.Modified;
-            await c.SaveChangesAsync();
-            return entity;
+            return context.Set<T>().Find(id);
+
+        }
+
+        public List<T> TList(string paramater)
+        {
+
+            return context.Set<T>().Include(paramater).ToList();
+
         }
 
     }
