@@ -19,19 +19,24 @@ namespace DemirbasTakipSistemi.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult CategoryAdd(Category category)
+        public ActionResult CategoryAdd(string name)
         {
+            Category category = new Category();
+            category.CategoryName = name;
+            categoryRepository.TAdd(category);
 
-            return View();
+            return View(category);
         }
-        public ActionResult CategoryUpdate()
+        [HttpGet]
+        public ActionResult CategoryUpdate(int id)
         {
-            return View();
+            var c = categoryRepository.TGet(id);
+            return PartialView("_CategoryUpdate",c);
         }
         public ActionResult CategoryList()
         {
             var list = categoryRepository.TList();
-            return View();
+            return View(list);
         }
         public ActionResult CategoryDelete()
         {
