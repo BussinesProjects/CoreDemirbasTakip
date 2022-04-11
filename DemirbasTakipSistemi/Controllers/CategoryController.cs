@@ -31,7 +31,7 @@ namespace DemirbasTakipSistemi.Controllers
         public ActionResult CategoryUpdate(int id)
         {
             var c = categoryRepository.TGet(id);
-            return PartialView("_CategoryUpdate",c);
+            return View(c);
         }
         public ActionResult CategoryList()
         {

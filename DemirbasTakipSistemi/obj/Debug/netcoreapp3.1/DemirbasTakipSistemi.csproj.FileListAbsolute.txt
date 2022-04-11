@@ -196,4 +196,4 @@ C:\Users\viaPe\source\repos\DemirBasProje\CoreDemirbasTakip\DemirbasTakipSistemi
 C:\Users\viaPe\source\repos\DemirBasProje\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\DemirbasTakipSistemi.dll
 C:\Users\viaPe\source\repos\DemirBasProje\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\DemirbasTakipSistemi.pdb
 C:\Users\viaPe\source\repos\DemirBasProje\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\DemirbasTakipSistemi.genruntimeconfig.cache
-C:\Users\viaPe\source\repos\DemirBasProje\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\Razor\Views\Category\_CategoryUpdate.cshtml.g.cs
+C:\Users\viaPe\source\repos\DemirBasProje\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\Razor\Views\Category\CategoryUpdate.cshtml.g.cs

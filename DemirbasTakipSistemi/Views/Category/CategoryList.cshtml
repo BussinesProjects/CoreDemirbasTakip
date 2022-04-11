@@ -68,7 +68,7 @@
                                                     <td>@item.CategoryName</td>
                                                     <td>Sorumlu</td>
                                                     <td>
-                                                        <button class="btn-flat  btn-warning ti-pencil" data-target="#UpdateModal" data- data-toggle="modal" data-url="@Url.Action("CategoryUpdate",@item.CategoryID)"></button>
+                                                          <button class="btn-flat  btn-warning ti-pencil" onclick="location.href='@Url.Action("CategoryUpdate", "Category",new{id=@item.CategoryID})';return false;"></button>
                                                         <button class="btn-flat btn-danger  sweet-confirm ti-trash "></button>
 
                                                     </td>
@@ -154,4 +154,3 @@
 <script src="~/Content/assets/js/lib/data-table/buttons.print.min.js"></script>
 <script src="~/Content/assets/js/lib/data-table/datatables-init.js"></script>
 <script src="~/js/State.js"></script>
-

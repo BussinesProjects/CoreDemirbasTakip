@@ -2,15 +2,7 @@
 
     var modal = $('#createCategoryModal');
 
-    $('button[data-toggle="modal"]').click(function (event) {
-        debugger;
-        var url = $(this).data('url');
-        $.get(url,).done(function (data) {
-            modal.html(data);
-            modal.find('.modal').modal('show');
-        })
 
-    });
 
 
     modal.on('click', '[data-save="modal"]', function (event) {
