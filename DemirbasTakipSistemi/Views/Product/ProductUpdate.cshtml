@@ -1,4 +1,5 @@
-﻿
+﻿@using DemirbasTakipSistemi.Models.DataModel
+@model Product
 @{
     ViewBag.Title = "ProductUpdate";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -28,20 +29,20 @@
                 <div class="card">
                     <div class="card-title">
                         <h4>Demirbaş Güncelle</h4>
-
+         
                     </div>
                     <div class="card-body">
                         <div class="basic-elements">
-                            <form>
+                            <form action="~/Product/ProductUpdate"method="post" class="form-horizontal">
                                 <div class="row">
                                     <div class="col-lg-4">
                                         <div class="form-group">
                                             <label>Seri Numarası</label>
-                                            <input type="text" class="form-control" placeholder="Seri numarası giriniz...">
+                                            <input type="text" class="form-control" name="ProductSerialNumber" placeholder="Seri numarası giriniz...">
                                         </div>
                                         <div class="form-group">
                                             <label>Adedi</label>
-                                            <select class="form-control">
+                                            <select class="form-control" name="ProductAmount">
                                                 <option>1</option>
                                                 <option>2</option>
                                                 <option>3</option>
@@ -53,14 +54,14 @@
 
                                         <div class="form-group">
                                             <label>Ürün Fotoğrafı</label>
-                                            <input class="form-control" type="file">
+                                            <input class="form-control" type="file" name="ProductImage"> 
                                         </div>
 
                                     </div>
                                     <div class="col-lg-4">
                                         <div class="form-group">
                                             <label>Demirbaş Kategori</label>
-                                            <select class="form-control">
+                                            <select class="form-control" name="CategoryID">
                                                 <option>1</option>
                                                 <option>2</option>
                                                 <option>3</option>
@@ -71,12 +72,12 @@
 
                                         <div class="form-group">
                                             <label>Marka</label>
-                                            <input class="form-control" type="text" placeholder="Marka giriniz...">
+                                            <input class="form-control" type="text" name="ProductBrand" placeholder="Marka giriniz...">
 
                                         </div>
                                         <div class="form-group">
                                             <label>Garanti Tarihi</label>
-                                            <input class="form-control" type="date">
+                                            <input class="form-control" type="date" name="ProductWarrantyDate">
                                         </div>
 
 
@@ -84,7 +85,7 @@
                                     <div class="col-lg-4">
                                         <div class="form-group">
                                             <label>Demirbaş Sorumlusu</label>
-                                            <select class="form-control">
+                                            <select class="form-control"  name="PersonID">
                                                 <option>1</option>
                                                 <option>2</option>
                                                 <option>3</option>
@@ -94,26 +95,20 @@
                                         </div>
                                         <div class="form-group">
                                             <label>Servis İletişim</label>
-                                            <input class="form-control" type="text" placeholder="İletişim bilgisi giriniz...">
+                                            <input class="form-control" type="text"  name="ServiceContact" placeholder="İletişim bilgisi giriniz...">
 
                                         </div>
                                         <div class="form-group">
                                             <label>Özellikler/Açıklama</label>
-                                            <textarea class="form-control" rows="3" placeholder="Açıklama giriniz..."></textarea>
+                                            <textarea class="form-control" rows="3" name="ProductFeatures" placeholder="Açıklama giriniz..."></textarea>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row">
+                                  
                                     <div class="col-lg-4">
-                                        @*<button class="btn-outline btn-success">Demirbaş Ekle</button>
-                                            <button class="btn-outline btn-success">Listeye Dön</button>*@
-                                    </div>
-                                    <div class="col-lg-4">
-
-                                    </div>
-                                    <div class="col-lg-4">
-                                        <button class="btn-outline btn-success">Demirbaş Güncelle</button>
-                                        <button class="btn-outline btn-success">Listeye Dön</button>
+                                        <button class="btn btn-danger" type="submit"> Listeye Dön </button>
+                                    <button class="btn btn-primary" type="submit"> Güncelle </button>
                                     </div>
                                 </div>
                             </form>

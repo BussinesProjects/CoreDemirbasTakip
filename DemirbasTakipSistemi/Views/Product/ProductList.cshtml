@@ -1,9 +1,9 @@
-﻿
+﻿@using DemirbasTakipSistemi.Models.DataModel
+@model List<Product>
 @{
     ViewBag.Title = "List";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
 
 <!-- Styles -->
 <link href="~/Content/assets/css/lib/font-awesome.min.css" rel="stylesheet">
@@ -60,14 +60,16 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr>
-                                                <td>1</td>
-                                                <td>Seri Numarası</td>
-                                                <td>Sorumlu</td>
-                                                <td>Kategori</td>
-                                                <td>Marka</td>
-                                                <td>Kayıt Tarihi</td>
-                                                <td>Adet</td>
+                                            @foreach (var item in Model)
+                                           {
+                                                <tr>
+                                                <td>@item.Id</td>
+                                                <td>@item.ProductSerialNumber</td>
+                                                <td>@item.PersonID</td>
+                                                <td>@item.CategoryID</td>
+                                                <td>@item.ProductBrand</td>
+                                                <td>@item.RegisterDateTime</td>
+                                                <td>@item.ProductAmount</td>
                                                 <td>
                                                     <button class="btn-flat  btn-warning ti-pencil" onclick="location.href='@Url.Action("ProductUpdate", "Product")';return false;"></button>
                                                     <button class="btn-flat  btn-info ti-info"></button>
@@ -78,6 +80,8 @@
                                                 </td>
                                             </tr>
 
+                                           }
+                                           
                                         </tbody>
                                     </table>
                                 </div>

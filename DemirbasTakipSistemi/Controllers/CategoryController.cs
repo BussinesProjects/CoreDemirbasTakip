@@ -33,6 +33,13 @@ namespace DemirbasTakipSistemi.Controllers
             var c = categoryRepository.TGet(id);
             return View(c);
         }
+
+        [HttpPost]
+        public ActionResult CategoryUpdate(Category c)
+        {
+            categoryRepository.TUpdate(c);
+            return View(c);
+        }
         public ActionResult CategoryList()
         {
             var list = categoryRepository.TList();
