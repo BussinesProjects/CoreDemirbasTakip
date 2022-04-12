@@ -1,4 +1,5 @@
-﻿
+﻿@using DemirbasTakipSistemi.Models.ViewModel
+@model PeopleAndCategoryViewModel
 @{
     ViewBag.Title = "ProductAdd";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -33,51 +34,46 @@
                     </div>
                     <div class="card-body">
                         <div class="basic-elements">
-                            <form>
+                            <form action="~/Product/ProductAdd" method="post" class="form-horizontal">
                                 <div class="row">
                                     <div class="col-lg-4">
                                         <div class="form-group">
                                             <label>Seri Numarası</label>
-                                            <input type="text" class="form-control" placeholder="Seri numarası giriniz...">
+                                            <input type="text" class="form-control" name="ProductSerialNumber" placeholder="Seri numarası giriniz...">
                                         </div>
                                         <div class="form-group">
                                             <label>Adedi</label>
-                                            <select class="form-control">
-                                                <option>1</option>
-                                                <option>2</option>
-                                                <option>3</option>
-                                                <option>4</option>
-                                                <option>5</option>
-                                            </select>
+                                            <input type="number" class="form-control" name="ProductAmount" placeholder="Adet giriniz..." min="0">
                                         </div>
 
 
                                         <div class="form-group">
-                                            <label>Ürün Fotoğrafı</label>
-                                            <input class="form-control" type="file">
+                                            <span>Select File:</span>
+                                            <input type="file" name="postedFiles" multiple />
+                                          
+
                                         </div>
 
                                     </div>
                                     <div class="col-lg-4">
                                         <div class="form-group">
                                             <label>Demirbaş Kategori</label>
-                                            <select class="form-control">
-                                                <option>1</option>
-                                                <option>2</option>
-                                                <option>3</option>
-                                                <option>4</option>
-                                                <option>5</option>
+                                            <select class="form-control" name="CategoryID">
+                                                @foreach (var item in Model.Categories)
+                                                {
+                                                    <option name="data" value="@item.CategoryID">@item.CategoryName</option>
+                                                }
                                             </select>
                                         </div>
 
                                         <div class="form-group">
                                             <label>Marka</label>
-                                            <input class="form-control" type="text" placeholder="Marka giriniz...">
+                                            <input class="form-control" name="ProductBrand" type="text" placeholder="Marka giriniz...">
 
                                         </div>
                                         <div class="form-group">
                                             <label>Garanti Tarihi</label>
-                                            <input class="form-control" type="date">
+                                            <input class="form-control" name="ProductWarrantyDate" type="date">
                                         </div>
 
 
@@ -85,36 +81,29 @@
                                     <div class="col-lg-4">
                                         <div class="form-group">
                                             <label>Demirbaş Sorumlusu</label>
-                                            <select class="form-control">
-                                                <option>1</option>
-                                                <option>2</option>
-                                                <option>3</option>
-                                                <option>4</option>
-                                                <option>5</option>
+                                            <select class="form-control" name="PersonID">
+                                                @foreach (var item in Model.People)
+                                                {
+                                                    <option name="data" value="@item.PersonID">@item.PersonName</option>
+                                                }
                                             </select>
                                         </div>
                                         <div class="form-group">
                                             <label>Servis İletişim</label>
-                                            <input class="form-control" type="text" placeholder="İletişim bilgisi giriniz...">
+                                            <input class="form-control" type="text" name="ServiceContact" placeholder="İletişim bilgisi giriniz...">
 
                                         </div>
                                         <div class="form-group">
                                             <label>Özellikler/Açıklama</label>
-                                            <textarea class="form-control" rows="3" placeholder="Açıklama giriniz..."></textarea>
+                                            <textarea class="form-control" rows="3" name="ProductFeatures" placeholder="Açıklama giriniz..."></textarea>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-lg-4">
-                                        @*<button class="btn-outline btn-success">Demirbaş Ekle</button>
-                                            <button class="btn-outline btn-success">Listeye Dön</button>*@
-                                    </div>
-                                    <div class="col-lg-4">
 
-                                    </div>
-                                    <div class="col-lg-4">
-                                        <button class="btn-outline btn-success">Demirbaş Ekle</button>
-                                        <button class="btn-outline btn-success">Listeye Dön</button>
+                                        <button class="btn btn-danger" type="submit"> Listeye Dön </button>
+                                        <button class="btn btn-primary" type="submit"> Ekle </button>
                                     </div>
                                 </div>
                             </form>
@@ -125,11 +114,11 @@
             <!-- /# column -->
             <!-- /# column -->
         </div>
-        </div>
     </div>
-        <script src="~/Content/assets/js/lib/jquery.nanoscroller.min.js"></script>
+</div>
+<script src="~/Content/assets/js/lib/jquery.nanoscroller.min.js"></script>
 
-        <script src="~/Content/assets/js/lib/preloader/pace.min.js"></script>
-        <!-- sidebar -->
-        <!-- bootstrap -->
-        <!-- scripit init-->
+<script src="~/Content/assets/js/lib/preloader/pace.min.js"></script>
+<!-- sidebar -->
+<!-- bootstrap -->
+<!-- scripit init-->

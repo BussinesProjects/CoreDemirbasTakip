@@ -1,5 +1,6 @@
 ﻿@using DemirbasTakipSistemi.Models.DataModel
-@model Product
+@using DemirbasTakipSistemi.Models.ViewModel
+@model Tuple<Product, PeopleAndCategoryViewModel>
 @{
     ViewBag.Title = "ProductUpdate";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -38,17 +39,12 @@
                                     <div class="col-lg-4">
                                         <div class="form-group">
                                             <label>Seri Numarası</label>
-                                            <input type="text" class="form-control" name="ProductSerialNumber" placeholder="Seri numarası giriniz...">
+                                               <input type="hidden" class="form-control" name="Id" value=@Model.Item1.Id >
+                                            <input type="text" class="form-control" name="ProductSerialNumber" value="@Model.Item1.ProductSerialNumber">
                                         </div>
                                         <div class="form-group">
                                             <label>Adedi</label>
-                                            <select class="form-control" name="ProductAmount">
-                                                <option>1</option>
-                                                <option>2</option>
-                                                <option>3</option>
-                                                <option>4</option>
-                                                <option>5</option>
-                                            </select>
+                                           <input type="number" class="form-control" name="ProductAmount" value="@Model.Item1.ProductAmount" min="0">
                                         </div>
 
 
@@ -62,22 +58,29 @@
                                         <div class="form-group">
                                             <label>Demirbaş Kategori</label>
                                             <select class="form-control" name="CategoryID">
-                                                <option>1</option>
-                                                <option>2</option>
-                                                <option>3</option>
-                                                <option>4</option>
-                                                <option>5</option>
+                                                @foreach (var item in Model.Item2.Categories)
+                                                {
+                                                    if(item.CategoryID==Model.Item1.CategoryID)
+                                                    {
+                                                        <option name="data" value="@item.CategoryID" selected>@item.CategoryName</option>
+                                                    }
+                                                    else
+                                                    {
+                                                        <option name="data" value="@item.CategoryID" >@item.CategoryName</option>
+                                                    }
+                                                    
+                                                }
                                             </select>
                                         </div>
 
                                         <div class="form-group">
                                             <label>Marka</label>
-                                            <input class="form-control" type="text" name="ProductBrand" placeholder="Marka giriniz...">
+                                            <input class="form-control" type="text" name="ProductBrand" value="@Model.Item1.ProductBrand">
 
                                         </div>
                                         <div class="form-group">
                                             <label>Garanti Tarihi</label>
-                                            <input class="form-control" type="date" name="ProductWarrantyDate">
+                                            <input class="form-control" type="date" name="ProductWarrantyDate" value="@Model.Item1.ProductWarrantyDate.Date.ToString("yyyy-MM-dd")"autocomplete="off" >
                                         </div>
 
 
@@ -86,21 +89,29 @@
                                         <div class="form-group">
                                             <label>Demirbaş Sorumlusu</label>
                                             <select class="form-control"  name="PersonID">
-                                                <option>1</option>
-                                                <option>2</option>
-                                                <option>3</option>
-                                                <option>4</option>
-                                                <option>5</option>
+                                                @foreach (var item in Model.Item2.People)
+                                                {
+                                                    if (item.PersonID==Model.Item1.PersonID)
+                                                    {
+                                                    
+                                                          <option name="data" value="@item.PersonID" selected>@item.PersonName</option>
+                                                    }
+                                                    else
+                                                    {
+                                                          <option name="data" value="@item.PersonID">@item.PersonName</option>
+                                                    }
+                                                  
+                                                }
                                             </select>
                                         </div>
                                         <div class="form-group">
                                             <label>Servis İletişim</label>
-                                            <input class="form-control" type="text"  name="ServiceContact" placeholder="İletişim bilgisi giriniz...">
+                                            <input class="form-control" type="text"  name="ServiceContact" value="@Model.Item1.ServiceContact">
 
                                         </div>
                                         <div class="form-group">
                                             <label>Özellikler/Açıklama</label>
-                                            <textarea class="form-control" rows="3" name="ProductFeatures" placeholder="Açıklama giriniz..."></textarea>
+                                            <textarea class="form-control"  name="ProductFeatures" value="@Model.Item1.ProductFeatures"></textarea>
                                         </div>
                                     </div>
                                 </div>

@@ -1,0 +1,11 @@
+﻿using DemirbasTakipSistemi.Models.DataModel;
+using System.Collections.Generic;
+
+namespace DemirbasTakipSistemi.Models.ViewModel
+{
+    public class PeopleAndCategoryViewModel
+    {
+        public List<Person> People { get; set; }
+        public List<Category> Categories { get; set; }
+    }
+}

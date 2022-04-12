@@ -177,7 +177,6 @@ C:\Users\viaPe\source\repos\DemirBasProje\CoreDemirbasTakip\DemirbasTakipSistemi
 C:\Users\viaPe\source\repos\DemirBasProje\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\Razor\Views\Category\CategoryList.cshtml.g.cs
 C:\Users\viaPe\source\repos\DemirBasProje\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
 C:\Users\viaPe\source\repos\DemirBasProje\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
-C:\Users\viaPe\source\repos\DemirBasProje\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\Razor\Views\Personal\PersonalList.cshtml.g.cs
 C:\Users\viaPe\source\repos\DemirBasProje\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\Razor\Views\Product\ProductAdd.cshtml.g.cs
 C:\Users\viaPe\source\repos\DemirBasProje\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\Razor\Views\Product\ProductList.cshtml.g.cs
 C:\Users\viaPe\source\repos\DemirBasProje\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\Razor\Views\Product\ProductUpdate.cshtml.g.cs
@@ -197,3 +196,6 @@ C:\Users\viaPe\source\repos\DemirBasProje\CoreDemirbasTakip\DemirbasTakipSistemi
 C:\Users\viaPe\source\repos\DemirBasProje\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\DemirbasTakipSistemi.pdb
 C:\Users\viaPe\source\repos\DemirBasProje\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\DemirbasTakipSistemi.genruntimeconfig.cache
 C:\Users\viaPe\source\repos\DemirBasProje\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\Razor\Views\Category\CategoryUpdate.cshtml.g.cs
+C:\Users\viaPe\source\repos\DemirBasProje\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\Razor\Views\Person\PersonAdd.cshtml.g.cs
+C:\Users\viaPe\source\repos\DemirBasProje\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\Razor\Views\Person\PersonList.cshtml.g.cs
+C:\Users\viaPe\source\repos\DemirBasProje\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\Razor\Views\Person\PersonUpdate.cshtml.g.cs

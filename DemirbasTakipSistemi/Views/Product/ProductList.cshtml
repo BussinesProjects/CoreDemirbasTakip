@@ -30,7 +30,7 @@
                     <div class="page-header">
                         <div class="page-title">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item">   <button class="btn-flat  btn-success  ti-plus" data-toggle="modal" data-target="#myModal">EKLE</button></li>
+                                <li class="breadcrumb-item">   <button class="btn-flat  btn-success  ti-plus" onclick="location.href='@Url.Action("ProductAdd", "Product")';return false;">EKLE</button></li>
                             </ol>
                         </div>
                     </div>
@@ -65,13 +65,13 @@
                                                 <tr>
                                                 <td>@item.Id</td>
                                                 <td>@item.ProductSerialNumber</td>
-                                                <td>@item.PersonID</td>
-                                                <td>@item.CategoryID</td>
+                                                <td>@item.Person.PersonName</td>
+                                                <td>@item.Category.CategoryName</td>
                                                 <td>@item.ProductBrand</td>
                                                 <td>@item.RegisterDateTime</td>
                                                 <td>@item.ProductAmount</td>
                                                 <td>
-                                                    <button class="btn-flat  btn-warning ti-pencil" onclick="location.href='@Url.Action("ProductUpdate", "Product")';return false;"></button>
+                                                    <button class="btn-flat  btn-warning ti-pencil" onclick="location.href='@Url.Action("ProductUpdate", "Product",new{id=@item.Id})';return false;"></button>
                                                     <button class="btn-flat  btn-info ti-info"></button>
                                                     <button class="btn-flat btn-danger  sweet-confirm ti-trash "></button>
 
@@ -97,7 +97,7 @@
 </div>
 
 <!-- sidebar -->
-<div aria-hidden="true" role="dialog" tabindex="-1" id="myModal" class="modal fade">
+@*<div aria-hidden="true" role="dialog" tabindex="-1" id="myModal" class="modal fade">
     <div class="modal-dialog">
         <div class="modal-content text-left">
             <div class="modal-header">
@@ -201,7 +201,7 @@
                     <span>Attachment</span>
                     <input type="file" name="files[]" multiple="">
                 </span>*@
-                                    <button class="btn btn-danger" type="submit"> Listeye Dön </button>
+                                    @*<button class="btn btn-danger" type="submit"> Listeye Dön </button>
                                     <button class="btn btn-primary" type="submit"> Ekle </button>
                                 </div>
                             </div>
@@ -210,7 +210,7 @@
                         </div>
                  
                         
-                      
+                      *@
                      
                             
                      
@@ -218,13 +218,13 @@
 
 
 
-</form>
+@*</form>
             </div>
         </div>
         <!-- /.modal-content -->
     </div>
     <!-- /.modal-dialog -->
-</div>
+</div>*@
 
 <!-- bootstrap -->
 <!-- scripit init-->
