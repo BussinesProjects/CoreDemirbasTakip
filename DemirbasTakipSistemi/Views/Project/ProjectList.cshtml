@@ -1,12 +1,11 @@
-﻿
+﻿@using DemirbasTakipSistemi.Models.DataModel
+@model List<Project>
 @{
     ViewBag.Title = "ProjectList";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-
-
-<!-- Styles -->
+color!-- Styles -->
 <link href="~/Content/assets/css/lib/font-awesome.min.css" rel="stylesheet">
 <link href="~/Content/assets/css/lib/themify-icons.css" rel="stylesheet">
 <link href="~/Content/assets/css/lib/data-table/buttons.bootstrap.min.css" rel="stylesheet" />
@@ -34,7 +33,7 @@
                               
                                     @*<button class="" href="#myModal" data-toggle="modal"></button>*@
                                 <li class="breadcrumb-item">  
-                                <button class="btn-flat  btn-success  ti-plus" data-toggle="modal" data-target="#myModal">EKLE</button>
+                                <button class="btn-flat  btn-success  ti-plus" onclick="location.href='@Url.Action("ProjectAdd", "Project")';return false;">EKLE</button>
                                 </li>
 
 
@@ -67,23 +66,38 @@
                                             </tr>
                                         </thead>
                                         <tbody>
+                                           @foreach (var item in Model)
+                                           {
                                             <tr>
-                                                <td> <a href="~/Project/Products" style="color:blue">Ürünler</a> </td>
-                                                <td>Seri Numarası</td>
-                                                <td>Sorumlu</td>
-                                                <td>Kategori</td>
-                                                <td>Marka</td>
-                                                <td>Kayıt Tarihi</td>
-                                                <td>Adet</td>
+                                                <td> @*<a href="~/Project/Products/" style="color:blue">Ürünler</a>*@
+                                                    <button class="btn-outline-success" type="button" onclick="location.href='@Url.Action("Products", "Project", new { code = item.ProjectCode })'"/>
+                                
+                                                
+                                                </td>
+                                                   @if(@item.ProjectStatus=="Pasif")
+                                                    {
+                                                        <td style="color:red">@item.ProjectStatus</td>
+                                                    }
+                                                    @if(@item.ProjectStatus=="Aktif")
+                                                    {
+                                                        <td style="color:green">@item.ProjectStatus</td>
+                                                    }
+                                                    
+                                                <td>@item.ProjectName</td>
+                                                <td>@item.ProjectCode</td>
+                                                 <td>@item.ProjectStartDate.Date.ToString("dd-MM-yyyy")</td>
+                                                <td>@item.ProjectClient</td>
+                                                <td></td>
+                                                
                                                 <td>
-                                                    <button class="btn-flat  btn-warning ti-pencil" onclick="location.href='@Url.Action("ProjectUpdate", "Project")';return false;"></button>
+                                                    <button class="btn-flat  btn-warning ti-pencil" onclick="location.href='@Url.Action("ProjectUpdate","Project",new{code=@item.ProjectCode})';return false;"></button>
                                                     <button class="btn-flat btn-danger  sweet-confirm ti-trash "></button>
 
 
 
                                                 </td>
                                             </tr>
-
+                                            }
                                         </tbody>
                                     </table>
                                 </div>

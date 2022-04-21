@@ -1,4 +1,5 @@
-﻿
+﻿@using DemirbasTakipSistemi.Models.DataModel
+@model List<ProjectProduct>
 @{
     ViewBag.Title = "Products";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -32,7 +33,7 @@
                     <div class="page-header">
                         <div class="page-title">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item">  <a href="#myModal" data-toggle="modal" title="Compose" class="btn-flat  btn-success ">EKLE</a>
+                                <li class="breadcrumb-item">   <button class="btn-flat  btn-success  ti-plus" onclick="location.href='@Url.Action("ProductAdd", "Project")';return false;">EKLE</button> </li>
                             </ol>
                         </div>
                     </div>
@@ -58,21 +59,33 @@
                                                 <th>İletişim</th>
                                                 <th>Garanti Baş.</th>
                                                 <th>Garanti Bit.</th>
+                                                <th></th>
                                             </tr>
                                         </thead>
                                         <tbody>
+                                             @foreach (var item in Model)
+                                           {
+                                              
                                             <tr>
-                                                <td>Seri Numarası</td>
-                                                <td>Marka</td>
-                                                <td>Model</td>
-                                                <td>Tedarikçi</td>
-                                                <td>Adet</td>
-                                                <td>Tarih</td>
-                                                <td>İletişim</td>
-                                                <td>Garanti Baş.</td>
-                                                <td>Garanti Bit.</td>
-                                            </tr>
+                                                <td>@item.ProductSerialNumber</td> 
+                                                <td>@item.ProductBrand</td>
+                                                <td>@item.ProductModel</td>
+                                                <td>@item.ProductProvider</td>
+                                                <td>@item.ProductAmount</td>
+                                                <td>@item.RegisterDateTime.Date.ToString("dd-MM-yyyy")</td>
+                                                <td>@item.ProductServiceContact</td>
+                                                <td>@item.ProductWarrantyStartDate.Date.ToString("dd-MM-yyyy")</td>
+                                                <td>@item.ProductWarrantyFinishDate.Date.ToString("dd-MM-yyyy")</td>
+                                                <td>
+                                                     <button class="btn-flat  btn-warning ti-pencil" onclick="location.href='@Url.Action("ProductUpdate", "Project",new{serialNumber=@item.ProductSerialNumber})';return false;"></button>
+                                                    <button class="btn-flat  btn-info ti-info"></button>
+                                                    <button class="btn-flat btn-danger  sweet-confirm ti-trash "></button>
 
+                                                </td>
+                                            </tr>
+                                            }
+                                            
+                                           
                                         </tbody>
                                     </table>
                                 </div>

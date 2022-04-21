@@ -68,7 +68,7 @@
                                                 <td>@item.Person.PersonName</td>
                                                 <td>@item.Category.CategoryName</td>
                                                 <td>@item.ProductBrand</td>
-                                                <td>@item.RegisterDateTime</td>
+                                                <td>@item.RegisterDateTime.Date.ToString("dd-MM-yyyy")</td>
                                                 <td>@item.ProductAmount</td>
                                                 <td>
                                                     <button class="btn-flat  btn-warning ti-pencil" onclick="location.href='@Url.Action("ProductUpdate", "Product",new{id=@item.Id})';return false;"></button>

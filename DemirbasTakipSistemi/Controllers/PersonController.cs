@@ -32,7 +32,7 @@ namespace DemirbasTakipSistemi.Controllers
         }
         [HttpPost]
         public ActionResult PersonUpdate(Person person)
-        {
+       {
             personRepository.TUpdate(person);
             return View(person);
         }

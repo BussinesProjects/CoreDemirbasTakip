@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\viaPe\\source\\repos\\DemirBasProje\\CoreDemirbasTakip\\DemirbasTakipSistemi\\DemirbasTakipSistemi.csproj": {}
+    "C:\\Users\\kulas\\source\\repos\\Demirbas\\CoreDemirbasTakip\\DemirbasTakipSistemi\\DemirbasTakipSistemi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\viaPe\\source\\repos\\DemirBasProje\\CoreDemirbasTakip\\DemirbasTakipSistemi\\DemirbasTakipSistemi.csproj": {
+    "C:\\Users\\kulas\\source\\repos\\Demirbas\\CoreDemirbasTakip\\DemirbasTakipSistemi\\DemirbasTakipSistemi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\viaPe\\source\\repos\\DemirBasProje\\CoreDemirbasTakip\\DemirbasTakipSistemi\\DemirbasTakipSistemi.csproj",
+        "projectUniqueName": "C:\\Users\\kulas\\source\\repos\\Demirbas\\CoreDemirbasTakip\\DemirbasTakipSistemi\\DemirbasTakipSistemi.csproj",
         "projectName": "DemirbasTakipSistemi",
-        "projectPath": "C:\\Users\\viaPe\\source\\repos\\DemirBasProje\\CoreDemirbasTakip\\DemirbasTakipSistemi\\DemirbasTakipSistemi.csproj",
-        "packagesPath": "C:\\Users\\viaPe\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\viaPe\\source\\repos\\DemirBasProje\\CoreDemirbasTakip\\DemirbasTakipSistemi\\obj\\",
+        "projectPath": "C:\\Users\\kulas\\source\\repos\\Demirbas\\CoreDemirbasTakip\\DemirbasTakipSistemi\\DemirbasTakipSistemi.csproj",
+        "packagesPath": "C:\\Users\\kulas\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\kulas\\source\\repos\\Demirbas\\CoreDemirbasTakip\\DemirbasTakipSistemi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\viaPe\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\kulas\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -75,6 +75,24 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.10, 3.1.10]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[3.1.24, 3.1.24]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[3.1.0, 3.1.0]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[3.1.0, 3.1.0]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -83,7 +101,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.104\\RuntimeIdentifierGraph.json"
         }
       }
     }

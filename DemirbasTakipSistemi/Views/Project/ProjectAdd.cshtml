@@ -1,7 +1,5 @@
-﻿@using DemirbasTakipSistemi.Models.DataModel
-@model Project
-@{
-    ViewBag.Title = "ProjectUpdate";
+﻿@{
+    ViewBag.Title = "ProductAdd";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -29,27 +27,26 @@
             <div class="col-lg-12">
                 <div class="card">
                     <div class="card-title">
-                        <h4>Proje Güncelle</h4>
+                        <h4>Yeni Proje</h4>
 
                     </div>
                     <div class="card-body">
                         <div class="basic-elements">
-                            <form action="~/Project/ProjectUpdate" method="post" class="form-horizontal">
+                            <form action="~/Project/ProjectAdd" method="post" class="form-horizontal">
                                 <div class="row">
                                     <div class="col-lg-6">
                                         <div class="form-group">
-                                  
                                             <label class="col-lg-3 control-label">Proje Kodu</label>
                                             <div class="col-lg-9">
-                                               
-                                                <input type="text" class="form-control"  name="ProjectCode" value="@Model.ProjectCode" readonly>
+
+                                                <input type="text" class="form-control" placeholder="Proje Kodu" name="ProjectCode">
                                             </div>
                                         </div>
                                        
                                               <div class="form-group">
                                             <label class="col-lg-3 control-label">Proje Müşterisi </label>
                                             <div class="col-lg-9">
-                                                <input type="text" class="form-control" value="@Model.ProjectClient" name="ProjectClient">
+                                                <input type="text" class="form-control" placeholder="Proje Müşterisi" name="ProjectClient">
                                             </div>
                                         </div>
                                         
@@ -60,30 +57,22 @@
                                        <div class="form-group">
                                             <label class="col-lg-3 control-label">Proje Adı</label>
                                             <div class="col-lg-9">
-                                                <input type="text" class="form-control" value="@Model.ProjectName"  name="ProjectName">
+                                                <input type="text" class="form-control" placeholder="Proje Adı" name="ProjectName">
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label class="col-lg-3 control-label">Proje Tarihi</label>
                                             <div class="col-lg-9">
-                                                <input type="date" class="form-control" value="@Model.ProjectStartDate.Date.ToString("dd-MM-yyyy")"autocomplete="off"  name="ProjectStartDate">
+                                                <input type="date" class="form-control" placeholder="Proje Tarihi" name="ProjectCode">
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label class="col-lg-3 control-label">Adedi</label>
                                             <div class="col-lg-9">
                                                   <select class="form-control" name="ProjectStatus">
-                                                   @if(@Model.ProjectStatus=="Aktif" )
-                                                    {
-                                                        <option  value="Aktif" selected>Aktif</option>
-                                                         <option  value="Pasif" >Pasif</option> 
-                                                    }
-                                                    else
-                                                    {
-                                                         <option  value="Pasif" selected>Pasif</option> 
-                                                         <option  value="Aktif">Aktif</option>
-                                                    }
-                                                  
+                                                
+                                                    <option  value="Aktif">Aktif</option>
+                                                      <option  value="Pasif">Pasif</option>
                                               }
                                             </select>
                                             </div>
@@ -96,7 +85,7 @@
                                  <div class="row">
                                     <div class="col-lg-6">
                                          <button class="btn btn-danger" type="submit"> Listeye Dön </button>
-                                        <button class="btn btn-primary" type="submit"> Güncelle </button>
+                                        <button class="btn btn-primary" type="submit"> Ekle </button>
                                         
                                     </div>
                                    
@@ -117,4 +106,3 @@
 <!-- sidebar -->
 <!-- bootstrap -->
 <!-- scripit init-->
-

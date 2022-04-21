@@ -1,7 +1,5 @@
-﻿@using DemirbasTakipSistemi.Models.DataModel
-@model Project
-@{
-    ViewBag.Title = "ProjectUpdate";
+﻿@{
+    ViewBag.Title = "ProductUpdate";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -34,72 +32,76 @@
                     </div>
                     <div class="card-body">
                         <div class="basic-elements">
-                            <form action="~/Project/ProjectUpdate" method="post" class="form-horizontal">
+                            <form action="~/Project/ProductUpdate" method="post" class="form-horizontal">
                                 <div class="row">
                                     <div class="col-lg-6">
                                         <div class="form-group">
-                                  
+
                                             <label class="col-lg-3 control-label">Proje Kodu</label>
                                             <div class="col-lg-9">
-                                               
-                                                <input type="text" class="form-control"  name="ProjectCode" value="@Model.ProjectCode" readonly>
+
+                                                @* <input type="text" class="form-control"  name="ProjectCode" value="@Model.ProjectCode" readonly>*@
                                             </div>
                                         </div>
-                                       
-                                              <div class="form-group">
-                                            <label class="col-lg-3 control-label">Proje Müşterisi </label>
+
+                                        <div class="form-group">
+                                            <label class="col-lg-3 control-label">Seri Numarası </label>
                                             <div class="col-lg-9">
-                                                <input type="text" class="form-control" value="@Model.ProjectClient" name="ProjectClient">
+                                                <input type="text" class="form-control" name="ProductSerialNumber">
                                             </div>
                                         </div>
-                                        
-                                        
+                                        <div class="form-group">
+                                            <label class="col-lg-3 control-label">Marka</label>
+                                            <div class="col-lg-9">
+                                                <input type="text" class="form-control" name="ProductBrand">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-lg-3 control-label">Model</label>
+                                            <div class="col-lg-9">
+                                                <input type="text" class="form-control" name="ProductModel">
+                                            </div>
+                                        </div>
+
                                     </div>
                                     <div class="col-lg-6">
 
-                                       <div class="form-group">
-                                            <label class="col-lg-3 control-label">Proje Adı</label>
+                                        <div class="form-group">
+                                            <label class="col-lg-3 control-label">Müşteri</label>
                                             <div class="col-lg-9">
-                                                <input type="text" class="form-control" value="@Model.ProjectName"  name="ProjectName">
+                                                <input type="text" class="form-control" name="ProductProvider">
                                             </div>
                                         </div>
+                                        <div class="form-group">
+                                            <label class="col-lg-3 control-label">Müşteri</label>
+                                            <div class="col-lg-9">
+                                                <input type="number" class="form-control" name="ProductAmount">
+                                            </div>
+                                        </div>
+
                                         <div class="form-group">
                                             <label class="col-lg-3 control-label">Proje Tarihi</label>
                                             <div class="col-lg-9">
-                                                <input type="date" class="form-control" value="@Model.ProjectStartDate.Date.ToString("dd-MM-yyyy")"autocomplete="off"  name="ProjectStartDate">
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="col-lg-3 control-label">Adedi</label>
-                                            <div class="col-lg-9">
-                                                  <select class="form-control" name="ProjectStatus">
-                                                   @if(@Model.ProjectStatus=="Aktif" )
-                                                    {
-                                                        <option  value="Aktif" selected>Aktif</option>
-                                                         <option  value="Pasif" >Pasif</option> 
-                                                    }
-                                                    else
-                                                    {
-                                                         <option  value="Pasif" selected>Pasif</option> 
-                                                         <option  value="Aktif">Aktif</option>
-                                                    }
-                                                  
-                                              }
-                                            </select>
+                                                <input type="date" class="form-control" name="ProductWarrantyStartDate">
                                             </div>
                                         </div>
 
-                                        
+                                        <div class="form-group">
+                                            <label class="col-lg-3 control-label">Proje Tarihi</label>
+                                            <div class="col-lg-9">
+                                                <input type="date" class="form-control" name="ProductWarrantyFinishDate">
+                                            </div>
                                         </div>
-                                        
-                                </div>
-                                 <div class="row">
-                                    <div class="col-lg-6">
-                                         <button class="btn btn-danger" type="submit"> Listeye Dön </button>
-                                        <button class="btn btn-primary" type="submit"> Güncelle </button>
-                                        
+
                                     </div>
-                                   
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <button class="btn btn-danger" type="submit"> Listeye Dön </button>
+                                        <button class="btn btn-primary" type="submit"> Ekle </button>
+
+                                    </div>
+
                                 </div>
                             </form>
                         </div>
@@ -117,4 +119,3 @@
 <!-- sidebar -->
 <!-- bootstrap -->
 <!-- scripit init-->
-
