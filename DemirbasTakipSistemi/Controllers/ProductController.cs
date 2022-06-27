@@ -60,10 +60,12 @@ namespace DemirbasTakipSistemi.Controllers
                 }
             }
             productRepository.TAdd(p);
+            /*
             PeopleAndCategoryViewModel pc = new PeopleAndCategoryViewModel();
             pc.People = personRepository.TList();
             pc.Categories = categoryRepository.TList();
-            return View(pc);
+            return View(pc);*/
+            return RedirectToAction("ProductList");
         }
         public ActionResult ProductUpdate(int id )
         {
@@ -71,7 +73,7 @@ namespace DemirbasTakipSistemi.Controllers
             PeopleAndCategoryViewModel pc = new PeopleAndCategoryViewModel();
             pc.People = personRepository.TList();
             pc.Categories = categoryRepository.TList();
-           return View(Tuple.Create<Product, PeopleAndCategoryViewModel>(product, pc));
+            return View(Tuple.Create<Product, PeopleAndCategoryViewModel>(product, pc));
         }
 
         [HttpPost]
@@ -85,10 +87,12 @@ namespace DemirbasTakipSistemi.Controllers
             //product.ProductBrand = p.ProductBrand;
             //product.
             productRepository.TUpdate(p);
+            /*
             PeopleAndCategoryViewModel pc = new PeopleAndCategoryViewModel();
             pc.People = personRepository.TList();
             pc.Categories = categoryRepository.TList();
-            return View(Tuple.Create<Product, PeopleAndCategoryViewModel>(p, pc));
+            return View(Tuple.Create<Product, PeopleAndCategoryViewModel>(p, pc));*/
+            return RedirectToAction("ProductList");
         }
     }
 }
