@@ -30,7 +30,7 @@
                     <div class="page-header">
                         <div class="page-title">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item">   <button class="btn-flat  btn-success  ti-plus" onclick="location.href='@Url.Action("ProductAdd", "Product")';return false;">EKLE</button></li>
+                                <li class="breadcrumb-item">   <button class="btn-flat  btn-success  ti-plus" onclick="location.href='@Url.Action("ProductAdd", "Product")';return false;"> EKLE</button></li>
                             </ol>
                         </div>
                     </div>
@@ -73,9 +73,11 @@
                                                 <td>
                                                     <button class="btn-flat  btn-warning ti-pencil" onclick="location.href='@Url.Action("ProductUpdate", "Product",new{id=@item.Id})';return false;"></button>
                                                     <button class="btn-flat  btn-info ti-info" ></button>
-                                                    <button class="btn-flat btn-danger  sweet-confirm ti-trash "></button>
-
-
+                                                    @*<form id="sweet-confirm" >
+                                                        <button class="btn-flat  btn-danger sweet-confirm ti-trash" onclick="location.href='@Url.Action("ProductDelete", "Product",new{id=@item.Id})';return false;"></button>
+                                                        <button class="btn-flat btn-danger sweet-confirm ti-trash"></button>
+                                                    </form>*@
+                                                    <button class="btn-flat btn-danger sweet-confirm ti-trash"></button>
 
                                                 </td>
                                             </tr>

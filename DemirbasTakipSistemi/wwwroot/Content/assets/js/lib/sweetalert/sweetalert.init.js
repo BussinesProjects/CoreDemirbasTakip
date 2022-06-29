@@ -12,7 +12,7 @@
 ////};
 document.querySelector('.sweet-confirm').onclick = function(){
     swal({
-            title: "Silmek istediginizden emin misiniz?",
+            title: "Silmek istediginizden emin misiniz-?",
             text: "",
             type: "warning",
             showCancelButton: true,

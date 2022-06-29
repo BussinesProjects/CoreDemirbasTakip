@@ -94,5 +94,20 @@ namespace DemirbasTakipSistemi.Controllers
             return View(Tuple.Create<Product, PeopleAndCategoryViewModel>(p, pc));*/
             return RedirectToAction("ProductList");
         }
+
+
+        //[HttpPost]
+        public ActionResult ProductDelete(int id)
+        {
+            productRepository.TDelete(productRepository.TGet(id));
+            return RedirectToAction("ProductList");
+        }
+        /*
+        [HttpPost]
+        public ActionResult ProductDelete(Product p)
+        {
+            productRepository.TDelete(p);
+            return RedirectToAction("ProductList");
+        }*/
     }
 }

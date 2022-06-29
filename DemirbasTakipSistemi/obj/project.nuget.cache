@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "I3+DQvbMlnVGMThfaov4GDMCYwV6O3DB017O59s/wN76ZxE1I5GJ3iXkPX/x1m1ejp/ZPjqakklRG3cy8zPnkg==",
+  "dgSpecHash": "r46n1A9xCmgonNRjeyAh0V/RpaHFFEvCswPTj+XWl3iH45jKAqai0KaNfM/xPr5pWsL/I7CWwQjZkAlGBdtImw==",
   "success": true,
   "projectFilePath": "D:\\cs\\staj1\\CoreDemirbasTakip\\DemirbasTakipSistemi\\DemirbasTakipSistemi.csproj",
   "expectedPackageFiles": [
@@ -91,8 +91,7 @@
     "C:\\Users\\drbya\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\drbya\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Users\\drbya\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\drbya\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512",
-    "C:\\Users\\drbya\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.25\\microsoft.netcore.app.host.win-x64.3.1.25.nupkg.sha512"
+    "C:\\Users\\drbya\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
   ],
   "logs": []
 }
