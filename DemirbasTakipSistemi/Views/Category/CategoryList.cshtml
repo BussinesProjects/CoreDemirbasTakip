@@ -33,7 +33,7 @@
                         <div class="page-title">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item">
-                                    <button class="btn-flat  btn-success  ti-plus" data-toggle="modal" data-target="#createCategoryModal">EKLE</button>
+                                    <button class="btn-flat  btn-success  ti-plus" data-toggle="modal" data-target="#createCategoryModal"  onclick="location.href='@Url.Action("CategoryAdd", "Category")';return false;">EKLE</button>
                                 </li>
                             </ol>
                         </div>
@@ -68,8 +68,8 @@
                                                     <td>@item.CategoryName</td>
                                                     <td>Sorumlu</td>
                                                     <td>
-                                                          <button class="btn-flat  btn-warning ti-pencil" onclick="location.href='@Url.Action("CategoryUpdate", "Category",new{id=@item.CategoryID})';return false;"></button>
-                                                        <button class="btn-flat btn-danger  sweet-confirm ti-trash "></button>
+                                                        <button class="btn-flat  btn-warning ti-pencil" onclick="location.href='@Url.Action("CategoryUpdate", "Category",new{id=@item.CategoryID})';return false;"></button>
+                                                        <button class="btn-flat btn-danger  sweet-confirm ti-trash" onclick="location.href='@Url.Action("CategoryDelete", "Category",new{id=@item.CategoryID})';return false;"></button>
 
                                                     </td>
 
@@ -89,7 +89,7 @@
         </div>
     </div>
 </div>
-
+@*
 <!-- sidebar -->
 <div aria-hidden="true" role="dialog" tabindex="-1" id="createCategoryModal" class="modal fade">
     <div class="modal-dialog">
@@ -117,7 +117,8 @@
                                         <i class="fa fa-plus fa fa-white"></i>
                                         <span>Attachment</span>
                                         <input type="file" name="files[]" multiple="">
-                                        </span>*@
+                                        </span>* @
+
                                     <button class="btn btn-danger" type="submit"> Listeye Dön </button>
                                     <button class="btn btn-primary" type="button" data-save="modal"> Ekle </button>
                                 </div>
@@ -137,7 +138,7 @@
         <!-- /.modal-content -->
     </div>
     <!-- /.modal-dialog -->
-</div>
+</div>*@
 
 <!-- bootstrap -->
 <!-- scripit init-->

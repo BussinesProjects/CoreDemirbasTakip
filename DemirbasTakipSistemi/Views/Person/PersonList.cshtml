@@ -70,7 +70,7 @@
                                                 <td>
                                                     <button class="btn-flat  btn-warning ti-pencil" onclick="location.href='@Url.Action("PersonUpdate", "Person",new{id=@item.PersonID})';return false;"></button>
                                                     <button class="btn-flat  btn-info ti-info"></button>
-                                                    <button class="btn-flat btn-danger  sweet-confirm ti-trash "></button>
+                                                    <button class="btn-flat btn-danger  sweet-confirm ti-trash" onclick="location.href='@Url.Action("PersonDelete", "Person",new{id=@item.PersonID})';return false;"></button>
 
 
 
@@ -92,6 +92,7 @@
         </div>
     </div>
 </div>
+@*  Ne işe yarıyor bilmediğim için commentli aşağısı
 
 <!-- sidebar -->
 <div aria-hidden="true" role="dialog" tabindex="-1" id="myModal" class="modal fade">
@@ -128,14 +129,12 @@
                     <i class="fa fa-plus fa fa-white"></i>
                     <span>Attachment</span>
                     <input type="file" name="files[]" multiple="">
-                </span>*@
+                </span>* @
                                     
                                     <a asp-controller="Person" asp-action="PersonList" type="submit" class="btn btn-danger" style="width:150px">
                                         Listeye Dön-
                                     </a>
-                                    <a asp-controller="Person" asp-action="PersonList" type="submit" class="btn btn-primary" style="width:150px">
-                                        Ekle-
-                                    </a>
+                                    <button class="btn btn-primary" type="submit" > Ekle </button>
                                 </div>
                             </div>
 
@@ -189,7 +188,7 @@
                                             <i class="fa fa-plus fa fa-white"></i>
                                             <span>Attachment</span>
                                             <input type="file" name="files[]" multiple="">
-                                        </span>*@
+                                        </span>* @
                                     <button class="btn btn-danger" type="submit"> Listeye Dön? </button>
                                     <button class="btn btn-primary" type="submit"> Ekle! </button>
                                 </div>
@@ -210,7 +209,7 @@
     </div>
     <!-- /.modal-dialog -->
 </div>
-
+*@
 <!-- bootstrap -->
 <!-- scripit init-->
 <script src="~/Content/assets/js/lib/data-table/datatables.min.js"></script>

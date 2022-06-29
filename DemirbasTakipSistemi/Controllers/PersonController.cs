@@ -12,14 +12,13 @@ namespace DemirbasTakipSistemi.Controllers
         [HttpGet]
         public ActionResult PersonAdd()
         {
-          
             return View();
         }
         [HttpPost]
         public ActionResult PersonAdd(Person person)
         {
             personRepository.TAdd(person);
-            return View();
+            return RedirectToAction("PersonList");
         }
         public ActionResult PersonList()
         {
@@ -34,11 +33,12 @@ namespace DemirbasTakipSistemi.Controllers
         public ActionResult PersonUpdate(Person person)
        {
             personRepository.TUpdate(person);
-            return View(person);
+            return RedirectToAction("PersonList");
         }
-        public ActionResult PersonDelete()
+        public ActionResult PersonDelete(int id)
         {
-            return View();
+            personRepository.TDelete( personRepository.TGet(id));
+            return RedirectToAction("PersonList");
         }
     }
 }

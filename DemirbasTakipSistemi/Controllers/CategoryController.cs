@@ -13,7 +13,13 @@ namespace DemirbasTakipSistemi.Controllers
         
         private readonly CategoryRepository categoryRepository = new CategoryRepository();
         // GET: Category
-       
+
+        public ActionResult CategoryList()
+        {
+            var list = categoryRepository.TList();
+            return View(list);
+        }
+
         public ActionResult CategoryAdd()
         {
             return View();
@@ -25,29 +31,24 @@ namespace DemirbasTakipSistemi.Controllers
             category.CategoryName = name;
             categoryRepository.TAdd(category);
 
-            return View(category);
+            return RedirectToAction("CategoryList");
         }
-        [HttpGet]
+        //[HttpGet]
         public ActionResult CategoryUpdate(int id)
         {
-            var c = categoryRepository.TGet(id);
-            return View(c);
+            return View(categoryRepository.TGet(id));
         }
 
         [HttpPost]
         public ActionResult CategoryUpdate(Category c)
         {
             categoryRepository.TUpdate(c);
-            return View(c);
+            return RedirectToAction("CategoryList");
         }
-        public ActionResult CategoryList()
+        public ActionResult CategoryDelete( int id)
         {
-            var list = categoryRepository.TList();
-            return View(list);
-        }
-        public ActionResult CategoryDelete()
-        {
-            return View();
+            categoryRepository.TDelete(categoryRepository.TGet(id));
+            return RedirectToAction("CategoryList");
         }
     }
 }

@@ -73,12 +73,8 @@
                                                 <td>
                                                     <button class="btn-flat  btn-warning ti-pencil" onclick="location.href='@Url.Action("ProductUpdate", "Product",new{id=@item.Id})';return false;"></button>
                                                     <button class="btn-flat  btn-info ti-info" ></button>
-                                                    @*<form id="sweet-confirm" >
-                                                        <button class="btn-flat  btn-danger sweet-confirm ti-trash" onclick="location.href='@Url.Action("ProductDelete", "Product",new{id=@item.Id})';return false;"></button>
-                                                        <button class="btn-flat btn-danger sweet-confirm ti-trash"></button>
-                                                    </form>*@
-                                                    <button class="btn-flat btn-danger sweet-confirm ti-trash"></button>
-
+                                                    <button class="btn-flat  btn-danger ti-trash" onclick="location.href='@Url.Action("ProductDelete", "Product",new{id=@item.Id})';return false;"></button>
+                                                    @*<button class="btn-flat btn-danger sweet-confirm ti-trash"></button>*@
                                                 </td>
                                             </tr>
 
