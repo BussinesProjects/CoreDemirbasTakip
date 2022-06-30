@@ -46,7 +46,7 @@ namespace DemirbasTakipSistemi.Repositories
             return context.Set<T>().Find(id);
 
         }
-
+ 
         public List<T> TList(string paramater)
         {
 

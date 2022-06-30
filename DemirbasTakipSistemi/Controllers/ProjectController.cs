@@ -12,6 +12,7 @@ namespace DemirbasTakipSistemi.Controllers
         // GET: Acount
         public ActionResult ProjectList()
         {
+         
             return View(projectRepository.TList());
         }
         public ActionResult ProjectAdd()
@@ -33,20 +34,6 @@ namespace DemirbasTakipSistemi.Controllers
                 return View();
             }
         }
-        [HttpPost]
-        public ActionResult ProductAdd(ProjectProduct p)
-        {
-            if ( p.ProjectCode != null)
-            {
-                p.isEnabled = true;
-                projectProductRepository.TAdd(p);
-                return RedirectToAction("ProjectList");
-            }
-            else
-            {
-                return View();
-            }
-        }
         public ActionResult ProjectUpdate(string code)
         {
            
@@ -58,6 +45,19 @@ namespace DemirbasTakipSistemi.Controllers
             projectRepository.TUpdate(project);
             return RedirectToAction("ProjectList");
         }
+        public ActionResult ProjectDelete(string ProjectCode)
+        {
+            Project project = projectRepository.GetCode(ProjectCode);
+            project.isEnabled = false;
+            projectRepository.TUpdate(project);
+
+            return RedirectToAction("ProjectList");
+
+        }
+
+
+
+
         public ActionResult Products(string code)
         {
           
@@ -68,7 +68,30 @@ namespace DemirbasTakipSistemi.Controllers
 
             return View();
         }
-        public ActionResult ProductUpdate(string serialNumber)
+        [HttpPost]
+        public ActionResult ProductAdd(ProjectProduct p)
+        {
+            // check if the project code exists
+            bool found = false;
+            foreach (ProjectProduct project in projectProductRepository.List( p.ProjectCode))
+            {
+                if (project.ProjectCode.Equals(p.ProjectCode))// should be true for all
+                {
+                    found = true;
+                }
+            }
+            if (found) // the project code is a valid project code
+            {
+                p.isEnabled = true;
+                projectProductRepository.TAdd(p);
+                return View(projectProductRepository.List(p.ProjectCode));
+            }
+            else
+            {
+                return View();
+            }
+        }
+        public ActionResult ProductUpdate(string serialNumber) 
         {
 
             return View(projectProductRepository.GetSerialNumber(serialNumber));
@@ -76,17 +99,17 @@ namespace DemirbasTakipSistemi.Controllers
         [HttpPost]
         public ActionResult ProductUpdate(ProjectProduct p)
         {
-            projectProductRepository.TUpdate(p);//productRepository.TDelete( productRepository.TGet(id));
+            projectProductRepository.TUpdate(p);
             
             return RedirectToAction("ProjectList");
 
         }
 
-        public ActionResult ProductDelete(string IDcode)
+        public ActionResult ProductDelete(string serialNumber)
         {
-            ProjectProduct project = projectProductRepository.GetSerialNumber(IDcode);
-            project.isEnabled = false;
-            projectProductRepository.TUpdate(project);
+            ProjectProduct product = projectProductRepository.GetSerialNumber(serialNumber);
+            product.isEnabled = false;
+            projectProductRepository.TUpdate(product);
 
             return RedirectToAction("ProjectList");
 
