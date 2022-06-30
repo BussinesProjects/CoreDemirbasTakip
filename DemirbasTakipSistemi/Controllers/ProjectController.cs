@@ -22,8 +22,30 @@ namespace DemirbasTakipSistemi.Controllers
         [HttpPost]
         public ActionResult ProjectAdd(Project project)
         {
-            projectRepository.TAdd(project);
-            return View();
+            if ( project.ProjectCode != null)
+            {
+                project.isEnabled = true;
+                projectRepository.TAdd(project);
+                return RedirectToAction("ProjectList");
+            }
+            else
+            {
+                return View();
+            }
+        }
+        [HttpPost]
+        public ActionResult ProductAdd(ProjectProduct p)
+        {
+            if ( p.ProjectCode != null)
+            {
+                p.isEnabled = true;
+                projectProductRepository.TAdd(p);
+                return RedirectToAction("ProjectList");
+            }
+            else
+            {
+                return View();
+            }
         }
         public ActionResult ProjectUpdate(string code)
         {
@@ -34,7 +56,7 @@ namespace DemirbasTakipSistemi.Controllers
         public ActionResult ProjectUpdate(Project project)
         {
             projectRepository.TUpdate(project);
-            return View(project);
+            return RedirectToAction("ProjectList");
         }
         public ActionResult Products(string code)
         {
@@ -46,12 +68,6 @@ namespace DemirbasTakipSistemi.Controllers
 
             return View();
         }
-        [HttpPost]
-        public ActionResult ProductAdd(ProjectProduct p)
-        {
-            projectProductRepository.TAdd(p);
-            return View();
-        }
         public ActionResult ProductUpdate(string serialNumber)
         {
 
@@ -60,8 +76,20 @@ namespace DemirbasTakipSistemi.Controllers
         [HttpPost]
         public ActionResult ProductUpdate(ProjectProduct p)
         {
-            projectProductRepository.TUpdate(p);
-            return View(p);
+            projectProductRepository.TUpdate(p);//productRepository.TDelete( productRepository.TGet(id));
+            
+            return RedirectToAction("ProjectList");
+
+        }
+
+        public ActionResult ProductDelete(string IDcode)
+        {
+            ProjectProduct project = projectProductRepository.GetSerialNumber(IDcode);
+            project.isEnabled = false;
+            projectProductRepository.TUpdate(project);
+
+            return RedirectToAction("ProjectList");
+
         }
     }
 }

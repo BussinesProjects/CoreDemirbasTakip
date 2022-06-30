@@ -17,6 +17,7 @@ namespace DemirbasTakipSistemi.Controllers
         [HttpPost]
         public ActionResult PersonAdd(Person person)
         {
+            person.isEnabled = true;
             personRepository.TAdd(person);
             return RedirectToAction("PersonList");
         }
@@ -37,7 +38,11 @@ namespace DemirbasTakipSistemi.Controllers
         }
         public ActionResult PersonDelete(int id)
         {
-            personRepository.TDelete( personRepository.TGet(id));
+            //personRepository.TDelete( personRepository.TGet(id));
+            Person person = personRepository.TGet(id);
+            person.isEnabled = false;
+            personRepository.TUpdate(person);
+
             return RedirectToAction("PersonList");
         }
     }

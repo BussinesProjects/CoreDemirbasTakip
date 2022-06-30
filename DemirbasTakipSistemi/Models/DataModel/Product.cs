@@ -13,6 +13,7 @@ namespace DemirbasTakipSistemi.Models.DataModel
     
     public partial class Product
     {
+        public bool isEnabled { get; set; }
         public int Id { get; set; }
         public string ProductSerialNumber { get; set; }
         public int CategoryID { get; set; }

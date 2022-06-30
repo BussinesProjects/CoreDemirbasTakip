@@ -10,6 +10,8 @@
 ////document.querySelector('.sweet-success').onclick = function(){
 ////    swal("Hey, Good job !!", "You clicked the button !!", "success")
 ////};
+
+
 document.querySelector('.sweet-confirm').onclick = function(){
     swal({
             title: "Silmek istediginizden emin misiniz-?",
@@ -24,6 +26,7 @@ document.querySelector('.sweet-confirm').onclick = function(){
             swal("Silindi !!", "Demirbas bilgisi silindi!!", "success");
         });
 };
+
 //document.querySelector('.sweet-success-cancel').onclick = function(){
 //    swal({
 //            title: "Are you sure to delete ?",

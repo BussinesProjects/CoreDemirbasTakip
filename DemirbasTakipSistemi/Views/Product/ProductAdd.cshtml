@@ -61,7 +61,10 @@
                                             <select class="form-control" name="CategoryID">
                                                 @foreach (var item in Model.Categories)
                                                 {
-                                                    <option name="data" value="@item.CategoryID">@item.CategoryName</option>
+                                                    if ( item.isEnabled)
+                                                    {
+                                                        <option name="data" value="@item.CategoryID">@item.CategoryName</option>
+                                                    }
                                                 }
                                             </select>
                                         </div>
@@ -84,7 +87,11 @@
                                             <select class="form-control" name="PersonID">
                                                 @foreach (var item in Model.People)
                                                 {
+                                                    
+                                                    if ( item.isEnabled)
+                                                    {
                                                     <option name="data" value="@item.PersonID">@item.PersonName</option>
+                                                    }
                                                 }
                                             </select>
                                         </div>

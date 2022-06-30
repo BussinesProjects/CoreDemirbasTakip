@@ -20,6 +20,7 @@ namespace DemirbasTakipSistemi.Models.DataModel
             this.Products = new HashSet<Product>();
         }
     
+        public bool isEnabled { get; set; }
         public int CategoryID { get; set; }
         public string CategoryName { get; set; }
     

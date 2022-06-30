@@ -59,6 +59,7 @@ namespace DemirbasTakipSistemi.Controllers
                     ViewBag.Message += string.Format("<b>{0}</b> uploaded.<br />", fileName);
                 }
             }
+            p.isEnabled = true;
             productRepository.TAdd(p);
             /*
             PeopleAndCategoryViewModel pc = new PeopleAndCategoryViewModel();
@@ -97,7 +98,11 @@ namespace DemirbasTakipSistemi.Controllers
 
         public ActionResult ProductDelete(int id)
         {
-            productRepository.TDelete( productRepository.TGet(id));
+            //productRepository.TDelete( productRepository.TGet(id));
+            Product product = productRepository.TGet(id);
+            product.isEnabled = false;
+            productRepository.TUpdate(product);
+
             return RedirectToAction("ProductList");
         }
     }

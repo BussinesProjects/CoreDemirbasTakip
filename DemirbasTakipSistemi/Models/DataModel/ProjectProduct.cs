@@ -8,6 +8,7 @@ namespace DemirbasTakipSistemi.Models.DataModel
     public partial class ProjectProduct
     {
         [Key]
+        public bool isEnabled { get; set; }
         public string ProjectCode { get; set; }
         public string ProductSerialNumber { get; set; }
         public string ProductBrand { get; set; }

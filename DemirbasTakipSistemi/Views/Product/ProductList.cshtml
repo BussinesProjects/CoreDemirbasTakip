@@ -62,23 +62,25 @@
                                         <tbody>
                                             @foreach (var item in Model)
                                            {
-                                                <tr>
-                                                <td>@item.Id</td>
-                                                <td>@item.ProductSerialNumber</td>
-                                                <td>@item.Person.PersonName</td>
-                                                <td>@item.Category.CategoryName</td>
-                                                <td>@item.ProductBrand</td>
-                                                <td>@item.RegisterDateTime.Date.ToString("dd-MM-yyyy")</td>
-                                                <td>@item.ProductAmount</td>
-                                                <td>
-                                                    <button class="btn-flat  btn-warning ti-pencil" onclick="location.href='@Url.Action("ProductUpdate", "Product",new{id=@item.Id})';return false;"></button>
-                                                    <button class="btn-flat  btn-info ti-info" ></button>
-                                                    <button class="btn-flat  btn-danger ti-trash" onclick="location.href='@Url.Action("ProductDelete", "Product",new{id=@item.Id})';return false;"></button>
-                                                    @*<button class="btn-flat btn-danger sweet-confirm ti-trash"></button>*@
-                                                </td>
-                                            </tr>
-
-                                           }
+                                                @if (item.isEnabled)
+                                                {
+                                                    <tr>
+                                                        <td>@item.Id</td>
+                                                        <td>@item.ProductSerialNumber</td>
+                                                        <td>@item.Person.PersonName</td>
+                                                        <td>@item.Category.CategoryName</td>
+                                                        <td>@item.ProductBrand</td>
+                                                        <td>@item.RegisterDateTime.Date.ToString("dd-MM-yyyy")</td>
+                                                        <td>@item.ProductAmount</td>
+                                                        <td>
+                                                            <button class="btn-flat  btn-warning ti-pencil" onclick="location.href='@Url.Action("ProductUpdate", "Product",new{id=@item.Id})';return false;"></button>
+                                                            <button class="btn-flat  btn-info ti-info" ></button>
+                                                            <button class="btn-flat  btn-danger ti-trash" onclick="location.href='@Url.Action("ProductDelete", "Product",new{id=@item.Id})';return false;"></button>
+                                                            @*<button class="btn-flat btn-danger sweet-confirm ti-trash"></button>*@
+                                                        </td>
+                                                    </tr>
+                                                }
+                                            }
                                            
                                         </tbody>
                                     </table>

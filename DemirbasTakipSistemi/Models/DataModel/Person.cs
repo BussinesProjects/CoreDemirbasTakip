@@ -13,6 +13,7 @@ namespace DemirbasTakipSistemi.Models.DataModel
             this.Products = new HashSet<Product>();
         }
     
+        public bool isEnabled { get; set; }
         public int PersonID { get; set; }
         public string PersonName { get; set; }
         public string PersonContact { get; set; }

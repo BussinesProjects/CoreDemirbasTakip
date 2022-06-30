@@ -17,6 +17,7 @@ namespace DemirbasTakipSistemi.Controllers
         public ActionResult CategoryList()
         {
             var list = categoryRepository.TList();
+            
             return View(list);
         }
 
@@ -29,6 +30,7 @@ namespace DemirbasTakipSistemi.Controllers
         {
             Category category = new Category();
             category.CategoryName = name;
+            category.isEnabled = true;
             categoryRepository.TAdd(category);
 
             return RedirectToAction("CategoryList");
@@ -47,7 +49,11 @@ namespace DemirbasTakipSistemi.Controllers
         }
         public ActionResult CategoryDelete( int id)
         {
-            categoryRepository.TDelete(categoryRepository.TGet(id));
+            //categoryRepository.TDelete(categoryRepository.TGet(id));
+            Category category = categoryRepository.TGet(id);
+            category.isEnabled = false;
+            categoryRepository.TUpdate(category);
+
             return RedirectToAction("CategoryList");
         }
     }

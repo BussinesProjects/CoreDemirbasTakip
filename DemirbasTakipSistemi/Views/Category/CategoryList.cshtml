@@ -63,17 +63,21 @@
 
                                             @foreach (var item in Model)
                                             {
-                                                <tr>
-                                                    <td>@item.CategoryID</td>
-                                                    <td>@item.CategoryName</td>
-                                                    <td>Sorumlu</td>
-                                                    <td>
-                                                        <button class="btn-flat  btn-warning ti-pencil" onclick="location.href='@Url.Action("CategoryUpdate", "Category",new{id=@item.CategoryID})';return false;"></button>
-                                                        <button class="btn-flat btn-danger  sweet-confirm ti-trash" onclick="location.href='@Url.Action("CategoryDelete", "Category",new{id=@item.CategoryID})';return false;"></button>
+                                                @if ( item.isEnabled)
+                                                {
+                                                    <tr>
+                                                        <td>@item.CategoryID</td>
+                                                        <td>@item.CategoryName</td>
+                                                        <td>Sorumlu</td>
+                                                        <td>
+                                                            <button class="btn-flat  btn-warning ti-pencil" onclick="location.href='@Url.Action("CategoryUpdate", "Category",new{id=@item.CategoryID})';return false;"></button>
+                                                            @*<button class="btn-flat btn-danger  sweet-confirm ti-trash" onclick="location.href='@Url.Action("CategoryDelete", "Category",new{id=@item.CategoryID})';return false;"></button>
+                                                            *@<button class="btn-flat btn-danger  ti-trash" onclick="location.href='@Url.Action("CategoryDelete", "Category",new{id=@item.CategoryID})';return false;"></button>
 
-                                                    </td>
+                                                        </td>
 
-                                                </tr>
+                                                    </tr>
+                                                }
                                             }
 
                                         </tbody>

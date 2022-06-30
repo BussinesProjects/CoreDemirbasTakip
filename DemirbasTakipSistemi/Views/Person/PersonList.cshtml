@@ -62,21 +62,23 @@
                                         <tbody>
                                         @foreach (var item in Model)
                                        {
-                                           <tr>
-                                                <th>@item.PersonID </th>
-                                                <th>@item.PersonName</th>
-                                                <th>@item.PersonContact</th>
-                                               @* <th>Kayıt Sayısı</th>*@
-                                                <td>
-                                                    <button class="btn-flat  btn-warning ti-pencil" onclick="location.href='@Url.Action("PersonUpdate", "Person",new{id=@item.PersonID})';return false;"></button>
-                                                    <button class="btn-flat  btn-info ti-info"></button>
-                                                    <button class="btn-flat btn-danger  sweet-confirm ti-trash" onclick="location.href='@Url.Action("PersonDelete", "Person",new{id=@item.PersonID})';return false;"></button>
+                                                @if (item.isEnabled)
+                                                {
+                                                    <tr>
+                                                        <th>@item.PersonID </th>
+                                                        <th>@item.PersonName</th>
+                                                        <th>@item.PersonContact</th>
+                                                        @* <th>Kayıt Sayısı</th>*@
+                                                        <td>
+                                                            <button class="btn-flat  btn-warning ti-pencil" onclick="location.href='@Url.Action("PersonUpdate", "Person",new{id=@item.PersonID})';return false;"></button>
+                                                            <button class="btn-flat  btn-info ti-info"></button>
+                                                            <button class="btn-flat btn-danger  ti-trash" onclick="location.href='@Url.Action("PersonDelete", "Person",new{id=@item.PersonID})';return false;"></button>
 
 
-
-                                                </td>
-                                            </tr>
-                                       }
+                                                        </td>
+                                                    </tr>
+                                                }
+                                            }
                                             
 
                                         </tbody>
@@ -92,6 +94,12 @@
         </div>
     </div>
 </div>
+
+
+
+
+
+
 @*  Ne işe yarıyor bilmediğim için commentli aşağısı
 
 <!-- sidebar -->
