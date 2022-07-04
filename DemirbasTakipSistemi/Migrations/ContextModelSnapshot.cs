@@ -185,13 +185,10 @@ namespace DemirbasTakipSistemi.Migrations
 
             modelBuilder.Entity("DemirbasTakipSistemi.Models.DataModel.Project", b =>
                 {
-                    b.Property<bool>("isEnabled")
-                        .HasColumnType("bit");
+                    b.Property<string>("ProjectCode")
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("ProjectClient")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ProjectCode")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ProjectName")
@@ -203,15 +200,18 @@ namespace DemirbasTakipSistemi.Migrations
                     b.Property<string>("ProjectStatus")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("isEnabled");
+                    b.Property<bool>("isEnabled")
+                        .HasColumnType("bit");
+
+                    b.HasKey("ProjectCode");
 
                     b.ToTable("Projects");
                 });
 
             modelBuilder.Entity("DemirbasTakipSistemi.Models.DataModel.ProjectProduct", b =>
                 {
-                    b.Property<bool>("isEnabled")
-                        .HasColumnType("bit");
+                    b.Property<string>("ProductSerialNumber")
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<int>("ProductAmount")
                         .HasColumnType("int");
@@ -231,9 +231,6 @@ namespace DemirbasTakipSistemi.Migrations
                     b.Property<string>("ProductProvider")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("ProductSerialNumber")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("ProductServiceContact")
                         .HasColumnType("nvarchar(max)");
 
@@ -246,15 +243,18 @@ namespace DemirbasTakipSistemi.Migrations
                     b.Property<string>("ProjectCode")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<bool?>("ProjectisEnabled")
-                        .HasColumnType("bit");
+                    b.Property<string>("ProjectCode1")
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<DateTime>("RegisterDateTime")
                         .HasColumnType("datetime2");
 
-                    b.HasKey("isEnabled");
+                    b.Property<bool>("isEnabled")
+                        .HasColumnType("bit");
 
-                    b.HasIndex("ProjectisEnabled");
+                    b.HasKey("ProductSerialNumber");
+
+                    b.HasIndex("ProjectCode1");
 
                     b.ToTable("ProjectProducts");
                 });
@@ -342,7 +342,7 @@ namespace DemirbasTakipSistemi.Migrations
                 {
                     b.HasOne("DemirbasTakipSistemi.Models.DataModel.Project", "Project")
                         .WithMany("ProjectProducts")
-                        .HasForeignKey("ProjectisEnabled");
+                        .HasForeignKey("ProjectCode1");
                 });
 #pragma warning restore 612, 618
         }

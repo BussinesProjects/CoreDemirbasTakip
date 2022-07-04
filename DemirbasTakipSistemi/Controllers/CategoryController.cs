@@ -44,6 +44,7 @@ namespace DemirbasTakipSistemi.Controllers
         [HttpPost]
         public ActionResult CategoryUpdate(Category c)
         {
+            c.isEnabled = true;
             categoryRepository.TUpdate(c);
             return RedirectToAction("CategoryList");
         }

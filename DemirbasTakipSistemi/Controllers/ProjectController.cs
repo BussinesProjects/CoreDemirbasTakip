@@ -1,7 +1,7 @@
 ﻿using DemirbasTakipSistemi.Models.DataModel;
 using DemirbasTakipSistemi.Repositories;
 using Microsoft.AspNetCore.Mvc;
-
+using System.Dynamic;
 
 namespace DemirbasTakipSistemi.Controllers
 {
@@ -23,7 +23,7 @@ namespace DemirbasTakipSistemi.Controllers
         [HttpPost]
         public ActionResult ProjectAdd(Project project)
         {
-            if ( project.ProjectCode != null)
+            if ( project.ProjectCode != null && projectRepository.GetCode(project.ProjectCode) == null)
             {
                 project.isEnabled = true;
                 projectRepository.TAdd(project);
@@ -45,9 +45,9 @@ namespace DemirbasTakipSistemi.Controllers
             projectRepository.TUpdate(project);
             return RedirectToAction("ProjectList");
         }
-        public ActionResult ProjectDelete(string ProjectCode)
+        public ActionResult ProjectDelete(string code)
         {
-            Project project = projectRepository.GetCode(ProjectCode);
+            Project project = projectRepository.GetCode(code);
             project.isEnabled = false;
             projectRepository.TUpdate(project);
 
@@ -60,35 +60,52 @@ namespace DemirbasTakipSistemi.Controllers
 
         public ActionResult Products(string code)
         {
-          
-            return View(projectProductRepository.List(code));
-        }
-        public ActionResult ProductAdd()
-        {
+            dynamic mymodel = new ExpandoObject();
+            mymodel.listProjectsOfCode = projectProductRepository.List(code);
+            mymodel.projectCode = code;
+            return View(mymodel);
 
-            return View();
+            //return View(projectProductRepository.List(code));
+        }
+        public ActionResult ProductAdd( string code)
+        {
+            Project project = projectRepository.GetCode(code);
+            return View( project);
         }
         [HttpPost]
         public ActionResult ProductAdd(ProjectProduct p)
         {
             // check if the project code exists
-            bool found = false;
-            foreach (ProjectProduct project in projectProductRepository.List( p.ProjectCode))
+            bool foundProject = false;
+            bool existsAlready = false;
+            if ( projectRepository.GetCode(p.ProjectCode) != null)
             {
-                if (project.ProjectCode.Equals(p.ProjectCode))// should be true for all
+                foundProject = true;
+            }
+            foreach ( ProjectProduct product in projectProductRepository.GetAll())
+            {
+                if ( product.ProductSerialNumber.Equals( p.ProductSerialNumber))
                 {
-                    found = true;
+                    existsAlready = true;
                 }
             }
-            if (found) // the project code is a valid project code
+
+
+            if (foundProject && !existsAlready) // the project code is a valid project code
             {
+                p.Project = projectRepository.GetCode(p.ProjectCode);
                 p.isEnabled = true;
                 projectProductRepository.TAdd(p);
-                return View(projectProductRepository.List(p.ProjectCode));
+                //return View(projectProductRepository.List(p.ProjectCode));
+                return Products(p.ProjectCode); //???
             }
-            else
+            else if (foundProject && existsAlready)
             {
-                return View();
+                return View( projectRepository.GetCode( p.ProjectCode));
+            }
+            else // should not happen, but just in case
+            {
+                return RedirectToAction("ProjectList");
             }
         }
         public ActionResult ProductUpdate(string serialNumber) 
@@ -104,7 +121,6 @@ namespace DemirbasTakipSistemi.Controllers
             return RedirectToAction("ProjectList");
 
         }
-
         public ActionResult ProductDelete(string serialNumber)
         {
             ProjectProduct product = projectProductRepository.GetSerialNumber(serialNumber);

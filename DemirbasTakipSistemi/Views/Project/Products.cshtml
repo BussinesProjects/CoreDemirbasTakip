@@ -1,5 +1,5 @@
 ﻿@using DemirbasTakipSistemi.Models.DataModel
-@model List<ProjectProduct>
+@model dynamic
 @{
     ViewBag.Title = "Products";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -24,7 +24,7 @@
                 <div class="col-lg-8 p-r-0 title-margin-right">
                     <div class="page-header">
                         <div class="page-title">
-                            <h1>ÜRÜN TAKİP SİSTEMİ | <span>Proje Adı </span></h1>
+                            <h1>ÜRÜN TAKİP SİSTEMİ | <span>Proje Adı @((string)Model.projectCode) </span></h1>
                         </div>
                     </div>
                 </div>
@@ -33,7 +33,12 @@
                     <div class="page-header">
                         <div class="page-title">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item">   <button class="btn-flat  btn-success  ti-plus" onclick="location.href='@Url.Action("ProductAdd", "Project")';return false;">EKLE</button> </li>
+                                <li class="breadcrumb-item">   
+                                    <button class="btn-flat  btn-success  ti-plus" onclick="location.href='@Url.Action("ProductAdd", "Project")';return false;">EKLE</button> </li>
+                                    
+                                        <a asp-controller="Project" asp-action="ProductAdd" asp-route-code="@(Model.projectCode)" class="btn-flat btn-success ti-plus">
+                                            AAAAA
+                                        </a>
                             </ol>
                         </div>
                     </div>
@@ -63,9 +68,8 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                             @foreach (var item in Model)
+                                             @foreach (ProjectProduct item in Model.listProjectsOfCode)
                                            {
-                                              
                                             <tr>
                                                 <td>@item.ProductSerialNumber</td> 
                                                 <td>@item.ProductBrand</td>

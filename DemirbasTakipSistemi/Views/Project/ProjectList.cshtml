@@ -68,32 +68,35 @@ color!-- Styles -->
                                         <tbody>
                                            @foreach (var item in Model)
                                            {
-                                            <tr>
-                                                <td> @*<a href="~/Project/Products/" style="color:blue">Ürünler</a>*@
-                                                    <button class="btn-outline-success" type="button" onclick="location.href='@Url.Action("Products", "Project", new { code = item.ProjectCode })'"/>
-                                
-                                                
-                                                </td>
-                                                   @if(@item.ProjectStatus=="Pasif")
-                                                    {
-                                                        <td style="color:red">@item.ProjectStatus</td>
-                                                    }
-                                                    @if(@item.ProjectStatus=="Aktif")
-                                                    {
-                                                        <td style="color:green">@item.ProjectStatus</td>
-                                                    }
-                                                    
-                                                <td>@item.ProjectName</td>
-                                                <td>@item.ProjectCode</td>
-                                                 <td>@item.ProjectStartDate.Date.ToString("dd-MM-yyyy")</td>
-                                                <td>@item.ProjectClient</td>
-                                                <td></td>
-                                                
-                                                <td>
-                                                    <button class="btn-flat  btn-warning ti-pencil" onclick="location.href='@Url.Action("ProjectUpdate","Project",new{code=@item.ProjectCode})';return false;"></button>
-                                                    <button class="btn-flat  btn-danger ti-trash" onclick="location.href='@Url.Action("ProjectDelete", "Project",new{ code =@item.ProjectCode})';return false;"></button>
-                                                </td>
-                                            </tr>
+                                                if (@item.isEnabled)
+                                                {
+                                                    <tr>
+                                                        <td> @*<a href="~/Project/Products/" style="color:blue">Ürünler</a>*@
+                                                            <button class="btn-outline-success" type="button" onclick="location.href='@Url.Action("Products", "Project", new { code = @item.ProjectCode })'"/>
+
+
+                                                        </td>
+                                                        @if (@item.ProjectStatus == "Pasif")
+                                                        {
+                                                            <td style="color:red">@item.ProjectStatus</td>
+                                                        }
+                                                        @if (@item.ProjectStatus == "Aktif")
+                                                        {
+                                                            <td style="color:green">@item.ProjectStatus</td>
+                                                        }
+
+                                                        <td>@item.ProjectName</td>
+                                                        <td>@item.ProjectCode</td>
+                                                        <td>@item.ProjectStartDate.Date.ToString("dd-MM-yyyy")</td>
+                                                        <td>@item.ProjectClient</td>
+                                                        <td></td>
+
+                                                        <td>
+                                                            <button class="btn-flat  btn-warning ti-pencil" onclick="location.href='@Url.Action("ProjectUpdate","Project",new{code=@item.ProjectCode})';return false;"></button>
+                                                            <button class="btn-flat  btn-danger ti-trash" onclick="location.href='@Url.Action("ProjectDelete","Project",new{code=@item.ProjectCode})';return false;"></button>
+                                                        </td>
+                                                    </tr>
+                                                }
                                             }
                                         </tbody>
                                     </table>
@@ -181,6 +184,8 @@ color!-- Styles -->
     <!-- /.modal-dialog -->
 </div>
 
+
+
 <div aria-hidden="true" role="dialog" tabindex="-1" id="updateModal" class="modal fade">
     <div class="modal-dialog">
         <div class="modal-content text-left">
@@ -262,6 +267,8 @@ color!-- Styles -->
 <!-- sidebar -->
 <!-- bootstrap -->
 <!-- scripit init-->
+
+
 <script src="~/Content/assets/js/lib/data-table/datatables.min.js"></script>
 <script src="~/Content/assets/js/lib/data-table/dataTables.buttons.min.js"></script>
 <script src="~/Content/assets/js/lib/sweetalert/sweetalert.min.js"></script>

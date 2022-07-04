@@ -33,6 +33,7 @@ namespace DemirbasTakipSistemi.Controllers
         [HttpPost]
         public ActionResult PersonUpdate(Person person)
        {
+            person.isEnabled = true;
             personRepository.TUpdate(person);
             return RedirectToAction("PersonList");
         }

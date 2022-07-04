@@ -1,6 +1,7 @@
 ﻿using DemirbasTakipSistemi.Interface;
 using DemirbasTakipSistemi.Models;
 using DemirbasTakipSistemi.Models.DataModel;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -18,6 +19,16 @@ namespace DemirbasTakipSistemi.Repositories
         {
 
             return context.Set<ProjectProduct>().Where(x => x.ProductSerialNumber == serialNumber).FirstOrDefault();
+        }
+
+        public List<ProjectProduct> GetAll()
+        {
+
+            var data = context.ProjectProducts
+                      .Include(x => x.Project).AsNoTracking();
+
+            return data.ToList();
+
         }
     }
 }

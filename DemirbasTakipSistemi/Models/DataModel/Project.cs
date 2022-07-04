@@ -15,8 +15,8 @@ namespace DemirbasTakipSistemi.Models.DataModel
             this.ProjectProducts = new HashSet<ProjectProduct>();
         }
         [Key]
-        public bool isEnabled { get; set; }
         public string ProjectCode { get; set; }
+        public bool isEnabled { get; set; }
         public string ProjectClient { get; set; }
         public string ProjectName { get; set; }
         public System.DateTime ProjectStartDate { get; set; }

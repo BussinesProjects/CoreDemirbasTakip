@@ -17,6 +17,7 @@ namespace DemirbasTakipSistemi.Controllers
         private readonly ProductRepository productRepository = new ProductRepository();
         private readonly CategoryRepository categoryRepository = new CategoryRepository();
         private readonly PersonRepository personRepository = new PersonRepository();
+        private readonly ProjectProductRepository projectProductRepository = new ProjectProductRepository();
         private IHostingEnvironment Environment;
         // GET: Product
         public ProductController(IHostingEnvironment _environment)
@@ -25,7 +26,11 @@ namespace DemirbasTakipSistemi.Controllers
         }
         public ActionResult ProductList()
         {
-          
+            //dynamic mymodel = new ExpandoObject();
+            //mymodel.List<Product> = productRepository.GetAll();
+            //mymodel.List<ProjectProduct> = projectProductRepository.GetAll();
+            //return View(mymodel);
+
             return View(productRepository.GetAll());
         }
         public ActionResult ProductAdd()
@@ -87,6 +92,7 @@ namespace DemirbasTakipSistemi.Controllers
             //product.ProductWarrantyDate = p.ProductWarrantyDate;
             //product.ProductBrand = p.ProductBrand;
             //product.
+            p.isEnabled = true;
             productRepository.TUpdate(p);
             /*
             PeopleAndCategoryViewModel pc = new PeopleAndCategoryViewModel();
