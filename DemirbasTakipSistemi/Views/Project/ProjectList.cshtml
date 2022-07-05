@@ -89,7 +89,9 @@ color!-- Styles -->
                                                         <td>@item.ProjectCode</td>
                                                         <td>@item.ProjectStartDate.Date.ToString("dd-MM-yyyy")</td>
                                                         <td>@item.ProjectClient</td>
-                                                        <td></td>
+                                                        <td>@item.ProjectProducts.Count</td>
+                                                        @*
+                                                        <td>@item.ProjectProducts.Where(x=>x.isEnabled).ToArray().Length</td>*@
 
                                                         <td>
                                                             <button class="btn-flat  btn-warning ti-pencil" onclick="location.href='@Url.Action("ProjectUpdate","Project",new{code=@item.ProjectCode})';return false;"></button>

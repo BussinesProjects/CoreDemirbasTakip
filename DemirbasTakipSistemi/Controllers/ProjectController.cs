@@ -42,6 +42,7 @@ namespace DemirbasTakipSistemi.Controllers
         [HttpPost]
         public ActionResult ProjectUpdate(Project project)
         {
+            project.isEnabled = true;
             projectRepository.TUpdate(project);
             return RedirectToAction("ProjectList");
         }
@@ -93,11 +94,10 @@ namespace DemirbasTakipSistemi.Controllers
 
             if (foundProject && !existsAlready) // the project code is a valid project code
             {
-                p.Project = projectRepository.GetCode(p.ProjectCode);
+                //projectRepository.GetCode(p.ProjectCode).ProjectProducts.Add(p);  to increase the couter...
                 p.isEnabled = true;
                 projectProductRepository.TAdd(p);
-                //return View(projectProductRepository.List(p.ProjectCode));
-                return Products(p.ProjectCode); //???
+                return RedirectToAction("Products", new { code = p.ProjectCode });
             }
             else if (foundProject && existsAlready)
             {
@@ -110,15 +110,16 @@ namespace DemirbasTakipSistemi.Controllers
         }
         public ActionResult ProductUpdate(string serialNumber) 
         {
-
             return View(projectProductRepository.GetSerialNumber(serialNumber));
         }
         [HttpPost]
         public ActionResult ProductUpdate(ProjectProduct p)
         {
+            //ProjectProduct updating = projectProductRepository.GetSerialNumber(p.ProductSerialNumber);
+            p.isEnabled = true;
             projectProductRepository.TUpdate(p);
-            
-            return RedirectToAction("ProjectList");
+
+            return RedirectToAction("Products", new { code = p.ProjectCode });
 
         }
         public ActionResult ProductDelete(string serialNumber)
@@ -127,7 +128,7 @@ namespace DemirbasTakipSistemi.Controllers
             product.isEnabled = false;
             projectProductRepository.TUpdate(product);
 
-            return RedirectToAction("ProjectList");
+            return RedirectToAction("Products", new { code = product.ProjectCode });
 
         }
     }

@@ -33,12 +33,10 @@
                     <div class="page-header">
                         <div class="page-title">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item">   
-                                    <button class="btn-flat  btn-success  ti-plus" onclick="location.href='@Url.Action("ProductAdd", "Project")';return false;">EKLE</button> </li>
-                                    
-                                        <a asp-controller="Project" asp-action="ProductAdd" asp-route-code="@(Model.projectCode)" class="btn-flat btn-success ti-plus">
-                                            AAAAA
-                                        </a>
+                               @* <li class="breadcrumb-item">*@
+                                    <a asp-controller="Project" asp-action="ProductAdd" asp-route-code="@(Model.projectCode)" class="btn btn-flat btn-success ti-plus" >
+                                        Ekle
+                                    </a>
                             </ol>
                         </div>
                     </div>
@@ -70,25 +68,26 @@
                                         <tbody>
                                              @foreach (ProjectProduct item in Model.listProjectsOfCode)
                                            {
-                                            <tr>
-                                                <td>@item.ProductSerialNumber</td> 
-                                                <td>@item.ProductBrand</td>
-                                                <td>@item.ProductModel</td>
-                                                <td>@item.ProductProvider</td>
-                                                <td>@item.ProductAmount</td>
-                                                <td>@item.RegisterDateTime.Date.ToString("dd-MM-yyyy")</td>
-                                                <td>@item.ProductServiceContact</td>
-                                                <td>@item.ProductWarrantyStartDate.Date.ToString("dd-MM-yyyy")</td>
-                                                <td>@item.ProductWarrantyFinishDate.Date.ToString("dd-MM-yyyy")</td>
-                                                <td>
-                                                     <button class="btn-flat  btn-warning ti-pencil" onclick="location.href='@Url.Action("ProductUpdate", "Project",new{serialNumber=@item.ProductSerialNumber})';return false;"></button>
-                                                    <button class="btn-flat  btn-info ti-info"></button>
-                                                    <button class="btn-flat btn-danger  sweet-confirm ti-trash "></button>
+                                               if ( @item.isEnabled) {
+                                                    <tr>
+                                                        <td>@item.ProductSerialNumber</td> 
+                                                        <td>@item.ProductBrand</td>
+                                                        <td>@item.ProductModel</td>
+                                                        <td>@item.ProductProvider</td>
+                                                        <td>@item.ProductAmount</td>
+                                                        <td>@item.RegisterDateTime.Date.ToString("dd-MM-yyyy")</td>
+                                                        <td>@item.ProductServiceContact</td>
+                                                        <td>@item.ProductWarrantyStartDate.Date.ToString("dd-MM-yyyy")</td>
+                                                        <td>@item.ProductWarrantyFinishDate.Date.ToString("dd-MM-yyyy")</td>
+                                                        <td>
+                                                             <button class="btn-flat  btn-warning ti-pencil" onclick="location.href='@Url.Action("ProductUpdate", "Project",new{serialNumber=@item.ProductSerialNumber})';return false;"></button>
+                                                            @*<button class="btn-flat  btn-info ti-info"></button>*@
+                                                            <button class="btn-flat   btn-danger ti-trash " onclick="location.href='@Url.Action("ProductDelete", "Project",new{serialNumber=@item.ProductSerialNumber})';return false;"></button>
 
-                                                </td>
-                                            </tr>
+                                                        </td>
+                                                    </tr>
+                                                    }
                                             }
-                                            
                                            
                                         </tbody>
                                     </table>
@@ -225,6 +224,7 @@
                     <input type="file" name="files[]" multiple="">
                 </span>*@
                                 <button class="btn btn-danger" type="submit"> Listeye Dön </button>
+                                
                                 <button class="btn btn-primary" type="submit"> Ekle </button>
                             </div>
                         </div>

@@ -7,10 +7,11 @@ namespace DemirbasTakipSistemi.Models.DataModel
     
     public partial class ProjectProduct
     {
-        public string ProjectCode { get; set; }
-        public bool isEnabled { get; set; }
         [Key]
         public string ProductSerialNumber { get; set; }
+
+        public bool isEnabled { get; set; }
+        public string ProjectCode { get; set; }
         public string ProductBrand { get; set; }
         public string ProductModel { get; set; }
         public System.DateTime RegisterDateTime { get; set; }

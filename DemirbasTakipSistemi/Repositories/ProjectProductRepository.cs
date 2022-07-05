@@ -30,5 +30,18 @@ namespace DemirbasTakipSistemi.Repositories
             return data.ToList();
 
         }
+        public void TAdd(ProjectProduct paramater)
+        {
+            context.ProjectProducts.Add(paramater);
+            context.SaveChanges();
+
+        }
+
+        public void TUpdate(ProjectProduct paramater)
+        {
+            context.ProjectProducts.Update(paramater);
+            context.SaveChanges();
+
+        }
     }
 }

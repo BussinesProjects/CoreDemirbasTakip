@@ -134,8 +134,8 @@ namespace DemirbasTakipSistemi.Migrations
                 name: "ProjectProducts",
                 columns: table => new
                 {
-                    ProjectCode = table.Column<string>(nullable: false),
                     ProductSerialNumber = table.Column<string>(nullable: true),
+                    ProjectCode = table.Column<string>(nullable: false),
                     ProductBrand = table.Column<string>(nullable: true),
                     ProductModel = table.Column<string>(nullable: true),
                     RegisterDateTime = table.Column<DateTime>(nullable: false),
