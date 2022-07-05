@@ -56,7 +56,7 @@ namespace DemirbasTakipSistemi.Controllers
 
         }
 
-
+        /*
 
 
         public ActionResult Products(string code)
@@ -130,6 +130,6 @@ namespace DemirbasTakipSistemi.Controllers
 
             return RedirectToAction("Products", new { code = product.ProjectCode });
 
-        }
+        }*/
     }
 }

@@ -16,7 +16,7 @@ namespace DemirbasTakipSistemi.Models
         public DbSet<PatchNote> PatchNotes { get; set; }
         public DbSet<Person> People { get; set; }
         public DbSet<Product> Products { get; set; }
-        public DbSet<ProjectProduct> ProjectProducts { get; set; }
+        public DbSet<Product> ProjectProducts { get; set; }
         public DbSet<Project> Projects { get; set; }
         public DbSet<Request> Requests { get; set; }
         public DbSet<Role> Roles { get; set; }

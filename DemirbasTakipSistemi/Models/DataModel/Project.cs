@@ -9,10 +9,10 @@ namespace DemirbasTakipSistemi.Models.DataModel
     
     public partial class Project
     {
-      
+        
         public Project()
         {
-            this.ProjectProducts = new HashSet<ProjectProduct>();
+            this.ProjectProducts = new HashSet<Product>();
         }
         [Key]
         public string ProjectCode { get; set; }
@@ -23,6 +23,6 @@ namespace DemirbasTakipSistemi.Models.DataModel
         public string ProjectStatus { get; set; }
     
      
-        public virtual ICollection<ProjectProduct> ProjectProducts { get; set; }
+        public virtual ICollection<Product> ProjectProducts { get; set; }
     }
 }

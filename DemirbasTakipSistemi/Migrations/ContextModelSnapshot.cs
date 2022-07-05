@@ -159,11 +159,32 @@ namespace DemirbasTakipSistemi.Migrations
                     b.Property<string>("ProductImage")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("ProductModel")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ProductProvider")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("ProductSerialNumber")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ProductServiceContact")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("ProductWarrantyDate")
                         .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("ProductWarrantyFinishDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("ProductWarrantyStartDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("ProjectCode")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ProjectCode1")
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<DateTime>("RegisterDateTime")
                         .HasColumnType("datetime2");
@@ -180,7 +201,9 @@ namespace DemirbasTakipSistemi.Migrations
 
                     b.HasIndex("PersonID");
 
-                    b.ToTable("Products");
+                    b.HasIndex("ProjectCode1");
+
+                    b.ToTable("Product");
                 });
 
             modelBuilder.Entity("DemirbasTakipSistemi.Models.DataModel.Project", b =>
@@ -206,57 +229,6 @@ namespace DemirbasTakipSistemi.Migrations
                     b.HasKey("ProjectCode");
 
                     b.ToTable("Projects");
-                });
-
-            modelBuilder.Entity("DemirbasTakipSistemi.Models.DataModel.ProjectProduct", b =>
-                {
-                    b.Property<string>("ProductSerialNumber")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<int>("ProductAmount")
-                        .HasColumnType("int");
-
-                    b.Property<string>("ProductBrand")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ProductFeatures")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ProductImage")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ProductModel")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ProductProvider")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ProductServiceContact")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("ProductWarrantyFinishDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime>("ProductWarrantyStartDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("ProjectCode")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ProjectCode1")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<DateTime>("RegisterDateTime")
-                        .HasColumnType("datetime2");
-
-                    b.Property<bool>("isEnabled")
-                        .HasColumnType("bit");
-
-                    b.HasKey("ProductSerialNumber");
-
-                    b.HasIndex("ProjectCode1");
-
-                    b.ToTable("ProjectProducts");
                 });
 
             modelBuilder.Entity("DemirbasTakipSistemi.Models.DataModel.Request", b =>
@@ -336,10 +308,7 @@ namespace DemirbasTakipSistemi.Migrations
                         .HasForeignKey("PersonID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-                });
 
-            modelBuilder.Entity("DemirbasTakipSistemi.Models.DataModel.ProjectProduct", b =>
-                {
                     b.HasOne("DemirbasTakipSistemi.Models.DataModel.Project", "Project")
                         .WithMany("ProjectProducts")
                         .HasForeignKey("ProjectCode1");

@@ -7,20 +7,20 @@ using System.Linq;
 
 namespace DemirbasTakipSistemi.Repositories
 {
-    public class ProjectProductRepository : Repository<ProjectProduct>
+    public class ProjectProductRepository : Repository<Product>
     {
         Context context = new Context();
-        public List<ProjectProduct> List(string code)
+        public List<Product> List(string code)
         {
 
-            return context.Set<ProjectProduct>().Where(x=>x.ProjectCode==code).ToList();
+            return context.Set<Product>().Where(x=>x.ProjectCode==code).ToList();
         }
-        public ProjectProduct GetSerialNumber(string serialNumber)
+        public Product GetSerialNumber(string serialNumber)
         {
 
-            return context.Set<ProjectProduct>().Where(x => x.ProductSerialNumber == serialNumber).FirstOrDefault();
+            return context.Set<Product>().Where(x => x.ProductSerialNumber == serialNumber).FirstOrDefault();
         }
-
+        /*
         public List<ProjectProduct> GetAll()
         {
 
@@ -42,6 +42,6 @@ namespace DemirbasTakipSistemi.Repositories
             context.ProjectProducts.Update(paramater);
             context.SaveChanges();
 
-        }
+        }*/
     }
 }

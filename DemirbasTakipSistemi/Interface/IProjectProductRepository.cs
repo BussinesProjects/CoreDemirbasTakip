@@ -2,7 +2,7 @@
 
 namespace DemirbasTakipSistemi.Interface
 {
-    public interface IProjectProductRepository:IRepository<ProjectProduct>
+    public interface IProjectProductRepository:IRepository<Product>
     {
     }
 }
