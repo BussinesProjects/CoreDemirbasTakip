@@ -10,15 +10,16 @@ namespace DemirbasTakipSistemi.Models.DataModel
     public partial class Project
     {
         
-        public Project()
-        {
-            this.ProjectProducts = new HashSet<Product>();
-        }
+        //public Project()
+        //{
+        //    this.ProjectProducts = new HashSet<Product>();
+        //}
         [Key]
         public string ProjectCode { get; set; }
+        public int Connections { get; set; }
+        public string ProjectName { get; set; }
         public bool isEnabled { get; set; }
         public string ProjectClient { get; set; }
-        public string ProjectName { get; set; }
         public System.DateTime ProjectStartDate { get; set; }
         public string ProjectStatus { get; set; }
     

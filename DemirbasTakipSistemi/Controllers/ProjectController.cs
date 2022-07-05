@@ -26,6 +26,7 @@ namespace DemirbasTakipSistemi.Controllers
             if ( project.ProjectCode != null && projectRepository.GetCode(project.ProjectCode) == null)
             {
                 project.isEnabled = true;
+                project.Connections = 0;
                 projectRepository.TAdd(project);
                 return RedirectToAction("ProjectList");
             }
@@ -56,7 +57,6 @@ namespace DemirbasTakipSistemi.Controllers
 
         }
 
-        /*
 
 
         public ActionResult Products(string code)
@@ -74,7 +74,7 @@ namespace DemirbasTakipSistemi.Controllers
             return View( project);
         }
         [HttpPost]
-        public ActionResult ProductAdd(ProjectProduct p)
+        public ActionResult ProductAdd(Product p)
         {
             // check if the project code exists
             bool foundProject = false;
@@ -83,19 +83,16 @@ namespace DemirbasTakipSistemi.Controllers
             {
                 foundProject = true;
             }
-            foreach ( ProjectProduct product in projectProductRepository.GetAll())
+            if (projectProductRepository.GetSerialNumber( p.ProductSerialNumber) != null)
             {
-                if ( product.ProductSerialNumber.Equals( p.ProductSerialNumber))
-                {
-                    existsAlready = true;
-                }
+                existsAlready = true;
             }
-
 
             if (foundProject && !existsAlready) // the project code is a valid project code
             {
                 //projectRepository.GetCode(p.ProjectCode).ProjectProducts.Add(p);  to increase the couter...
                 p.isEnabled = true;
+                projectRepository.GetCode(p.ProjectCode).Connections++;
                 projectProductRepository.TAdd(p);
                 return RedirectToAction("Products", new { code = p.ProjectCode });
             }
@@ -108,6 +105,7 @@ namespace DemirbasTakipSistemi.Controllers
                 return RedirectToAction("ProjectList");
             }
         }
+        /*
         public ActionResult ProductUpdate(string serialNumber) 
         {
             return View(projectProductRepository.GetSerialNumber(serialNumber));

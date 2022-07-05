@@ -34,7 +34,7 @@
                     </div>
                     <div class="card-body">
                         <div class="basic-elements">
-                            <form action="~/Project/ProductAdd" method="post" class="form-horizontal">
+                            @*<form action="~/Project/ProductAdd" method="post" class="form-horizontal">
                                 <div class="row">
                                     <div class="col-lg-6">
                                         <div class="form-group">
@@ -106,6 +106,100 @@
 
                                     </div>
 
+                                </div>
+                            </form>*@
+                            
+                            <form method="post" class="form-horizontal" asp-action="ProductAdd">
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        
+                                        <div class="form-group">
+                                            <label>Proje Kodu</label>
+                                            <input class="form-control" name="ProjectCode" type="text" placeholder="Marka giriniz...">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Demirbaş Sorumlusu</label>
+                                            <select class="form-control" name="PersonID">
+                                               @* @foreach (var item in Model.People)
+                                                {
+                                                    
+                                                    if ( item.isEnabled)
+                                                    {
+                                                        <option name="data" value="@item.PersonID">@item.PersonName</option>
+                                                    }
+                                                }*@
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Adedi</label>
+                                            <input type="number" class="form-control" name="ProductAmount" placeholder="Adet giriniz..." min="0">
+                                        </div>
+                                        <div class="form-group">
+                                            <span>Ürün Fotoğrafı:</span>
+                                             <input type="file" name="postedFiles" multiple />
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-4">
+                                        <div class="form-group">
+                                            <label>Marka</label>
+                                            <input class="form-control" name="ProductBrand" type="text" placeholder="Marka giriniz...">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Model</label>
+                                            <input class="form-control" name="ProductModel" type="text" placeholder="Marka giriniz...">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Demirbaş Kategori</label>
+                                            <select class="form-control" name="CategoryID">
+                                               @* @foreach (var item in Model.Categories)
+                                                {
+                                                    if ( item.isEnabled)
+                                                    {
+                                                        <option name="data" value="@item.CategoryID">@item.CategoryName</option>
+                                                    }
+                                                }*@
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Seri Numarası</label>
+                                            <input class="form-control" name="ProductSerialNumber" type="text" placeholder="Marka giriniz...">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Özellikler/Açıklama</label>
+                                            <textarea class="form-control" rows="3" name="ProductFeatures" placeholder="Açıklama giriniz..."></textarea>
+                                        </div>
+
+
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="form-group">
+                                            <label>Servis İletişim</label>
+                                            <input class="form-control" type="text" name="ServiceContact" placeholder="İletişim bilgisi giriniz...">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Ürün Dağıtıcısı</label>
+                                            <input class="form-control" name="ProductProvider" type="text" placeholder="Marka giriniz...">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label>Garanti Başlangıç Tarihi</label>
+                                            <input class="form-control" name="ProductWarrantyStartDate" type="date">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Garanti Bitiş Tarihi</label>
+                                            <input class="form-control" name="ProductWarrantyFinishDate" type="date">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        <a asp-controller="Product" asp-action="ProductList" class="btn btn-danger" style="width:150px">
+                                            Listeye Dön
+                                        </a>
+                                        <button class="btn btn-primary" type="submit" > Ekle </button>
+                                        
+                                    </div>
                                 </div>
                             </form>
                         </div>

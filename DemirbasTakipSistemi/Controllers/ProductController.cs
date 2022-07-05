@@ -17,7 +17,9 @@ namespace DemirbasTakipSistemi.Controllers
         private readonly ProductRepository productRepository = new ProductRepository();
         private readonly CategoryRepository categoryRepository = new CategoryRepository();
         private readonly PersonRepository personRepository = new PersonRepository();
-        private readonly ProjectProductRepository projectProductRepository = new ProjectProductRepository();
+        private readonly ProjectRepository projectRepository= new ProjectRepository();
+        
+        //private readonly ProjectProductRepository projectProductRepository = new ProjectProductRepository();
         private IHostingEnvironment Environment;
         // GET: Product
         public ProductController(IHostingEnvironment _environment)
@@ -85,11 +87,13 @@ namespace DemirbasTakipSistemi.Controllers
         [HttpPost]
         public ActionResult ProductUpdate(Product p)
         {
-            //var product = productRepository.TGet(p.Id);
+            //Product product = productRepository.TGet(p.Id);
             //product.ProductSerialNumber = p.ProductSerialNumber;
             //product.CategoryID = p.CategoryID;
             //product.PersonID = p.PersonID;
-            //product.ProductWarrantyDate = p.ProductWarrantyDate;
+            //p.ProductWarrantyStartDate= product.ProductWarrantyStartDate;
+            //p.ProductWarrantyFinishDate= product.ProductWarrantyFinishDate;
+            //p.RegisterDateTime = product.RegisterDateTime;
             //product.ProductBrand = p.ProductBrand;
             //product.
             p.isEnabled = true;

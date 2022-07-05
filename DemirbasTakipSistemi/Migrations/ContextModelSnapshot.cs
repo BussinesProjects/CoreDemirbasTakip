@@ -211,6 +211,9 @@ namespace DemirbasTakipSistemi.Migrations
                     b.Property<string>("ProjectCode")
                         .HasColumnType("nvarchar(450)");
 
+                    b.Property<int>("Connections")
+                        .HasColumnType("int");
+
                     b.Property<string>("ProjectClient")
                         .HasColumnType("nvarchar(max)");
 

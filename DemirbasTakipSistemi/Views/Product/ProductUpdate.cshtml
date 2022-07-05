@@ -35,57 +35,20 @@
                     <div class="card-body">
                         <div class="basic-elements">
                             <form action="~/Product/ProductUpdate"method="post" class="form-horizontal">
-                                <div class="row">
+                                <div class="row" >
                                     <div class="col-lg-4">
+                                        
                                         <div class="form-group">
-                                            <label>Seri Numarası</label>
-                                               <input type="hidden" class="form-control" name="Id" value=@Model.Item1.Id >
-                                            <input type="text" class="form-control" name="ProductSerialNumber" value="@Model.Item1.ProductSerialNumber">
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Adedi</label>
-                                           <input type="number" class="form-control" name="ProductAmount" value="@Model.Item1.ProductAmount" min="0">
+                                            <label>Oluşturulma tarihi</label>
+                                           <input class="form-control" name="RegisterDateTime" value="@Model.Item1.RegisterDateTime.Date.ToString("dd-MM-yyyy")" readonly>
                                         </div>
 
 
                                         <div class="form-group">
-                                            <label>Ürün Fotoğrafı</label>
-                                            <input class="form-control" type="file" name="ProductImage"> 
+                                            <label>Proje Kodu</label>
+                                           <input class="form-control" name="ProjectCode" value="@Model.Item1.ProjectCode" type="text" >
                                         </div>
 
-                                    </div>
-                                    <div class="col-lg-4">
-                                        <div class="form-group">
-                                            <label>Demirbaş Kategori</label>
-                                            <select class="form-control" name="CategoryID">
-                                                @foreach (var item in Model.Item2.Categories)
-                                                {
-                                                    if(item.CategoryID==Model.Item1.CategoryID)
-                                                    {
-                                                        <option name="data" value="@item.CategoryID" selected>@item.CategoryName</option>
-                                                    }
-                                                    else
-                                                    {
-                                                        <option name="data" value="@item.CategoryID" >@item.CategoryName</option>
-                                                    }
-                                                    
-                                                }
-                                            </select>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label>Marka</label>
-                                            <input class="form-control" type="text" name="ProductBrand" value="@Model.Item1.ProductBrand">
-
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Garanti Tarihi</label>
-                                            <input class="form-control" type="date" name="ProductWarrantyDate" value="@Model.Item1.ProductWarrantyDate.Date.ToString("dd-MM-yyyy")" >
-                                        </div>
-
-
-                                    </div>
-                                    <div class="col-lg-4">
                                         <div class="form-group">
                                             <label>Demirbaş Sorumlusu</label>
                                             <select class="form-control"  name="PersonID">
@@ -104,15 +67,88 @@
                                                 }
                                             </select>
                                         </div>
+
                                         <div class="form-group">
-                                            <label>Servis İletişim</label>
-                                            <input class="form-control" type="text"  name="ServiceContact" value="@Model.Item1.ServiceContact">
+                                            <label>Adedi</label>
+                                           <input type="number" class="form-control" name="ProductAmount" value="@Model.Item1.ProductAmount" min="0">
+                                        </div>
+
+                                        
+                                        <div class="form-group">
+                                            <span>Ürün Fotoğrafı:</span>
+                                             <input type="file" name="postedFiles" multiple />
+                                        </div>
+                                        @*<div class="form-group">
+                                            <label>Ürün Fotoğrafı</label>
+                                            <input class="form-control" type="file" name="ProductImage"> 
+                                        </div>*@
+
+
+
+                                    </div>
+
+                                    <div class="col-lg-4">
+                                        <div class="form-group">
+                                            <label>Marka</label>
+                                            <input class="form-control" type="text" name="ProductBrand" value="@Model.Item1.ProductBrand">
 
                                         </div>
+                                        <div class="form-group">
+                                            <label>Model</label>
+                                            <input class="form-control" type="text" name="ProductModel" value="@Model.Item1.ProductModel">
+
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Demirbaş Kategori</label>
+                                            <select class="form-control" name="CategoryID">
+                                                @foreach (var item in Model.Item2.Categories)
+                                                {
+                                                    if(item.CategoryID==Model.Item1.CategoryID)
+                                                    {
+                                                        <option name="data" value="@item.CategoryID" selected>@item.CategoryName</option>
+                                                    }
+                                                    else
+                                                    {
+                                                        <option name="data" value="@item.CategoryID" >@item.CategoryName</option>
+                                                    }
+                                                    
+                                                }
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Seri Numarası</label>
+                                            <input type="hidden" class="form-control" name="Id" value=@Model.Item1.Id >
+                                            <input class="form-control" name="ProductSerialNumber" type="text" value="@Model.Item1.ProductSerialNumber">
+                                        </div>
+                                        
                                         <div class="form-group">
                                             <label>Özellikler/Açıklama</label>
                                             <textarea class="form-control"  name="ProductFeatures" value="@Model.Item1.ProductFeatures"></textarea>
                                         </div>
+
+
+
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="form-group">
+                                            <label>Servis İletişim</label>
+                                            <input class="form-control" type="text"  name="ServiceContact" value="@Model.Item1.ServiceContact">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Ürün Dağıtıcısı</label>
+                                            <input class="form-control" type="text"  name="ProductProvider" value="@Model.Item1.ProductProvider">
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <label>Garanti Başlangıç Tarihi</label>
+                                            <input class="form-control" type="date" name="ProductWarrantyStartDate" value="@Model.Item1.ProductWarrantyStartDate.Date.ToString("yyyy-MM-dd")" >
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Garanti Bitiş Tarihi</label>
+                                            <input class="form-control" type="date" name="ProductWarrantyFinishDate" value="@Model.Item1.ProductWarrantyFinishDate.Date.ToString("yyyy-MM-dd")" >
+                                        </div>
+
+
                                     </div>
                                 </div>
                                 <div class="row">
