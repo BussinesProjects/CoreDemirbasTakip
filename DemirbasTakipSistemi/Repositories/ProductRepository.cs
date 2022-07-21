@@ -20,6 +20,16 @@ namespace DemirbasTakipSistemi.Repositories
             return data.ToList();
 
         }
+        public List<Product> List(string code)
+        {
 
+            return context.Set<Product>().Where(x => x.ProjectCode == code).ToList();
+        }
+
+        public Product GetSerialNumber(string serialNumber)
+        {
+
+            return context.Set<Product>().Where(x => x.ProductSerialNumber == serialNumber).FirstOrDefault();
+        }
     }
 }
