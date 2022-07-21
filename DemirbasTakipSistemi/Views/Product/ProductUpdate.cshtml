@@ -34,7 +34,7 @@
                     </div>
                     <div class="card-body">
                         <div class="basic-elements">
-                            <form action="~/Product/ProductUpdate"method="post" class="form-horizontal" id="confirmationForm" name="confirmationForm">
+                            <form action="~/Product/ProductUpdate"method="post" class="form-horizontal">
                                 <div class="row" >
                                     <div class="col-lg-4">
                                         
@@ -42,7 +42,8 @@
                                             <label>Oluşturulma tarihi</label>
                                            <input class="form-control" name="RegisterDateTime" value="@Model.Item1.RegisterDateTime.Date.ToString("dd-MM-yyyy")" readonly>
                                         </div>
-
+                                        
+                                        <label>Proje Kodu</label>
                                         <select class="form-control" name="ProjectCode">
                                             <option name="data" value=""></option>
                                             @foreach (var item in Model.Item2.Projects)
@@ -140,7 +141,7 @@
                                         
                                         <div class="form-group">
                                             <label>Özellikler/Açıklama</label>
-                                            <textarea class="form-control" rows="3" name="ProductFeatures" style="height:80px;" form="confirmationForm"> @Model.Item1.ProductFeatures</textarea>
+                                            <textarea class="form-control" style="height: 80px;"  name="ProductFeatures" >@Model.Item1.ProductFeatures</textarea>
                                         </div>
 
 

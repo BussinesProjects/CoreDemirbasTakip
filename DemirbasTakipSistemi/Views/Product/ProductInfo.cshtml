@@ -1,0 +1,150 @@
+﻿@using DemirbasTakipSistemi.Models.DataModel
+@using DemirbasTakipSistemi.Models.ViewModel
+@model Tuple<Product, PeopleAndCategoryViewModel>
+@{
+    ViewBag.Title = "ProductInfo";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link rel="shortcut icon" href="http://placehold.it/64.png/000/fff">
+<!-- Retina iPad Touch Icon-->
+<link rel="apple-touch-icon" sizes="144x144" href="http://placehold.it/144.png/000/fff">
+<!-- Retina iPhone Touch Icon-->
+<link rel="apple-touch-icon" sizes="114x114" href="http://placehold.it/114.png/000/fff">
+<!-- Standard iPad Touch Icon-->
+<link rel="apple-touch-icon" sizes="72x72" href="http://placehold.it/72.png/000/fff">
+<!-- Standard iPhone Touch Icon-->
+<link rel="apple-touch-icon" sizes="57x57" href="http://placehold.it/57.png/000/fff">
+
+<!-- Styles -->
+<link href="~/Content/assets/css/lib/font-awesome.min.css" rel="stylesheet">
+<link href="~/Content/assets/css/lib/themify-icons.css" rel="stylesheet">
+<link href="~/Content/assets/css/lib/menubar/sidebar.css" rel="stylesheet">
+<link href="~/Content/assets/css/lib/bootstrap.min.css" rel="stylesheet">
+<link href="~/Content/assets/css/lib/helper.css" rel="stylesheet">
+<link href="~/Content/assets/css/style.css" rel="stylesheet">
+<div class="card-body">
+    <div class="basic-elements">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-title">
+                        <h4>Demirbaş Bilgi</h4>
+         
+                    </div>
+                    <div class="card-body">
+                        <div class="basic-elements">
+                            <form action="~/Product/ProductList"method="post" class="form-horizontal">
+                                <div class="row" >
+                                    <div class="col-lg-4">
+                                        
+                                        <div class="form-group">
+                                            <label>Oluşturulma tarihi</label>
+                                           <input class="form-control"  type="text" name="RegisterDateTime" value="@Model.Item1.RegisterDateTime.Date.ToString("dd-MM-yyyy")" readonly>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label>Proje Kodu</label>
+                                            <input class="form-control"  type="text" name="ProjectCode" value="@Model.Item1.ProjectCode" readonly>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label>Demirbaş Sorumlusu</label>
+                                            <input class="form-control"  type="text" name="PersonID" value="@Model.Item1.PersonID" readonly>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label>Adedi</label>
+                                           <input class="form-control"  name="ProductAmount" value="@Model.Item1.ProductAmount" readonly>
+                                        </div>
+
+                                        
+                                        <div class="form-group">
+                                            <span>Ürün Fotoğrafı:</span>
+                                            @* <input type="file" name="postedFiles" multiple readonly/>*@
+                                        </div>
+                                        @*<div class="form-group">
+                                            <label>Ürün Fotoğrafı</label>
+                                            <input class="form-control" type="file" name="ProductImage"> 
+                                        </div>*@
+
+
+
+                                    </div>
+
+                                    <div class="col-lg-4">
+                                        <div class="form-group">
+                                            <label>Marka</label>
+                                            <input class="form-control" type="text" name="ProductBrand" value="@Model.Item1.ProductBrand" readonly>
+
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Model</label>
+                                            <input class="form-control" type="text" name="ProductModel" value="@Model.Item1.ProductModel" readonly>
+
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Demirbaş Kategori</label>
+                                                <input class="form-control" type="text" name="CategoryID" value="@Model.Item1.CategoryID" readonly>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Seri Numarası</label>
+                                            <input type="hidden" class="form-control" name="Id" value=@Model.Item1.Id >
+                                            <input class="form-control" name="ProductSerialNumber" type="text" value="@Model.Item1.ProductSerialNumber" readonly>
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <label>Özellikler/Açıklama</label>
+                                            <textarea class="form-control"  name="ProductFeatures" style="height: 80px;" readonly>@Model.Item1.ProductFeatures</textarea>
+                                        </div>
+
+
+
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="form-group">
+                                            <label>Servis İletişim</label>
+                                            <input class="form-control" type="text"  name="ServiceContact" value="@Model.Item1.ServiceContact" readonly>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Ürün Dağıtıcısı</label>
+                                            <input class="form-control" type="text"  name="ProductProvider" value="@Model.Item1.ProductProvider" readonly>
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <label>Garanti Başlangıç Tarihi</label>
+                                            <input class="form-control" type="date" name="ProductWarrantyStartDate" value="@Model.Item1.ProductWarrantyStartDate.Date.ToString("yyyy-MM-dd")" readonly>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Garanti Bitiş Tarihi</label>
+                                            <input class="form-control" type="date" name="ProductWarrantyFinishDate" value="@Model.Item1.ProductWarrantyFinishDate.Date.ToString("yyyy-MM-dd")" readonly>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                                <div class="row">
+                                  
+                                    <div class="col-lg-4">
+                                        
+                                        <a asp-controller="Product" asp-action="ProductList" type="submit" class="btn btn-danger" style="width:150px">
+                                            Listeye Dön
+                                        </a>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /# column -->
+            <!-- /# column -->
+        </div>
+        </div>
+    </div>
+        <script src="~/Content/assets/js/lib/jquery.nanoscroller.min.js"></script>
+
+        <script src="~/Content/assets/js/lib/preloader/pace.min.js"></script>
+        <!-- sidebar -->
+        <!-- bootstrap -->
+        <!-- scripit init-->

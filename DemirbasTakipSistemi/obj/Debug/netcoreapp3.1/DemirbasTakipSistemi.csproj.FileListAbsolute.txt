@@ -342,3 +342,5 @@ D:\cs\staj1\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\Demir
 D:\cs\staj1\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\DemirbasTakipSistemi.pdb
 D:\cs\staj1\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\DemirbasTakipSistemi.genruntimeconfig.cache
 D:\cs\staj1\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\Razor\Views\Category\CategoryAdd.cshtml.g.cs
+D:\cs\staj1\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\Razor\Views\Person\PersonInfo.cshtml.g.cs
+D:\cs\staj1\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\Razor\Views\Product\ProductInfo.cshtml.g.cs

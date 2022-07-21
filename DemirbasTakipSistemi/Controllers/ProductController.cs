@@ -109,6 +109,17 @@ namespace DemirbasTakipSistemi.Controllers
             return View(Tuple.Create<Product, PeopleAndCategoryViewModel>(product, pc));
         }
 
+        public ActionResult ProductInfo(int id)
+        {
+            var product = productRepository.TGet(id);
+            PeopleAndCategoryViewModel pc = new PeopleAndCategoryViewModel();
+            pc.People = personRepository.TList();
+            pc.Categories = categoryRepository.TList();
+            pc.Projects = projectRepository.TList();
+            pc.Proj = product.ProjectCode;
+            return View(Tuple.Create<Product, PeopleAndCategoryViewModel>(product, pc));
+        }
+
         [HttpPost]
         public ActionResult ProductUpdate(Product p)
         {
