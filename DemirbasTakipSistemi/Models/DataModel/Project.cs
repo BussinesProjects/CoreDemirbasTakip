@@ -17,14 +17,13 @@ namespace DemirbasTakipSistemi.Models.DataModel
         [Key]
         public int Id { get; set; }
         public string ProjectCode { get; set; }
-        public int Connections { get; set; }
+        public int ProjectCount { get; internal set; }
         public string ProjectName { get; set; }
         public bool isEnabled { get; set; }
         public string ProjectClient { get; set; }
         public System.DateTime ProjectStartDate { get; set; }
         public string ProjectStatus { get; set; }
-    
-     
+
         public virtual ICollection<Product> ProjectProducts { get; set; }
     }
 }
