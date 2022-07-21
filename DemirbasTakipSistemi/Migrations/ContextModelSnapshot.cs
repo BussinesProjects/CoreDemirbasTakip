@@ -225,9 +225,6 @@ namespace DemirbasTakipSistemi.Migrations
                     b.Property<string>("ProjectCode")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("ProjectCount")
-                        .HasColumnType("int");
-
                     b.Property<string>("ProjectName")
                         .HasColumnType("nvarchar(max)");
 

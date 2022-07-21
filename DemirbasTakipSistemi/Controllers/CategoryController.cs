@@ -13,8 +13,6 @@ namespace DemirbasTakipSistemi.Controllers
     {
         
         private readonly CategoryRepository categoryRepository = new CategoryRepository();
-        private readonly ProductRepository productRepository = new ProductRepository();
-
         // GET: Category
 
         public ActionResult CategoryList()
@@ -22,7 +20,7 @@ namespace DemirbasTakipSistemi.Controllers
             var list = categoryRepository.TList();
             foreach (Category c in list)
             {
-                c.ProductCount = productRepository.getCategoryProducts(c.CategoryID).Where(x => x.isEnabled).Count();
+                c.ProductCount = c.Products.Where(x => x.isEnabled).Count();
             }
 
             return View(list);
@@ -51,7 +49,7 @@ namespace DemirbasTakipSistemi.Controllers
         public ActionResult CategoryUpdate(Category c)
         {
             c.isEnabled = true;
-            c.ProductCount = productRepository.getCategoryProducts(c.CategoryID).Where(x => x.isEnabled).Count();
+            c.ProductCount = c.Products.Where(x => x.isEnabled).Count();
             categoryRepository.TUpdate(c);
             return RedirectToAction("CategoryList");
         }

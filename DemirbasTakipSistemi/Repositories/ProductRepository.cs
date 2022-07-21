@@ -2,7 +2,6 @@
 using DemirbasTakipSistemi.Models;
 using DemirbasTakipSistemi.Models.DataModel;
 using Microsoft.EntityFrameworkCore;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -28,11 +27,6 @@ namespace DemirbasTakipSistemi.Repositories
         public Product GetSerialNumber(string serialNumber)
         {
             return context.Set<Product>().Where(x => x.ProductSerialNumber == serialNumber).FirstOrDefault();
-        }
-
-        internal List<Product> getCategoryProducts(int CategoryId)
-        {
-            return context.Set<Product>().Where(x => x.CategoryID == CategoryId).ToList();
         }
     }
 }

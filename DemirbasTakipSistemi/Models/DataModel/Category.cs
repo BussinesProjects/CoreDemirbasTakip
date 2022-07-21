@@ -24,7 +24,7 @@ namespace DemirbasTakipSistemi.Models.DataModel
         public int CategoryID { get; set; }
         public string CategoryName { get; set; }
     
-        public virtual ICollection<Product> Products { get; set; } // not used
+        public virtual ICollection<Product> Products { get; set; }
         public int ProductCount { get; set; }
     }
 }
