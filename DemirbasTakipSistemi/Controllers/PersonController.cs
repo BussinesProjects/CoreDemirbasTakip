@@ -30,6 +30,10 @@ namespace DemirbasTakipSistemi.Controllers
            
             return View(personRepository.TGet(id));
         }
+        public ActionResult PersonInfo(int id)
+        {
+            return View(personRepository.TGet(id));
+        }
         [HttpPost]
         public ActionResult PersonUpdate(Person person)
        {

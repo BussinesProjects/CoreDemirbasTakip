@@ -71,8 +71,8 @@
                                                         @* <th>Kayıt Sayısı</th>*@
                                                         <td>
                                                             <button class="btn-flat  btn-warning ti-pencil" onclick="location.href='@Url.Action("PersonUpdate", "Person",new{id=@item.PersonID})';return false;"></button>
-                                                            <button class="btn-flat  btn-info ti-info"></button>
-                                                            <button class="btn-flat btn-danger  ti-trash" onclick="location.href='@Url.Action("PersonDelete", "Person",new{id=@item.PersonID})';return false;"></button>
+                                                            <button class="btn-flat  btn-info ti-info"      onclick="location.href='@Url.Action("PersonInfo", "Person",new{id=@item.PersonID})';return false;"></button>
+                                                            <button class="btn-flat btn-danger  ti-trash"   onclick="location.href='@Url.Action("PersonDelete", "Person",new{id=@item.PersonID})';return false;"></button>
 
 
                                                         </td>
