@@ -2,6 +2,7 @@
 using DemirbasTakipSistemi.Repositories;
 using Microsoft.AspNetCore.Mvc;
 using System.Dynamic;
+using System.Linq;
 
 namespace DemirbasTakipSistemi.Controllers
 {
@@ -15,7 +16,13 @@ namespace DemirbasTakipSistemi.Controllers
         public ActionResult ProjectList()
         {
 
-            return View(projectRepository.TList());
+            var list = projectRepository.TList();
+            foreach (Project proj in list)
+            {
+                proj.ProjectCount = productRepository.List( proj.ProjectCode).Where(x => x.isEnabled).Count();
+            }
+
+            return View(list);
         }
         public ActionResult ProjectAdd()
         {
@@ -28,7 +35,6 @@ namespace DemirbasTakipSistemi.Controllers
             if (project.ProjectCode != null && projectRepository.GetCode(project.ProjectCode) == null)
             {
                 project.isEnabled = true;
-                project.Connections = 0;
                 projectRepository.TAdd(project);
                 return RedirectToAction("ProjectList");
             }
@@ -67,6 +73,7 @@ namespace DemirbasTakipSistemi.Controllers
             dynamic mymodel = new ExpandoObject();
             mymodel.listProjectsOfCode = productRepository.List(code);
             mymodel.projectCode = code;
+            mymodel.projectName = projectRepository.GetCode(code).ProjectName;
             return View(mymodel);
 
             //return View(projectProductRepository.List(code));

@@ -37,9 +37,9 @@ namespace DemirbasTakipSistemi.Models.DataModel
         public System.DateTime ProductWarrantyStartDate { get; set; }//
         public System.DateTime ProductWarrantyFinishDate { get; set; }//
 
-        public virtual Category Category { get; set; }//
-        public virtual Person Person { get; set; }//
-        public virtual Project Project { get; set; }
+        public virtual Category Category { get; set; }// // not used
+        public virtual Person Person { get; set; }// // not used
+        public virtual Project Project { get; set; } // not used
 
     }
 }

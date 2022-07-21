@@ -19,6 +19,6 @@ namespace DemirbasTakipSistemi.Models.DataModel
         public string PersonContact { get; set; }
     
     
-        public virtual ICollection<Product> Products { get; set; }
+        public virtual ICollection<Product> Products { get; set; } // not used
     }
 }

@@ -61,7 +61,7 @@ color!-- Styles -->
                                                 <th>Proje Kodu</th>
                                                 <th>Müşteri</th>
                                                 <th>Proje Tarihi</th>
-                                                <th>Ürün Kaydı</th>
+                                                <th>Ürün Kayıt Sayısı</th>
                                                 <th>İşlem</th>
                                             </tr>
                                         </thead>
@@ -89,7 +89,7 @@ color!-- Styles -->
                                                         <td>@item.ProjectCode</td>
                                                         <td>@item.ProjectStartDate.Date.ToString("dd-MM-yyyy")</td>
                                                         <td>@item.ProjectClient</td>
-                                                        <td>@item.Connections</td>
+                                                        <td>@item.ProjectCount</td>
                                                         @*
                                                         <td>@item.ProjectProducts.Where(x=>x.isEnabled).ToArray().Length</td>*@
 
