@@ -5,6 +5,7 @@ using DemirbasTakipSistemi.Models.DataModel;
 using DemirbasTakipSistemi.Repositories;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Linq;
 
 namespace DemirbasTakipSistemi.Controllers
 {
@@ -17,7 +18,11 @@ namespace DemirbasTakipSistemi.Controllers
         public ActionResult CategoryList()
         {
             var list = categoryRepository.TList();
-            
+            foreach (Category c in list)
+            {
+                c.ProductCount = c.Products.Where(x => x.isEnabled).Count();
+            }
+
             return View(list);
         }
 
@@ -31,6 +36,7 @@ namespace DemirbasTakipSistemi.Controllers
             Category category = new Category();
             category.CategoryName = name;
             category.isEnabled = true;
+            category.ProductCount = 0;
             categoryRepository.TAdd(category);
 
             return RedirectToAction("CategoryList");
@@ -45,6 +51,7 @@ namespace DemirbasTakipSistemi.Controllers
         public ActionResult CategoryUpdate(Category c)
         {
             c.isEnabled = true;
+            c.ProductCount = c.Products.Where(x => x.isEnabled).Count();
             categoryRepository.TUpdate(c);
             return RedirectToAction("CategoryList");
         }

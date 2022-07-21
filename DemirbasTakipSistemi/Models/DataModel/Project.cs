@@ -15,6 +15,7 @@ namespace DemirbasTakipSistemi.Models.DataModel
         //    this.ProjectProducts = new HashSet<Product>();
         //}
         [Key]
+        public int Id { get; set; }
         public string ProjectCode { get; set; }
         public int Connections { get; set; }
         public string ProjectName { get; set; }

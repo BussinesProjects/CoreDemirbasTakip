@@ -82,6 +82,7 @@ namespace DemirbasTakipSistemi.Controllers
             }
             p.isEnabled = true;
             productRepository.TAdd(p);
+            //p.Category.Products.Add(p); // added recently
             //projectProductRepository.TAdd(p);
             /*
             PeopleAndCategoryViewModel pc = new PeopleAndCategoryViewModel();

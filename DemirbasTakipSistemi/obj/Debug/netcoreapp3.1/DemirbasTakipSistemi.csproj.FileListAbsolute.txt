@@ -325,9 +325,7 @@ D:\cs\staj1\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\Razor
 D:\cs\staj1\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\Razor\Views\Product\ProductAdd.cshtml.g.cs
 D:\cs\staj1\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\Razor\Views\Product\ProductList.cshtml.g.cs
 D:\cs\staj1\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\Razor\Views\Product\ProductUpdate.cshtml.g.cs
-D:\cs\staj1\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\Razor\Views\Project\ProductAdd.cshtml.g.cs
 D:\cs\staj1\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\Razor\Views\Project\Products.cshtml.g.cs
-D:\cs\staj1\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\Razor\Views\Project\ProductUpdate.cshtml.g.cs
 D:\cs\staj1\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\Razor\Views\Project\ProjectAdd.cshtml.g.cs
 D:\cs\staj1\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\Razor\Views\Project\ProjectList.cshtml.g.cs
 D:\cs\staj1\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\Razor\Views\Project\ProjectUpdate.cshtml.g.cs
@@ -343,3 +341,4 @@ D:\cs\staj1\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\Demir
 D:\cs\staj1\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\DemirbasTakipSistemi.dll
 D:\cs\staj1\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\DemirbasTakipSistemi.pdb
 D:\cs\staj1\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\DemirbasTakipSistemi.genruntimeconfig.cache
+D:\cs\staj1\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\Razor\Views\Category\CategoryAdd.cshtml.g.cs
