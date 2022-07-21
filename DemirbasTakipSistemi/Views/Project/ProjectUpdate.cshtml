@@ -38,11 +38,13 @@
                                 <div class="row">
                                     <div class="col-lg-6">
                                         <div class="form-group">
-                                  
+                                            
+                                            <input type="hidden" class="form-control" name="Id" value="@Model.Id">
+                                
                                             <label class="col-lg-3 control-label">Proje Kodu</label>
                                             <div class="col-lg-9">
                                                
-                                                <input type="text" class="form-control"  name="ProjectCode" value="@Model.ProjectCode" readonly>
+                                                <input type="text" class="form-control"  name="ProjectCode" value="@Model.ProjectCode">
                                             </div>
                                         </div>
                                        
@@ -95,7 +97,9 @@
                                 </div>
                                  <div class="row">
                                     <div class="col-lg-6">
-                                        <button class="btn btn-danger" type="submit"> Listeye Dön </button>
+                                        <a asp-controller="Project" asp-action="ProjectList" type="submit" class="btn btn-danger" style="width:150px">
+                                            Listeye Dön
+                                        </a>
                                         <button class="btn btn-primary" type="submit"> Güncelle </button>
                                         
                                     </div>

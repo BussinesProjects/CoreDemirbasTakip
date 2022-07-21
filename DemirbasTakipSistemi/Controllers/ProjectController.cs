@@ -37,10 +37,9 @@ namespace DemirbasTakipSistemi.Controllers
                 return View();
             }
         }
-        public ActionResult ProjectUpdate(string code)
+        public ActionResult ProjectUpdate(int Id)
         {
-
-            return View(projectRepository.GetCode(code));
+            return View(projectRepository.TGet(Id));
         }
         [HttpPost]
         public ActionResult ProjectUpdate(Project project)
@@ -49,9 +48,9 @@ namespace DemirbasTakipSistemi.Controllers
             projectRepository.TUpdate(project);
             return RedirectToAction("ProjectList");
         }
-        public ActionResult ProjectDelete(string code)
+        public ActionResult ProjectDelete(int Id)
         {
-            Project project = projectRepository.GetCode(code);
+            Project project = projectRepository.TGet(Id);
             project.isEnabled = false;
             projectRepository.TUpdate(project);
 
