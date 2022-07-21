@@ -8,9 +8,7 @@ namespace DemirbasTakipSistemi.Controllers
     public class ProjectController : Controller
     {
         private readonly ProjectRepository projectRepository = new ProjectRepository();
-        private readonly ProductRepository productRepository = new ProductRepository();
-
-        //private readonly ProjectProductRepository projectProductRepository = new ProjectProductRepository();
+        private readonly ProjectProductRepository projectProductRepository = new ProjectProductRepository();
         // GET: Acount
         public ActionResult ProjectList()
         {
@@ -61,28 +59,15 @@ namespace DemirbasTakipSistemi.Controllers
 
 
 
-
-
-
-
-
-
-
-
-
-
         public ActionResult Products(string code)
         {
             dynamic mymodel = new ExpandoObject();
-            mymodel.listProjectsOfCode = productRepository.List(code);
+            mymodel.listProjectsOfCode = projectProductRepository.List(code);
             mymodel.projectCode = code;
             return View(mymodel);
 
             //return View(projectProductRepository.List(code));
         }
-        
-        
-        /*
         public ActionResult ProductAdd( string code)
         {
             Project project = projectRepository.GetCode(code);
@@ -98,7 +83,7 @@ namespace DemirbasTakipSistemi.Controllers
             {
                 foundProject = true;
             }
-            if (productRepository.GetSerialNumber( p.ProductSerialNumber) != null)
+            if (projectProductRepository.GetSerialNumber( p.ProductSerialNumber) != null)
             {
                 existsAlready = true;
             }
@@ -108,7 +93,7 @@ namespace DemirbasTakipSistemi.Controllers
                 //projectRepository.GetCode(p.ProjectCode).ProjectProducts.Add(p);  to increase the couter...
                 p.isEnabled = true;
                 projectRepository.GetCode(p.ProjectCode).Connections++;
-                productRepository.TAdd(p);
+                projectProductRepository.TAdd(p);
                 return RedirectToAction("Products", new { code = p.ProjectCode });
             }
             else if (foundProject && existsAlready)
@@ -119,7 +104,7 @@ namespace DemirbasTakipSistemi.Controllers
             {
                 return RedirectToAction("ProjectList");
             }
-        }*/
+        }
         /*
         public ActionResult ProductUpdate(string serialNumber) 
         {
