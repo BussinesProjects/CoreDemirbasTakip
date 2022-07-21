@@ -17,21 +17,22 @@ namespace DemirbasTakipSistemi.Models.DataModel
     {
         [Key]
         public int Id { get; set; }
-
+        // the ones marked with // are implemented, the others are not.
+        // the ones marked with ** are displayed in the table
         public bool isEnabled { get; set; }//
-        public int CategoryID { get; set; }//
-        public int PersonID { get; set; }//
-        public int ProductAmount { get; set; }//
-        public string ProductSerialNumber { get; set; }//
-        public string ProjectCode { get; set; }//
+        public int CategoryID { get; set; }// **
+        public int PersonID { get; set; }// **
+        public int ProductAmount { get; set; }// **
+        public string ProductSerialNumber { get; set; }// **
+        public string ProjectCode { get; set; }// **
         public string ProductModel { get; set; }//
         public string ServiceContact { get; set; }//
-        public string ProductBrand { get; set; }//
+        public string ProductBrand { get; set; }// 
         public string ProductFeatures { get; set; }//
         public string ProductProvider { get; set; }//
         public string ProductImage { get; set; }
         public string ProductServiceContact { get; set; }//
-        public System.DateTime RegisterDateTime { get; set; }
+        public System.DateTime RegisterDateTime { get; set; } // **
         public System.DateTime ProductWarrantyDate { get; set; }
         public System.DateTime ProductWarrantyStartDate { get; set; }//
         public System.DateTime ProductWarrantyFinishDate { get; set; }//

@@ -31,10 +31,8 @@ namespace DemirbasTakipSistemi.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult CategoryAdd(string name)
+        public ActionResult CategoryAdd(Category category)
         {
-            Category category = new Category();
-            category.CategoryName = name;
             category.isEnabled = true;
             category.ProductCount = 0;
             categoryRepository.TAdd(category);

@@ -67,16 +67,18 @@
                                             <select class="form-control"  name="PersonID">
                                                 @foreach (var item in Model.Item2.People)
                                                 {
-                                                    if (item.PersonID==Model.Item1.PersonID)
+                                                    if (item.isEnabled)
                                                     {
-                                                    
-                                                          <option name="data" value="@item.PersonID" selected>@item.PersonName</option>
+                                                        if (item.PersonID == Model.Item1.PersonID)
+                                                        {
+
+                                                            <option name="data" value="@item.PersonID" selected>@item.PersonName</option>
+                                                        }
+                                                        else
+                                                        {
+                                                            <option name="data" value="@item.PersonID">@item.PersonName</option>
+                                                        }
                                                     }
-                                                    else
-                                                    {
-                                                          <option name="data" value="@item.PersonID">@item.PersonName</option>
-                                                    }
-                                                  
                                                 }
                                             </select>
                                         </div>
@@ -116,15 +118,17 @@
                                             <select class="form-control" name="CategoryID">
                                                 @foreach (var item in Model.Item2.Categories)
                                                 {
-                                                    if(item.CategoryID==Model.Item1.CategoryID)
+                                                    if (item.isEnabled)
                                                     {
-                                                        <option name="data" value="@item.CategoryID" selected>@item.CategoryName</option>
+                                                        if (item.CategoryID == Model.Item1.CategoryID)
+                                                        {
+                                                            <option name="data" value="@item.CategoryID" selected>@item.CategoryName</option>
+                                                        }
+                                                        else
+                                                        {
+                                                            <option name="data" value="@item.CategoryID" >@item.CategoryName</option>
+                                                        }
                                                     }
-                                                    else
-                                                    {
-                                                        <option name="data" value="@item.CategoryID" >@item.CategoryName</option>
-                                                    }
-                                                    
                                                 }
                                             </select>
                                         </div>

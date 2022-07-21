@@ -50,11 +50,12 @@
                                         <thead>
                                             <tr>
                                                 <th class="ti-list"></th>
-                                                <th>Seri Numarası</th>
+                                                <th>Proje Kodu</th>
+                                                <th>Ürün Seri No</th>
+                                                <th>Marka</th>
                                                 <th>Sorumlu</th>
                                                 <th>Kategori</th>
-                                                <th>Marka</th>
-                                                <th>Kayıt Tarihi</th>
+                                                <th>Ekelnenme Tarihi</th>
                                                 <th>Adet</th>
                                                 <th>İşlem</th>
                                             </tr>
@@ -66,10 +67,11 @@
                                                 {
                                                     <tr>
                                                         <td>@item.Id</td>
+                                                        <td>@item.ProjectCode</td>
                                                         <td>@item.ProductSerialNumber</td>
+                                                        <td>@item.ProductBrand</td>
                                                         <td>@item.Person.PersonName</td>
                                                         <td>@item.Category.CategoryName</td>
-                                                        <td>@item.ProductBrand</td>
                                                         <td>@item.RegisterDateTime.Date.ToString("dd-MM-yyyy")</td>
                                                         <td>@item.ProductAmount</td>
                                                         <td>
