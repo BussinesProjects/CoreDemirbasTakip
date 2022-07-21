@@ -40,7 +40,18 @@
                                         
                                         <div class="form-group">
                                             <label>Proje Kodu</label>
-                                            <input class="form-control" name="ProjectCode" type="text" placeholder="Marka giriniz...">
+                                            @*<input class="form-control" name="ProjectCode" type="text" placeholder="Proje Kodu giriniz...">*@
+                                            <select class="form-control" name="ProjectCode">
+                                                <option name="data" value=""></option>
+                                                @foreach (var item in Model.Projects)
+                                                {
+                                                    
+                                                    if ( item.isEnabled)
+                                                    {
+                                                        <option name="data" value="@item.ProjectCode">@item.ProjectCode</option>
+                                                    }
+                                                }
+                                            </select>
                                         </div>
                                         <div class="form-group">
                                             <label>Demirbaş Sorumlusu</label>
@@ -72,7 +83,7 @@
                                         </div>
                                         <div class="form-group">
                                             <label>Model</label>
-                                            <input class="form-control" name="ProductModel" type="text" placeholder="Marka giriniz...">
+                                            <input class="form-control" name="ProductModel" type="text" placeholder="Model giriniz...">
                                         </div>
                                         <div class="form-group">
                                             <label>Demirbaş Kategori</label>
@@ -88,7 +99,7 @@
                                         </div>
                                         <div class="form-group">
                                             <label>Seri Numarası</label>
-                                            <input class="form-control" name="ProductSerialNumber" type="text" placeholder="Marka giriniz...">
+                                            <input class="form-control" name="ProductSerialNumber" type="text" placeholder="Seri Numarası giriniz...">
                                         </div>
                                         <div class="form-group">
                                             <label>Özellikler/Açıklama</label>
@@ -104,7 +115,7 @@
                                         </div>
                                         <div class="form-group">
                                             <label>Ürün Dağıtıcısı</label>
-                                            <input class="form-control" name="ProductProvider" type="text" placeholder="Marka giriniz...">
+                                            <input class="form-control" name="ProductProvider" type="text" placeholder="Ürün Dağıtıcısı giriniz...">
                                         </div>
 
                                         <div class="form-group">
