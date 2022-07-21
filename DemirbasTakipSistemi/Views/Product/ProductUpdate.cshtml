@@ -43,11 +43,24 @@
                                            <input class="form-control" name="RegisterDateTime" value="@Model.Item1.RegisterDateTime.Date.ToString("dd-MM-yyyy")" readonly>
                                         </div>
 
-
-                                        <div class="form-group">
-                                            <label>Proje Kodu</label>
-                                           <input class="form-control" name="ProjectCode" value="@Model.Item1.ProjectCode" type="text" >
-                                        </div>
+                                        <select class="form-control" name="ProjectCode">
+                                            <option name="data" value=""></option>
+                                            @foreach (var item in Model.Item2.Projects)
+                                            {
+                                                    
+                                                if ( item.isEnabled)
+                                                {
+                                                    if (item.ProjectCode==Model.Item1.ProjectCode)
+                                                    {
+                                                        <option name="data" value="@item.ProjectCode" selected>@item.ProjectCode</option>
+                                                    
+                                                    }
+                                                    else {
+                                                        <option name="data" value="@item.ProjectCode">@item.ProjectCode</option>
+                                                    }                                                    
+                                                }
+                                            }
+                                        </select>
 
                                         <div class="form-group">
                                             <label>Demirbaş Sorumlusu</label>
