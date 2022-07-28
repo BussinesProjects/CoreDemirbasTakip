@@ -1,4 +1,5 @@
 ﻿using DemirbasTakipSistemi.Repositories;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Mvc;
 using System.Linq;
 
@@ -24,7 +25,13 @@ namespace DemirbasTakipSistemi.Controllers
                 ViewBag.Error = "Lütfen bilgilerinizi kontrol ediniz.";
                 return View();
             }
-          
+
         }
+        public IActionResult Logout()
+        {
+            //await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+            return RedirectToAction("Login", "Account");
+        }
+
     }
 }
