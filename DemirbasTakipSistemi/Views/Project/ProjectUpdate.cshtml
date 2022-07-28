@@ -44,7 +44,9 @@
                                             <label class="col-lg-3 control-label">Proje Kodu</label>
                                             <div class="col-lg-9">
                                                
-                                                <input type="text" class="form-control"  name="ProjectCode" value="@Model.ProjectCode">
+                                                <input required maxlength="255" type="text" class="form-control" value="@Model.ProjectCode" minlength=1 name="ProjectCode" oninvalid="this.setCustomValidity('Proje kodu boş geçilemez.')" oninput="setCustomValidity('')"/>
+                                                @*
+                                                <input type="text" class="form-control"  name="ProjectCode" value="@Model.ProjectCode">*@
                                             </div>
                                         </div>
                                        
@@ -62,7 +64,9 @@
                                        <div class="form-group">
                                             <label class="col-lg-3 control-label">Proje Adı</label>
                                             <div class="col-lg-9">
-                                                <input type="text" class="form-control" value="@Model.ProjectName"  name="ProjectName">
+                                                <input required maxlength="255" type="text" class="form-control" value="@Model.ProjectName" minlength=1 name="ProjectName" oninvalid="this.setCustomValidity('Proje adı boş geçilemez.')" oninput="setCustomValidity('')"/>
+                                                @*
+                                                <input type="text" class="form-control" value="@Model.ProjectName"  name="ProjectName">*@
                                             </div>
                                         </div>
                                         <div class="form-group">

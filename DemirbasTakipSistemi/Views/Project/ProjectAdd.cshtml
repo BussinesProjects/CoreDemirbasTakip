@@ -38,8 +38,9 @@
                                         <div class="form-group">
                                             <label class="col-lg-3 control-label">Proje Kodu</label>
                                             <div class="col-lg-9">
-
-                                                <input type="text" class="form-control" placeholder="Proje Kodu" name="ProjectCode">
+                                                
+                                                <input required maxlength="255" type="text" class="form-control" placeholder="Proje Kodu" minlength=1 name="ProjectCode" oninvalid="this.setCustomValidity('Proje kodu boş geçilemez.')" oninput="setCustomValidity('')"/>
+                                                @*<input type="text" class="form-control" placeholder="Proje Kodu" name="ProjectCode">*@
                                             </div>
                                         </div>
                                        
@@ -57,7 +58,8 @@
                                        <div class="form-group">
                                             <label class="col-lg-3 control-label">Proje Adı</label>
                                             <div class="col-lg-9">
-                                                <input type="text" class="form-control" placeholder="Proje Adı" name="ProjectName">
+                                                <input required maxlength="255" type="text" class="form-control" placeholder="Proje Adı" minlength=1 name="ProjectName" oninvalid="this.setCustomValidity('Proje adı boş geçilemez.')" oninput="setCustomValidity('')"/>
+                                                @*<input type="text" class="form-control" placeholder="Proje Adı" name="ProjectName">*@
                                             </div>
                                         </div>
                                         <div class="form-group">

@@ -69,7 +69,8 @@
                                         </div>
                                         <div class="form-group">
                                             <label>Adedi</label>
-                                            <input type="number" class="form-control" name="ProductAmount" placeholder="Adet giriniz..." min="0">
+                                            <input required type="number" min="0" maxlength="255" class="form-control" placeholder="Adet giriniz..." minlength=1 name="ProductAmount" oninvalid="this.setCustomValidity('Adet boş geçilemez.')" oninput="setCustomValidity('')"/>
+                                            @*<input type="number" class="form-control" name="ProductAmount" placeholder="Adet giriniz..." min="0">*@
                                         </div>
                                         <div class="form-group">
                                             <span>Ürün Fotoğrafı:</span>
@@ -100,7 +101,8 @@
                                         </div>
                                         <div class="form-group">
                                             <label>Seri Numarası</label>
-                                            <input class="form-control" name="ProductSerialNumber" type="text" placeholder="Seri Numarası giriniz...">
+                                                <input required maxlength="255" type="text" class="form-control" placeholder="Seri Numarası giriniz..." minlength=1 name="ProductSerialNumber" oninvalid="this.setCustomValidity('Seri numarası boş geçilemez.')" oninput="setCustomValidity('')"/>
+                                            @*<input class="form-control" name="ProductSerialNumber" type="text" placeholder="Seri Numarası giriniz...">*@
                                         </div>
                                         <div class="form-group">
                                             <label>Özellikler/Açıklama</label>

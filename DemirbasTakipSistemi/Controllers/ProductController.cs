@@ -100,7 +100,14 @@ namespace DemirbasTakipSistemi.Controllers
             }
             else if (previous == 1)
             {
-                return RedirectToAction("Products", "Project", new { code = projCode });
+                if ( projCode == null)
+                {
+                    return RedirectToAction("ProductList");
+                }
+                else
+                {
+                    return RedirectToAction("Products", "Project", new { code = projCode });
+                }
             }
             else
             {
