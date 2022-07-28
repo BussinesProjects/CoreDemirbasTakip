@@ -13,8 +13,13 @@
 <link href="~/Content/assets/css/lib/data-table/buttons.bootstrap.min.css" rel="stylesheet" />
 <link href="~/Content/assets/css/lib/menubar/sidebar.css" rel="stylesheet">
 <link href="~/Content/assets/css/lib/helper.css" rel="stylesheet">
-<link href="~/Content/assets/css/lib/sweetalert/sweetalert.css" rel="stylesheet">
+<script src="~/Content/assets/js/lib/sweetalert/sweetalert.min.js"></script>
+<script src="~/Content/assets/js/lib/data-table/jquery-1.12.4.js" ></script>
+<script src="~/Content/assets/js/lib/sweetalert/sweetalert2.all.min.js"></script>
 
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<link href="asset/plugin/sweetalert/css/sweetalert2.css" rel="stylesheet">
+<script src="asset/plugin/sweetalert/js/sweetalert2.all.min.js"></script>
 
 <div class="content-wrap">
     <div class="main">
@@ -59,6 +64,7 @@
                                                 <th>İşlem</th>
                                             </tr>
                                         </thead>
+                                        
                                         <tbody>
 
                                             @foreach (var item in Model)
@@ -72,8 +78,8 @@
                                                         <td>
                                                             <button class="btn-flat  btn-warning ti-pencil" onclick="location.href='@Url.Action("CategoryUpdate", "Category",new{id=@item.CategoryID})';return false;"></button>
                                                             @*<button class="btn-flat btn-danger  sweet-confirm ti-trash" onclick="location.href='@Url.Action("CategoryDelete", "Category",new{id=@item.CategoryID})';return false;"></button>
-                                                            *@<button class="btn-flat btn-danger  ti-trash" onclick="location.href='@Url.Action("CategoryDelete", "Category",new{id=@item.CategoryID})';return false;"></button>
-
+                                                            *@
+                                                            <button class="btn-flat btn-danger  ti-trash" @*id="btn-sa-confirm"*@ onclick="location.href='@Url.Action("CategoryDelete", "Category",new{id=@item.CategoryID})';return false;"></button>
                                                         </td>
 
                                                     </tr>
@@ -81,6 +87,7 @@
                                             }
 
                                         </tbody>
+                                        
                                     </table>
                                 </div>
                             </div>
@@ -93,6 +100,37 @@
         </div>
     </div>
 </div>
+
+<script>
+    $("#btn-sa-confirm").on('click',function(){
+        Swal.fire({
+        title: 'Are you sure?',
+        text: "You won't be able to revert this!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#1ab394',
+        cancelButtonColor: '#d9534f',
+        confirmButtonText: 'Sil!',
+        cancelButtonText: 'Silme!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                Swal.fire(
+                'Deleted!',
+                'Your file has been deleted.',
+                $('#sweeForm').submit();
+                )
+            }
+        });
+    });
+</script>
+
+
+
+
+
+
+
+
 @*
 <!-- sidebar -->
 <div aria-hidden="true" role="dialog" tabindex="-1" id="createCategoryModal" class="modal fade">

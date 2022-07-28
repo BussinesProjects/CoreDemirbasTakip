@@ -12,21 +12,40 @@
 ////};
 
 
-document.querySelector('.sweet-confirm').onclick = function(){
-    swal({
-            title: "Silmek istediginizden emin misiniz-?",
-            text: "",
-            type: "warning",
-            showCancelButton: true,
-            confirmButtonColor: "#DD6B55",
-            confirmButtonText: "Evet, sil !!",
-            closeOnConfirm: false
-        },
-        function(){
-            swal("Silindi !!", "Demirbas bilgisi silindi!!", "success");
-        });
-};
+//document.querySelector('#delConfirm').click( function(){
+//    swal({
+//            title: "Silmek istediginizden emin misiniz-?",
+//            text: "",
+//            type: "warning",
+//            showCancelButton: true,
+//            confirmButtonColor: "#DD6B55",
+//            confirmButtonText: "Evet, sil !!",
+//            closeOnConfirm: false
+//        },
+//        function(){
+//            swal("Silindi !!", "Demirbas bilgisi silindi!!", "success");
+//        });
+//});
 
+
+//$('#btnDelCategory').click(function () {
+//    swal({
+//        title: "Are you sure?",
+//        text: "Once deleted, you will not be able to recover this imaginary file!",
+//        icon: "warning",
+//        buttons: ["Hayır silme!", "Sil"],
+//        dangerMode: true,
+//    })
+//        .then((willDelete) => {
+//            if (willDelete) {
+//                swal("Poof! Your imaginary file has been deleted!", {
+//                    icon: "success",
+//                });
+//            } else {
+//                swal("Your imaginary file is safe!");
+//            }
+//        });
+//});
 //document.querySelector('.sweet-success-cancel').onclick = function(){
 //    swal({
 //            title: "Are you sure to delete ?",
