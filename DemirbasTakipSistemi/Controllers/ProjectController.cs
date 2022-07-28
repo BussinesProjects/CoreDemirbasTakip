@@ -74,6 +74,7 @@ namespace DemirbasTakipSistemi.Controllers
             mymodel.listProjectsOfCode = productRepository.List(code);
             mymodel.projectCode = code;
             mymodel.projectName = projectRepository.GetCode(code).ProjectName;
+            mymodel.prev = 1;
             return View(mymodel);
 
             //return View(projectProductRepository.List(code));

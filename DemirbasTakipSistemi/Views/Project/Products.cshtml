@@ -34,7 +34,7 @@
                         <div class="page-title">
                             <ol class="breadcrumb">
                                @* <li class="breadcrumb-item">*@
-                                    <a asp-controller="Product" asp-action="ProductAdd" asp-route-code="@(Model.projectCode)" class="btn btn-flat btn-success ti-plus" >
+                                    <a asp-controller="Product" asp-action="ProductAdd" asp-route-code="@(Model.projectCode)" asp-route-prev="@(Model.prev)" class="btn btn-flat btn-success ti-plus" >
                                         Ekle
                                     </a>
                             </ol>
@@ -80,9 +80,9 @@
                                                         <td>@item.ProductWarrantyStartDate.Date.ToString("dd-MM-yyyy")</td>
                                                         <td>@item.ProductWarrantyFinishDate.Date.ToString("dd-MM-yyyy")</td>
                                                         <td>
-                                                             <button class="btn-flat  btn-warning ti-pencil" onclick="location.href='@Url.Action("ProductUpdate", "Product",new{Id=@item.Id})';return false;"></button>
-                                                            <button class="btn-flat  btn-info ti-info"      onclick="location.href='@Url.Action("ProductInfo", "Product",new{id=@item.Id})';return false;"></button>
-                                                            <button class="btn-flat   btn-danger ti-trash " onclick="location.href='@Url.Action("ProductDelete", "Product",new{Id=@item.Id})';return false;"></button>
+                                                             <button class="btn-flat  btn-warning ti-pencil" onclick="location.href='@Url.Action("ProductUpdate", "Product",new{Id=@item.Id, pre = 1})';return false;"></button>
+                                                            <button class="btn-flat  btn-info ti-info"       onclick="location.href='@Url.Action("ProductInfo", "Product", new{id=@item.Id, pre = 1})';return false;"></button>
+                                                            <button class="btn-flat   btn-danger ti-trash " onclick="location.href='@Url.Action("ProductDelete", "Product",new{Id=@item.Id, pre = 1})';return false;"></button>
                                                         </td>
                                                     </tr>
                                                     }

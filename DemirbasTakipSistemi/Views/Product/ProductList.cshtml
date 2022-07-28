@@ -75,9 +75,9 @@
                                                         <td>@item.RegisterDateTime.Date.ToString("dd-MM-yyyy")</td>
                                                         <td>@item.ProductAmount</td>
                                                         <td>
-                                                            <button class="btn-flat  btn-warning ti-pencil" onclick="location.href='@Url.Action("ProductUpdate", "Product",new{id=@item.Id})';return false;"></button>
-                                                            <button class="btn-flat  btn-info ti-info"      onclick="location.href='@Url.Action("ProductInfo", "Product",new{id=@item.Id})';return false;"></button>
-                                                            <button class="btn-flat  btn-danger ti-trash"   onclick="location.href='@Url.Action("ProductDelete", "Product",new{id=@item.Id})';return false;"></button>
+                                                            <button class="btn-flat  btn-warning ti-pencil" onclick="location.href='@Url.Action("ProductUpdate", "Product",new{id=@item.Id, pre = 2})';return false;"></button>
+                                                            <button class="btn-flat  btn-info ti-info"      onclick="location.href='@Url.Action("ProductInfo", "Product",new{id=@item.Id, pre = 2})';return false;"></button>
+                                                            <button class="btn-flat  btn-danger ti-trash"   onclick="location.href='@Url.Action("ProductDelete", "Product",new{id=@item.Id, pre = 2})';return false;"></button>
                                                             @*<button class="btn-flat btn-danger sweet-confirm ti-trash"></button>*@
                                                         </td>
                                                     </tr>

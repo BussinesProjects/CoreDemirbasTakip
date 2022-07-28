@@ -39,6 +39,8 @@
                                     <div class="col-lg-4">
                                         
                                         <div class="form-group">
+                                            <input type="hidden" class="form-control" name="previous" value="@Model.Item2.Prev" >
+
                                             <label>Oluşturulma tarihi</label>
                                            <input class="form-control" name="RegisterDateTime" type="date" value="@Model.Item1.RegisterDateTime.Date.ToString("yyyy-MM-dd")" readonly>
                                         </div>
@@ -173,7 +175,7 @@
                                   
                                     <div class="col-lg-4">
                                         
-                                        <a asp-controller="Product" asp-action="ProductList" type="submit" class="btn btn-danger" style="width:150px">
+                                        <a asp-controller="Product" asp-action="redirectByInt" asp-route-previous="@Model.Item2.Prev" asp-route-projCode="@Model.Item2.Proj" type="submit" class="btn btn-danger" style="width:150px">
                                             Listeye Dön
                                         </a>
                                         <button class="btn btn-primary" type="submit" > Güncelle </button>

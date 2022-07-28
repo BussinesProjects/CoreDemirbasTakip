@@ -198,6 +198,9 @@ namespace DemirbasTakipSistemi.Migrations
                     b.Property<bool>("isEnabled")
                         .HasColumnType("bit");
 
+                    b.Property<int>("previous")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
                     b.HasIndex("CategoryID");
@@ -215,9 +218,6 @@ namespace DemirbasTakipSistemi.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<int>("Connections")
-                        .HasColumnType("int");
 
                     b.Property<string>("ProjectClient")
                         .HasColumnType("nvarchar(max)");

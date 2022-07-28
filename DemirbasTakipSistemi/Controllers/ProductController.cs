@@ -47,13 +47,14 @@ namespace DemirbasTakipSistemi.Controllers
         //    pc.Proj = "";
         //    return View(pc);
         //}
-        public ActionResult ProductAdd(string code)
+        public ActionResult ProductAdd(string code, int prev)
         {
             PeopleAndCategoryViewModel pc = new PeopleAndCategoryViewModel();
             pc.People = personRepository.TList();
             pc.Categories = categoryRepository.TList();
             pc.Projects = projectRepository.TList();
             pc.Proj = code;
+            pc.Prev = prev;
             return View(pc);
         }
         [HttpPost]
@@ -89,16 +90,41 @@ namespace DemirbasTakipSistemi.Controllers
             pc.People = personRepository.TList();
             pc.Categories = categoryRepository.TList();
             return View(pc);*/
-            if (p.ProjectCode == null || p.ProjectCode.Equals(""))
+            return redirectToPrev(p);
+        }
+        public ActionResult redirectByInt( int previous, string projCode)
+        {
+            if (previous == 2)
             {
                 return RedirectToAction("ProductList");
             }
+            else if (previous == 1)
+            {
+                return RedirectToAction("Products", "Project", new { code = projCode });
+            }
             else
+            {
+                return RedirectToAction("ProjectList", "Project"); // shouldn't happen.
+            }
+        }
+
+        public ActionResult redirectToPrev(Product p)
+        {
+            if (p.previous == 2)
+            {
+                return RedirectToAction("ProductList");
+            }
+            else if (p.previous == 1)
             {
                 return RedirectToAction("Products", "Project", new { code = p.ProjectCode });
             }
+            else
+            {
+                return RedirectToAction("ProjectList", "Project"); // shouldn't happen.
+            }
         }
-        public ActionResult ProductUpdate(int id)
+
+        public ActionResult ProductUpdate(int id, int pre)
         {
             var product = productRepository.TGet(id);
             PeopleAndCategoryViewModel pc = new PeopleAndCategoryViewModel();
@@ -106,10 +132,11 @@ namespace DemirbasTakipSistemi.Controllers
             pc.Categories = categoryRepository.TList();
             pc.Projects = projectRepository.TList();
             pc.Proj = product.ProjectCode;
+            pc.Prev = pre;
             return View(Tuple.Create<Product, PeopleAndCategoryViewModel>(product, pc));
         }
 
-        public ActionResult ProductInfo(int id)
+        public ActionResult ProductInfo(int id, int pre)
         {
             var product = productRepository.TGet(id);
             PeopleAndCategoryViewModel pc = new PeopleAndCategoryViewModel();
@@ -117,6 +144,7 @@ namespace DemirbasTakipSistemi.Controllers
             pc.Categories = categoryRepository.TList();
             pc.Projects = projectRepository.TList();
             pc.Proj = product.ProjectCode;
+            pc.Prev = pre;
             return View(Tuple.Create<Product, PeopleAndCategoryViewModel>(product, pc));
         }
 
@@ -141,32 +169,19 @@ namespace DemirbasTakipSistemi.Controllers
             pc.Categories = categoryRepository.TList();
             return View(Tuple.Create<Product, PeopleAndCategoryViewModel>(p, pc));*/
 
-            if (p.ProjectCode == null || p.ProjectCode.Equals(""))
-            {
-                return RedirectToAction("ProductList");
-            }
-            else
-            {
-                return RedirectToAction("Products", "Project", new { code = p.ProjectCode });
-            }
+            return redirectToPrev(p);
         }
 
-        public ActionResult ProductDelete(int id)
+        public ActionResult ProductDelete(int id, int pre)
         {
             //productRepository.TDelete( productRepository.TGet(id));
             Product product = productRepository.TGet(id);
             product.isEnabled = false;
             productRepository.TUpdate(product);
+            product.previous = pre;
             //projectProductRepository.TUpdate(product);
 
-            if (product.ProjectCode == null || product.ProjectCode.Equals(""))
-            {
-                return RedirectToAction("ProductList");
-            }
-            else
-            {
-                return RedirectToAction("Products", "Project", new { code = product.ProjectCode });
-            }
+            return redirectToPrev(product);
         }
     }
 }

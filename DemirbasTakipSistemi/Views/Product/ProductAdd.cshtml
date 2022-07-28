@@ -37,7 +37,8 @@
                             <form method="post" class="form-horizontal" asp-action="ProductAdd" id="confirmationForm" name="confirmationForm">
                                 <div class="row">
                                     <div class="col-lg-4">
-                                        
+                                        <input type="hidden" class="form-control" name="previous" value="@Model.Prev" >
+                                
                                         <div class="form-group">
                                             <label>Proje Kodu</label>
                                             @*<input class="form-control" name="ProjectCode" type="text" placeholder="Proje Kodu giriniz...">*@

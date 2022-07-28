@@ -9,5 +9,6 @@ namespace DemirbasTakipSistemi.Models.ViewModel
         public List<Category> Categories { get; set; }
         public List<Project> Projects { get; set; }
         public string Proj { get; set; }
+        public int Prev { get; set; }
     }
 }
