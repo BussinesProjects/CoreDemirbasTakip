@@ -1,11 +1,12 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 
+
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Via Teknoloji - Demirbaş</title>
-  
+
     <link href="~/Content/assets/css/lib/calendar2/pignose.calendar.min.css" rel="stylesheet">
     <link href="~/Content/assets/css/lib/chartist/chartist.min.css" rel="stylesheet">
     <link href="~/Content/assets/css/lib/font-awesome.min.css" rel="stylesheet">
@@ -37,8 +38,6 @@
                     <li><a href="~/Project/ProjectList"><i class="ti-layout-accordion-list"></i> Proje - Ürün Listesi</a></li>
                     <li><a href="~/Category/CategoryList"><i class="ti-layout-grid2"></i>Ürün Kategorileri</a></li>
                     <li><a href="~/Person/PersonList"><i class="ti-id-badge"></i>Personel Listesi</a></li>
-                    <li><a href="app-widget-card.html"><i class="ti-settings"></i>Hesap Ayarları</a></li>
-                    <li><a><i class="ti-close"></i>Çıkış</a></li>
 
                 </ul>
             </div>
@@ -75,17 +74,19 @@
 
                                             <li>
                                                 <a href="#">
-                                                    <i class="ti-settings"></i>
-                                                    <span>Setting</span>
-                                                </a>
-                                            </li>
+                                                    <a href="~/Setting/Index">
+                                                        <i class="ti-settings"></i>
+                                                        <span>Hesap Ayarları </span>
+                                                    </a>
+                                                    </a>
+</li>
 
 
 
                                             <li>
                                                 <a href="#">
                                                     <i class="ti-power-off"></i>
-                                                    <span onclick="location.href='@Url.Action("Logout", "Account")';return false;">Logout</span>
+                                                    <span onclick="location.href='@Url.Action("Logout", "Account")';return false;">Çıkış</span>
                                                 </a>
                                             </li>
                                         </ul>
@@ -134,13 +135,13 @@
                 <section id="main-content">
                     <div class="row">
                         <div class="col-lg-12">
-                           
-                                @RenderBody()
-                          
+
+                            @RenderBody()
+
                         </div>
                     </div>
                     <!-- /# row -->
-                   
+
                 </section>
             </div>
         </div>

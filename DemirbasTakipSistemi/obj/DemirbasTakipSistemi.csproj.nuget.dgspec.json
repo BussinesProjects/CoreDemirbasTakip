@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\cs\\staj1\\CoreDemirbasTakip\\DemirbasTakipSistemi\\DemirbasTakipSistemi.csproj": {}
+    "C:\\Users\\Cemile Gül\\Desktop\\CoreDemirbasTakip\\DemirbasTakipSistemi\\DemirbasTakipSistemi.csproj": {}
   },
   "projects": {
-    "D:\\cs\\staj1\\CoreDemirbasTakip\\DemirbasTakipSistemi\\DemirbasTakipSistemi.csproj": {
+    "C:\\Users\\Cemile Gül\\Desktop\\CoreDemirbasTakip\\DemirbasTakipSistemi\\DemirbasTakipSistemi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\cs\\staj1\\CoreDemirbasTakip\\DemirbasTakipSistemi\\DemirbasTakipSistemi.csproj",
+        "projectUniqueName": "C:\\Users\\Cemile Gül\\Desktop\\CoreDemirbasTakip\\DemirbasTakipSistemi\\DemirbasTakipSistemi.csproj",
         "projectName": "DemirbasTakipSistemi",
-        "projectPath": "D:\\cs\\staj1\\CoreDemirbasTakip\\DemirbasTakipSistemi\\DemirbasTakipSistemi.csproj",
-        "packagesPath": "C:\\Users\\drbya\\.nuget\\packages\\",
-        "outputPath": "D:\\cs\\staj1\\CoreDemirbasTakip\\DemirbasTakipSistemi\\obj\\",
+        "projectPath": "C:\\Users\\Cemile Gül\\Desktop\\CoreDemirbasTakip\\DemirbasTakipSistemi\\DemirbasTakipSistemi.csproj",
+        "packagesPath": "C:\\Users\\Cemile Gül\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Cemile Gül\\Desktop\\CoreDemirbasTakip\\DemirbasTakipSistemi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\drbya\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Cemile Gül\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -59,6 +59,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[3.1.0, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[3.1.5, )"
             }
           },
           "imports": [
@@ -79,7 +83,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.410\\RuntimeIdentifierGraph.json"
         }
       }
     }

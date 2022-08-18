@@ -17,9 +17,11 @@ namespace DemirbasTakipSistemi.Controllers
         {
             _logger = logger;
         }
-
+        
         public IActionResult Index()
         {
+            var Username = User.Identity.Name;
+            ViewBag.v = Username;
             return View();
         }
 

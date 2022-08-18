@@ -344,3 +344,228 @@ D:\cs\staj1\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\Demir
 D:\cs\staj1\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\Razor\Views\Category\CategoryAdd.cshtml.g.cs
 D:\cs\staj1\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\Razor\Views\Person\PersonInfo.cshtml.g.cs
 D:\cs\staj1\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\Razor\Views\Product\ProductInfo.cshtml.g.cs
+C:\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\appsettings.Development.json
+C:\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\appsettings.json
+C:\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\DemirbasTakipSistemi.exe
+C:\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\DemirbasTakipSistemi.deps.json
+C:\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\DemirbasTakipSistemi.runtimeconfig.json
+C:\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\DemirbasTakipSistemi.runtimeconfig.dev.json
+C:\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\DemirbasTakipSistemi.dll
+C:\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\DemirbasTakipSistemi.pdb
+C:\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\DemirbasTakipSistemi.Views.dll
+C:\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\DemirbasTakipSistemi.Views.pdb
+C:\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
+C:\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\Microsoft.Bcl.HashCode.dll
+C:\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
+C:\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+C:\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
+C:\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\Microsoft.Identity.Client.dll
+C:\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
+C:\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\System.Runtime.Caching.dll
+C:\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
+C:\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
+C:\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
+C:\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+C:\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+C:\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+C:\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
+C:\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
+C:\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\DemirbasTakipSistemi.csproj.AssemblyReference.cache
+C:\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\DemirbasTakipSistemi.GeneratedMSBuildEditorConfig.editorconfig
+C:\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\DemirbasTakipSistemi.AssemblyInfoInputs.cache
+C:\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\DemirbasTakipSistemi.AssemblyInfo.cs
+C:\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\DemirbasTakipSistemi.csproj.CoreCompileInputs.cache
+C:\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\DemirbasTakipSistemi.MvcApplicationPartsAssemblyInfo.cache
+C:\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\DemirbasTakipSistemi.RazorAssemblyInfo.cache
+C:\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\DemirbasTakipSistemi.RazorAssemblyInfo.cs
+C:\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\staticwebassets\DemirbasTakipSistemi.StaticWebAssets.Manifest.cache
+C:\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\staticwebassets\DemirbasTakipSistemi.StaticWebAssets.xml
+C:\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\scopedcss\bundle\DemirbasTakipSistemi.styles.css
+C:\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\DemirbasTakipSistemi.TagHelpers.input.cache
+C:\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\DemirbasTakipSistemi.TagHelpers.output.cache
+C:\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\DemirbasTakipSistemi.RazorCoreGenerate.cache
+C:\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\Razor\Views\Account\Login.cshtml.g.cs
+C:\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\Razor\Views\Account\View.cshtml.g.cs
+C:\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\Razor\Views\Category\CategoryAdd.cshtml.g.cs
+C:\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\Razor\Views\Category\CategoryList.cshtml.g.cs
+C:\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\Razor\Views\Category\CategoryUpdate.cshtml.g.cs
+C:\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
+C:\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
+C:\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\Razor\Views\Person\PersonAdd.cshtml.g.cs
+C:\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\Razor\Views\Person\PersonInfo.cshtml.g.cs
+C:\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\Razor\Views\Person\PersonList.cshtml.g.cs
+C:\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\Razor\Views\Person\PersonUpdate.cshtml.g.cs
+C:\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\Razor\Views\Product\ProductAdd.cshtml.g.cs
+C:\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\Razor\Views\Product\ProductInfo.cshtml.g.cs
+C:\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\Razor\Views\Product\ProductList.cshtml.g.cs
+C:\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\Razor\Views\Product\ProductUpdate.cshtml.g.cs
+C:\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\Razor\Views\Project\Products.cshtml.g.cs
+C:\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\Razor\Views\Project\ProjectAdd.cshtml.g.cs
+C:\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\Razor\Views\Project\ProjectList.cshtml.g.cs
+C:\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\Razor\Views\Project\ProjectUpdate.cshtml.g.cs
+C:\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
+C:\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+C:\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
+C:\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
+C:\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\DemirbasTakipSistemi.RazorTargetAssemblyInfo.cache
+C:\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\DemirbasTakipSistemi.RazorTargetAssemblyInfo.cs
+C:\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\DemirbasTakipSistemi.Views.pdb
+C:\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\DemirbasTakipSistemi.csproj.CopyComplete
+C:\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\DemirbasTakipSistemi.dll
+C:\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\DemirbasTakipSistemi.pdb
+C:\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\DemirbasTakipSistemi.genruntimeconfig.cache
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\appsettings.Development.json
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\DemirbasTakipSistemi.exe
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\DemirbasTakipSistemi.deps.json
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\DemirbasTakipSistemi.runtimeconfig.json
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\DemirbasTakipSistemi.runtimeconfig.dev.json
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\DemirbasTakipSistemi.dll
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\DemirbasTakipSistemi.pdb
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\DemirbasTakipSistemi.Views.dll
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\DemirbasTakipSistemi.Views.pdb
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\Microsoft.Bcl.HashCode.dll
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\Microsoft.Identity.Client.dll
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\System.Runtime.Caching.dll
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\DemirbasTakipSistemi.csproj.AssemblyReference.cache
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\DemirbasTakipSistemi.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\DemirbasTakipSistemi.AssemblyInfoInputs.cache
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\DemirbasTakipSistemi.AssemblyInfo.cs
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\DemirbasTakipSistemi.csproj.CoreCompileInputs.cache
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\DemirbasTakipSistemi.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\DemirbasTakipSistemi.RazorAssemblyInfo.cache
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\DemirbasTakipSistemi.RazorAssemblyInfo.cs
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\staticwebassets\DemirbasTakipSistemi.StaticWebAssets.Manifest.cache
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\staticwebassets\DemirbasTakipSistemi.StaticWebAssets.xml
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\scopedcss\bundle\DemirbasTakipSistemi.styles.css
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\DemirbasTakipSistemi.TagHelpers.input.cache
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\DemirbasTakipSistemi.TagHelpers.output.cache
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\DemirbasTakipSistemi.RazorCoreGenerate.cache
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\Razor\Views\Account\Login.cshtml.g.cs
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\Razor\Views\Account\View.cshtml.g.cs
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\Razor\Views\Category\CategoryAdd.cshtml.g.cs
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\Razor\Views\Category\CategoryList.cshtml.g.cs
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\Razor\Views\Category\CategoryUpdate.cshtml.g.cs
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\Razor\Views\Person\PersonAdd.cshtml.g.cs
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\Razor\Views\Person\PersonInfo.cshtml.g.cs
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\Razor\Views\Person\PersonList.cshtml.g.cs
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\Razor\Views\Person\PersonUpdate.cshtml.g.cs
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\Razor\Views\Product\ProductAdd.cshtml.g.cs
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\Razor\Views\Product\ProductInfo.cshtml.g.cs
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\Razor\Views\Product\ProductList.cshtml.g.cs
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\Razor\Views\Product\ProductUpdate.cshtml.g.cs
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\Razor\Views\Project\Products.cshtml.g.cs
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\Razor\Views\Project\ProjectAdd.cshtml.g.cs
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\Razor\Views\Project\ProjectList.cshtml.g.cs
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\Razor\Views\Project\ProjectUpdate.cshtml.g.cs
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\DemirbasTakipSistemi.RazorTargetAssemblyInfo.cache
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\DemirbasTakipSistemi.RazorTargetAssemblyInfo.cs
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\DemirbasTakipSistemi.Views.pdb
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\DemirbasTakipSistemi.csproj.CopyComplete
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\DemirbasTakipSistemi.dll
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\DemirbasTakipSistemi.pdb
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\DemirbasTakipSistemi.genruntimeconfig.cache
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Razor.Language.dll
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.dll
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.Razor.dll
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.Workspaces.dll
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.dll
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Contracts.dll
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Core.dll
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\dotnet-aspnet-codegenerator-design.dll
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\NuGet.Frameworks.dll
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\System.Composition.AttributedModel.dll
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\System.Composition.Convention.dll
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\System.Composition.Hosting.dll
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\System.Composition.Runtime.dll
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\System.Composition.TypedParts.dll
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.resources.dll
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.resources.dll
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.resources.dll
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.resources.dll
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.resources.dll
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.resources.dll
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.resources.dll
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.resources.dll
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.resources.dll
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.resources.dll
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.resources.dll
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\Razor\Views\Setting\Index.cshtml.g.cs
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\Razor\Views\Setting\PasswordUpdate.cshtml.g.cs
