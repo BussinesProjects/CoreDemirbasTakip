@@ -66,9 +66,15 @@
           "Microsoft.AspNetCore.Hosting.Abstractions.Reference": "3.1.0.0",
           "Microsoft.AspNetCore.Hosting": "3.1.0.0",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
           "Microsoft.AspNetCore.Hosting.Server.Abstractions": "3.1.0.0",
           "Microsoft.AspNetCore.Html.Abstractions.Reference": "3.1.0.0",
           "Microsoft.AspNetCore.Http.Abstractions": "3.1.0.0",
+=======
+          "Microsoft.AspNetCore.Hosting.Server.Abstractions.Reference": "3.1.0.0",
+          "Microsoft.AspNetCore.Html.Abstractions": "3.1.0.0",
+          "Microsoft.AspNetCore.Http.Abstractions.Reference": "3.1.0.0",
+>>>>>>> Stashed changes
 =======
           "Microsoft.AspNetCore.Hosting.Server.Abstractions.Reference": "3.1.0.0",
           "Microsoft.AspNetCore.Html.Abstractions": "3.1.0.0",
@@ -176,6 +182,9 @@
           "System.AppContext.Reference": "4.2.2.0",
 =======
           "System.AppContext": "4.2.2.0",
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
           "System.Buffers.Reference": "4.0.2.0",
           "System.Collections.Concurrent.Reference": "4.0.15.0",
@@ -298,6 +307,9 @@
           "System.Security.Cryptography.Primitives.Reference": "4.1.2.0",
           "System.Security.Cryptography.X509Certificates": "4.2.2.0",
           "System.Security.Cryptography.Xml.Reference": "4.0.3.0",
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
           "System.Security": "4.0.0.0",
           "System.Security.Permissions.Reference": "4.0.3.0",
@@ -348,6 +360,7 @@
         }
       },
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "Microsoft.AspNetCore.Html.Abstractions/2.2.0": {
         "dependencies": {
           "System.Text.Encodings.Web": "4.5.0"
@@ -374,6 +387,8 @@
           "Microsoft.AspNetCore.Html.Abstractions": "2.2.0",
           "Microsoft.AspNetCore.Razor": "2.2.0"
 =======
+=======
+>>>>>>> Stashed changes
       "Microsoft.AspNetCore.Authentication/2.2.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Authentication.Core": "2.2.0",
@@ -464,6 +479,9 @@
         "dependencies": {
           "Microsoft.Net.Http.Headers": "2.2.0",
           "System.Text.Encodings.Web": "4.5.0"
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
         }
       },
@@ -941,8 +959,11 @@
         }
       },
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "Microsoft.NETCore.Platforms/2.1.2": {},
 =======
+=======
+>>>>>>> Stashed changes
       "Microsoft.Net.Http.Headers/2.2.0": {
         "dependencies": {
           "Microsoft.Extensions.Primitives": "3.1.0",
@@ -1243,6 +1264,7 @@
         }
       },
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "System.AppContext/4.3.0": {
         "dependencies": {
           "System.Runtime": "4.3.0"
@@ -1257,6 +1279,9 @@
           "System.Threading": "4.3.0"
         }
       },
+=======
+      "System.Buffers/4.5.0": {},
+>>>>>>> Stashed changes
 =======
       "System.Buffers/4.5.0": {},
 >>>>>>> Stashed changes
@@ -1899,6 +1924,7 @@
           "System.Security.Principal.Windows": "4.5.0"
         }
       },
+<<<<<<< Updated upstream
       "System.Security.Cryptography.Algorithms/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "2.1.2",
@@ -1982,6 +2008,8 @@
           "runtime.native.System.Security.Cryptography.OpenSsl": "4.3.0"
         }
       },
+=======
+>>>>>>> Stashed changes
       "System.Security.Cryptography.Cng/4.5.0": {},
       "System.Security.Cryptography.Pkcs/4.5.0": {
         "dependencies": {
@@ -2016,6 +2044,7 @@
         }
       },
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "System.Security.Cryptography.X509Certificates/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "2.1.2",
@@ -2044,10 +2073,15 @@
           "runtime.native.System.Net.Http": "4.3.0",
           "runtime.native.System.Security.Cryptography.OpenSsl": "4.3.0"
 =======
+=======
+>>>>>>> Stashed changes
       "System.Security.Cryptography.Xml/4.5.0": {
         "dependencies": {
           "System.Security.Cryptography.Pkcs": "4.5.0",
           "System.Security.Permissions": "4.5.0"
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
         }
       },
@@ -3892,6 +3926,7 @@
       "sha512": ""
     },
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     "Microsoft.AspNetCore.Html.Abstractions/2.2.0": {
       "type": "package",
       "serviceable": true,
@@ -3920,6 +3955,8 @@
       "path": "microsoft.aspnetcore.razor.runtime/2.2.0",
       "hashPath": "microsoft.aspnetcore.razor.runtime.2.2.0.nupkg.sha512"
 =======
+=======
+>>>>>>> Stashed changes
     "Microsoft.AspNetCore.Authentication/2.2.0": {
       "type": "package",
       "serviceable": true,
@@ -4017,6 +4054,9 @@
       "sha512": "sha512-9ErxAAKaDzxXASB/b5uLEkLgUWv1QbeVxyJYEHQwMaxXOeFFVkQxiq8RyfVcifLU7NR0QY0p3acqx4ZpYfhHDg==",
       "path": "microsoft.aspnetcore.webutilities/2.2.0",
       "hashPath": "microsoft.aspnetcore.webutilities.2.2.0.nupkg.sha512"
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
     },
     "Microsoft.Bcl.AsyncInterfaces/1.1.0": {
@@ -4251,8 +4291,11 @@
       "hashPath": "microsoft.identity.client.3.0.8.nupkg.sha512"
     },
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     "Microsoft.NETCore.Platforms/2.1.2": {
 =======
+=======
+>>>>>>> Stashed changes
     "Microsoft.Net.Http.Headers/2.2.0": {
       "type": "package",
       "serviceable": true,
@@ -4507,6 +4550,7 @@
       "hashPath": "runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512"
     },
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     "System.AppContext/4.3.0": {
       "type": "package",
       "serviceable": true,
@@ -4521,12 +4565,17 @@
       "path": "system.buffers/4.3.0",
       "hashPath": "system.buffers.4.3.0.nupkg.sha512"
 =======
+=======
+>>>>>>> Stashed changes
     "System.Buffers/4.5.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-pL2ChpaRRWI/p4LXyy4RgeWlYF2sgfj/pnVMvBqwNFr5cXg7CXNnWZWxrOONLg8VGdFB8oB+EG2Qw4MLgTOe+A==",
       "path": "system.buffers/4.5.0",
       "hashPath": "system.buffers.4.5.0.nupkg.sha512"
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
     },
     "System.Collections/4.3.0": {
@@ -4943,6 +4992,7 @@
       "hashPath": "system.security.accesscontrol.4.5.0.nupkg.sha512"
     },
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     "System.Security.Cryptography.Algorithms/4.3.0": {
       "type": "package",
       "serviceable": true,
@@ -4978,6 +5028,8 @@
       "path": "system.security.cryptography.openssl/4.3.0",
       "hashPath": "system.security.cryptography.openssl.4.3.0.nupkg.sha512"
 =======
+=======
+>>>>>>> Stashed changes
     "System.Security.Cryptography.Cng/4.5.0": {
       "type": "package",
       "serviceable": true,
@@ -4991,6 +5043,9 @@
       "sha512": "sha512-TGQX51gxpY3K3I6LJlE2LAftVlIMqJf0cBGhz68Y89jjk3LJCB6SrwiD+YN1fkqemBvWGs+GjyMJukl6d6goyQ==",
       "path": "system.security.cryptography.pkcs/4.5.0",
       "hashPath": "system.security.cryptography.pkcs.4.5.0.nupkg.sha512"
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
     },
     "System.Security.Cryptography.Primitives/4.3.0": {
@@ -5008,6 +5063,7 @@
       "hashPath": "system.security.cryptography.protecteddata.4.5.0.nupkg.sha512"
     },
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     "System.Security.Cryptography.X509Certificates/4.3.0": {
       "type": "package",
       "serviceable": true,
@@ -5015,12 +5071,17 @@
       "path": "system.security.cryptography.x509certificates/4.3.0",
       "hashPath": "system.security.cryptography.x509certificates.4.3.0.nupkg.sha512"
 =======
+=======
+>>>>>>> Stashed changes
     "System.Security.Cryptography.Xml/4.5.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-i2Jn6rGXR63J0zIklImGRkDIJL4b1NfPSEbIVHBlqoIb12lfXIigCbDRpDmIEzwSo/v1U5y/rYJdzZYSyCWxvg==",
       "path": "system.security.cryptography.xml/4.5.0",
       "hashPath": "system.security.cryptography.xml.4.5.0.nupkg.sha512"
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
     },
     "System.Security.Permissions/4.5.0": {

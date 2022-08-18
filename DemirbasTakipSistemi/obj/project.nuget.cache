@@ -1,6 +1,10 @@
 {
   "version": 2,
+<<<<<<< Updated upstream
   "dgSpecHash": "PJHRVDmW08qT0C/VvoWlYKShATXSBlibkc6KqSIIcQ/bHEheQjNjyWVoi4NFv7acsdw1qLRcyi9ARkv3m2DQhA==",
+=======
+  "dgSpecHash": "kz8n+tBhTBe0y641RrOkxOq5/gUFC5hOUGBqUfx6Jq3VRXIxvsY8CEP6z8sOETAUl6ap+Xgf5aODXu50Q7xYCg==",
+>>>>>>> Stashed changes
   "success": true,
   "projectFilePath": "D:\\cs\\staj1\\CoreDemirbasTakip\\DemirbasTakipSistemi\\DemirbasTakipSistemi.csproj",
   "expectedPackageFiles": [
@@ -13,14 +17,20 @@
     "C:\\Users\\drbya\\.nuget\\packages\\microsoft.aspnetcore.dataprotection.abstractions\\2.2.0\\microsoft.aspnetcore.dataprotection.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\drbya\\.nuget\\packages\\microsoft.aspnetcore.hosting.abstractions\\2.2.0\\microsoft.aspnetcore.hosting.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\drbya\\.nuget\\packages\\microsoft.aspnetcore.hosting.server.abstractions\\2.2.0\\microsoft.aspnetcore.hosting.server.abstractions.2.2.0.nupkg.sha512",
+<<<<<<< Updated upstream
     "C:\\Users\\drbya\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
+=======
+>>>>>>> Stashed changes
     "C:\\Users\\drbya\\.nuget\\packages\\microsoft.aspnetcore.http\\2.2.0\\microsoft.aspnetcore.http.2.2.0.nupkg.sha512",
     "C:\\Users\\drbya\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.2.0\\microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\drbya\\.nuget\\packages\\microsoft.aspnetcore.http.extensions\\2.2.0\\microsoft.aspnetcore.http.extensions.2.2.0.nupkg.sha512",
     "C:\\Users\\drbya\\.nuget\\packages\\microsoft.aspnetcore.http.features\\2.2.0\\microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512",
+<<<<<<< Updated upstream
     "C:\\Users\\drbya\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",
     "C:\\Users\\drbya\\.nuget\\packages\\microsoft.aspnetcore.razor.language\\3.1.0\\microsoft.aspnetcore.razor.language.3.1.0.nupkg.sha512",
     "C:\\Users\\drbya\\.nuget\\packages\\microsoft.aspnetcore.razor.runtime\\2.2.0\\microsoft.aspnetcore.razor.runtime.2.2.0.nupkg.sha512",
+=======
+>>>>>>> Stashed changes
     "C:\\Users\\drbya\\.nuget\\packages\\microsoft.aspnetcore.webutilities\\2.2.0\\microsoft.aspnetcore.webutilities.2.2.0.nupkg.sha512",
     "C:\\Users\\drbya\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.0\\microsoft.bcl.asyncinterfaces.1.1.0.nupkg.sha512",
     "C:\\Users\\drbya\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",
@@ -56,7 +66,11 @@
     "C:\\Users\\drbya\\.nuget\\packages\\microsoft.extensions.webencoders\\2.2.0\\microsoft.extensions.webencoders.2.2.0.nupkg.sha512",
     "C:\\Users\\drbya\\.nuget\\packages\\microsoft.identity.client\\3.0.8\\microsoft.identity.client.3.0.8.nupkg.sha512",
     "C:\\Users\\drbya\\.nuget\\packages\\microsoft.net.http.headers\\2.2.0\\microsoft.net.http.headers.2.2.0.nupkg.sha512",
+<<<<<<< Updated upstream
     "C:\\Users\\drbya\\.nuget\\packages\\microsoft.netcore.platforms\\2.1.2\\microsoft.netcore.platforms.2.1.2.nupkg.sha512",
+=======
+    "C:\\Users\\drbya\\.nuget\\packages\\microsoft.netcore.platforms\\2.0.0\\microsoft.netcore.platforms.2.0.0.nupkg.sha512",
+>>>>>>> Stashed changes
     "C:\\Users\\drbya\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "C:\\Users\\drbya\\.nuget\\packages\\microsoft.visualstudio.web.codegeneration\\3.1.5\\microsoft.visualstudio.web.codegeneration.3.1.5.nupkg.sha512",
     "C:\\Users\\drbya\\.nuget\\packages\\microsoft.visualstudio.web.codegeneration.contracts\\3.1.5\\microsoft.visualstudio.web.codegeneration.contracts.3.1.5.nupkg.sha512",
@@ -91,7 +105,10 @@
     "C:\\Users\\drbya\\.nuget\\packages\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\drbya\\.nuget\\packages\\runtime.win-x64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\drbya\\.nuget\\packages\\runtime.win-x86.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+<<<<<<< Updated upstream
     "C:\\Users\\drbya\\.nuget\\packages\\system.appcontext\\4.3.0\\system.appcontext.4.3.0.nupkg.sha512",
+=======
+>>>>>>> Stashed changes
     "C:\\Users\\drbya\\.nuget\\packages\\system.buffers\\4.5.0\\system.buffers.4.5.0.nupkg.sha512",
     "C:\\Users\\drbya\\.nuget\\packages\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",
     "C:\\Users\\drbya\\.nuget\\packages\\system.collections.concurrent\\4.3.0\\system.collections.concurrent.4.3.0.nupkg.sha512",
@@ -152,6 +169,7 @@
     "C:\\Users\\drbya\\.nuget\\packages\\system.runtime.serialization.json\\4.3.0\\system.runtime.serialization.json.4.3.0.nupkg.sha512",
     "C:\\Users\\drbya\\.nuget\\packages\\system.runtime.serialization.primitives\\4.3.0\\system.runtime.serialization.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\drbya\\.nuget\\packages\\system.security.accesscontrol\\4.5.0\\system.security.accesscontrol.4.5.0.nupkg.sha512",
+<<<<<<< Updated upstream
     "C:\\Users\\drbya\\.nuget\\packages\\system.security.cryptography.algorithms\\4.3.0\\system.security.cryptography.algorithms.4.3.0.nupkg.sha512",
     "C:\\Users\\drbya\\.nuget\\packages\\system.security.cryptography.cng\\4.5.0\\system.security.cryptography.cng.4.5.0.nupkg.sha512",
     "C:\\Users\\drbya\\.nuget\\packages\\system.security.cryptography.csp\\4.3.0\\system.security.cryptography.csp.4.3.0.nupkg.sha512",
@@ -161,6 +179,12 @@
     "C:\\Users\\drbya\\.nuget\\packages\\system.security.cryptography.primitives\\4.3.0\\system.security.cryptography.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\drbya\\.nuget\\packages\\system.security.cryptography.protecteddata\\4.5.0\\system.security.cryptography.protecteddata.4.5.0.nupkg.sha512",
     "C:\\Users\\drbya\\.nuget\\packages\\system.security.cryptography.x509certificates\\4.3.0\\system.security.cryptography.x509certificates.4.3.0.nupkg.sha512",
+=======
+    "C:\\Users\\drbya\\.nuget\\packages\\system.security.cryptography.cng\\4.5.0\\system.security.cryptography.cng.4.5.0.nupkg.sha512",
+    "C:\\Users\\drbya\\.nuget\\packages\\system.security.cryptography.pkcs\\4.5.0\\system.security.cryptography.pkcs.4.5.0.nupkg.sha512",
+    "C:\\Users\\drbya\\.nuget\\packages\\system.security.cryptography.primitives\\4.3.0\\system.security.cryptography.primitives.4.3.0.nupkg.sha512",
+    "C:\\Users\\drbya\\.nuget\\packages\\system.security.cryptography.protecteddata\\4.5.0\\system.security.cryptography.protecteddata.4.5.0.nupkg.sha512",
+>>>>>>> Stashed changes
     "C:\\Users\\drbya\\.nuget\\packages\\system.security.cryptography.xml\\4.5.0\\system.security.cryptography.xml.4.5.0.nupkg.sha512",
     "C:\\Users\\drbya\\.nuget\\packages\\system.security.permissions\\4.5.0\\system.security.permissions.4.5.0.nupkg.sha512",
     "C:\\Users\\drbya\\.nuget\\packages\\system.security.principal.windows\\4.5.0\\system.security.principal.windows.4.5.0.nupkg.sha512",
