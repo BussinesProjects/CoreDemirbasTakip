@@ -48,21 +48,23 @@ namespace DemirbasTakipSistemi.Controllers
                 return View();
             }
 
+        }
+
+        public async Task<IActionResult> LogOut()
+        {
+            await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+            return RedirectToAction("Login", "Account");
+        }
+
+
+        //[System.Web.Mvc.OutputCache(NoStore = true, Duration = 0, VaryByParam = "*")]
+        //public IActionResult Logout()
+        //{
+        //    //await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+        //    return RedirectToAction("Login", "Account");
+        //}
+
+
+
     }
-
-    public async Task<IActionResult> LogOut()
-    {
-        await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
-        return RedirectToAction("Login", "Account");
-    }
-
-
-    //[System.Web.Mvc.OutputCache(NoStore = true, Duration = 0, VaryByParam = "*")]
-    //public IActionResult Logout()
-    //{
-    //    //await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
-    //    return RedirectToAction("Login", "Account");
-    //}
-
-}
 }

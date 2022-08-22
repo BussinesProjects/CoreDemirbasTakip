@@ -644,4 +644,4 @@ D:\cs\staj1\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\tr\Mi
 D:\cs\staj1\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 D:\cs\staj1\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
 D:\cs\staj1\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\Razor\Views\Setting\Index.cshtml.g.cs
-D:\cs\staj1\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\Razor\Views\Setting\PasswordUpdate.cshtml.g.cs
+D:\cs\staj1\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\Razor\Views\Setting\UsernamePasswordUpdate.cshtml.g.cs
