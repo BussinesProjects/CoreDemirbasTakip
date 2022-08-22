@@ -25,10 +25,6 @@ namespace DemirbasTakipSistemi.Repositories
         {
             return context.Set<Product>().Where(x => x.ProjectCode == code).ToList();
         }
-        public List<Product> ListById(int code)
-        {
-            return context.Set<Product>().Where(x => x.ProjectIdGet == code).ToList();
-        }
         public Product GetSerialNumber(string serialNumber)
         {
             return context.Set<Product>().Where(x => x.ProductSerialNumber == serialNumber).FirstOrDefault();

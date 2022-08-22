@@ -1,5 +1,6 @@
 ﻿using DemirbasTakipSistemi.Models;
 using DemirbasTakipSistemi.Models.DataModel;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace DemirbasTakipSistemi.Repositories
@@ -11,5 +12,10 @@ namespace DemirbasTakipSistemi.Repositories
         {
           return context.Set<Login>().Where(x=> x.Username==username && x.Password==password).FirstOrDefault();
         }
+        public List<Login> getNotAdmin()
+        {
+          return context.Set<Login>().ToList();
+        }
+        
     }
 }
