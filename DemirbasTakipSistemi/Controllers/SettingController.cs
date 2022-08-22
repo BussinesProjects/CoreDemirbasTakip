@@ -15,9 +15,10 @@ namespace DemirbasTakipSistemi.Controllers
             return View();
         }
 
-        [HttpGet]
+        [HttpPost]
         public ActionResult UsernamePasswordUpdate()
         {
+
             return View();
         }
 
