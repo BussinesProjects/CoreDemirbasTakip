@@ -40,7 +40,9 @@
                                         
                                         <div class="form-group">
                                             <input type="hidden" class="form-control" name="previous" value="@Model.Item2.Prev" >
-
+                                            <input type="hidden" class="form-control" name="ProjectIdGet" value="@Model.Item1.ProjectIdGet">
+                                            <input type="hidden" class="form-control" name="ProjectName" value="@Model.Item1.ProjectName">
+                                
                                             <label>Oluşturulma tarihi</label>
                                            <input class="form-control" name="RegisterDateTime" type="date" value="@Model.Item1.RegisterDateTime.Date.ToString("yyyy-MM-dd")" readonly>
                                         </div>

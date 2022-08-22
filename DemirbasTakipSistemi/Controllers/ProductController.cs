@@ -47,13 +47,13 @@ namespace DemirbasTakipSistemi.Controllers
         //    pc.Proj = "";
         //    return View(pc);
         //}
-        public ActionResult ProductAdd(string code, int prev)
+        public ActionResult ProductAdd(string projCode, int prev)
         {
             PeopleAndCategoryViewModel pc = new PeopleAndCategoryViewModel();
             pc.People = personRepository.TList();
             pc.Categories = categoryRepository.TList();
             pc.Projects = projectRepository.TList();
-            pc.Proj = code;
+            pc.Proj = projCode;
             pc.Prev = prev;
             return View(pc);
         }
@@ -82,6 +82,10 @@ namespace DemirbasTakipSistemi.Controllers
                 }
             }
             p.isEnabled = true;
+            if (p.ProjectCode != null) 
+            { 
+                p.ProjectIdGet = projectRepository.GetCode(p.ProjectCode).Id; 
+            }
             productRepository.TAdd(p);
             //p.Category.Products.Add(p); // added recently
             //projectProductRepository.TAdd(p);
@@ -117,13 +121,13 @@ namespace DemirbasTakipSistemi.Controllers
 
         public ActionResult redirectToPrev(Product p)
         {
-            if (p.previous == 2)
+            if (p.previous == 1 && p.ProjectCode != null)
+            {
+                return RedirectToAction("Products", "Project", new { code = p.ProjectCode, id = p.ProjectIdGet });
+            }
+            else if (p.previous == 2)
             {
                 return RedirectToAction("ProductList");
-            }
-            else if (p.previous == 1)
-            {
-                return RedirectToAction("Products", "Project", new { code = p.ProjectCode });
             }
             else
             {
@@ -143,6 +147,15 @@ namespace DemirbasTakipSistemi.Controllers
             return View(Tuple.Create<Product, PeopleAndCategoryViewModel>(product, pc));
         }
 
+        [HttpPost]
+        public ActionResult ProductUpdate(Product p)
+        {
+            p.isEnabled = true;
+            productRepository.TUpdate(p);
+
+            return redirectToPrev(p);
+        }
+
         public ActionResult ProductInfo(int id, int pre)
         {
             var product = productRepository.TGet(id);
@@ -154,31 +167,6 @@ namespace DemirbasTakipSistemi.Controllers
             pc.Prev = pre;
             return View(Tuple.Create<Product, PeopleAndCategoryViewModel>(product, pc));
         }
-
-        [HttpPost]
-        public ActionResult ProductUpdate(Product p)
-        {
-            //Product product = productRepository.TGet(p.Id);
-            //product.ProductSerialNumber = p.ProductSerialNumber;
-            //product.CategoryID = p.CategoryID;
-            //product.PersonID = p.PersonID;
-            //p.ProductWarrantyStartDate= product.ProductWarrantyStartDate;
-            //p.ProductWarrantyFinishDate= product.ProductWarrantyFinishDate;
-            //p.RegisterDateTime = product.RegisterDateTime;
-            //product.ProductBrand = p.ProductBrand;
-            //product.
-            p.isEnabled = true;
-            productRepository.TUpdate(p);
-            //projectProductRepository.TUpdate(p);
-            /*
-            PeopleAndCategoryViewModel pc = new PeopleAndCategoryViewModel();
-            pc.People = personRepository.TList();
-            pc.Categories = categoryRepository.TList();
-            return View(Tuple.Create<Product, PeopleAndCategoryViewModel>(p, pc));*/
-
-            return redirectToPrev(p);
-        }
-
         public ActionResult ProductDelete(int id, int pre)
         {
             //productRepository.TDelete( productRepository.TGet(id));

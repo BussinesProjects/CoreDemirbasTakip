@@ -72,7 +72,7 @@ color!-- Styles -->
                                                 {
                                                     <tr>
                                                         <td> @*<a href="~/Project/Products/" style="color:blue">Ürünler</a>*@
-                                                            <button class="btn-outline-success" type="button" onclick="location.href='@Url.Action("Products", "Project", new { code = @item.ProjectCode })'"/>
+                                                            <button class="btn-outline-success" type="button" onclick="location.href='@Url.Action("Products", "Project", new { code = @item.ProjectCode, id = @item.Id})';return false;"/>
 
 
                                                         </td>

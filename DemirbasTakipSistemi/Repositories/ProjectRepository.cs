@@ -13,6 +13,10 @@ namespace DemirbasTakipSistemi.Repositories
              //return context.Set<Project>().Find(code);
              return context.Set<Project>().Where(x => x.ProjectCode == code).FirstOrDefault();
         }
+        public Project GetProjectId( int id)
+        {
+            return context.Set<Project>().Where(x => x.Id == id).FirstOrDefault();
+        }
 
     }
 }
