@@ -4,23 +4,15 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Hesap Ayarları</h1>
+<h1 style="color:green">Hesap Ayarları</h1>
 <div class="card-body">
     <div class="basic-elements">
-        <form action="~/Setting/UserNameUpdate" method="post" class="form-horizontal">
+        <form action="~/Setting/UsernamePasswordUpdate" method="post" class="form-horizontal">
             <div class="row">
                 <div class="col-lg-6">
-                    <button class="btn btn-primary" style="background-color:green; color:white" type="submit"> Kullanıcı Adı Değiştir </button>
+                    <button class="btn btn-group" style=""  type="submit"> Kullanıcı Adı ve Şifre Değiştir </button>
                 </div>
             </div>
         </form>
-        <form action="~/Setting/PaswordUpdate" method="post" class="form-horizontal">
-            <div class="row">
-                <div class="col-lg-6">
-                    <button class="btn input-group-btn" style="background-color:green; color:white" type="submit"> Şifre Değiştir </button>
-                </div>
-            </div>
-        </form>
-
     </div>
 </div>
