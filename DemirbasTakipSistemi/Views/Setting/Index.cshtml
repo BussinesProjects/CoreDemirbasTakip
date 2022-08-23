@@ -78,20 +78,28 @@
                                             <tbody>
                                                 @foreach (var item in Model)
                                                 {
+                                                    @if (item.isEnabled)
+                                                    {
 
-                                    <tr>
-                                        <td>@item.Id</td>
-                                        <td>@item.Username</td>
-                                        @if (item.RoleId == 1)
-                                            {<td>Admin</td>  }
-                                        else
-                                             {<td>User</td>}
-                                        <td>
-                                            <button class="btn-flat  btn-warning ti-pencil" onclick="location.href='@Url.Action("UserUpdate", "Setting",new{id=@item.Id})';return false;"></button>
-                                            <button class="btn-flat  btn-danger ti-trash" onclick="location.href='@Url.Action("UserDelete", "Setting",new{id=@item.Id})';return false;"></button>
-                                        </td>
-                                    </tr>}
-                                            </tbody>
+                                                        <tr>
+                                                            <td>@item.Id</td>
+                                                            <td>@item.Username</td>
+                                                            @if (item.RoleId == 1)
+                                                            {
+                                                                <td>Admin</td>
+                                                            }
+                                                            else
+                                                            {
+                                                                <td>User</td>
+                                                            }
+                                                            <td>
+                                                                <button class="btn-flat  btn-warning ti-pencil" onclick="location.href='@Url.Action("UserUpdate", "Setting", new { id = @item.Id })';return false;"></button>
+                                                                <button class="btn-flat  btn-danger ti-trash" onclick="location.href='@Url.Action("UserDelete", "Setting", new { id = @item.Id })';return false;"></button>
+                                                            </td>
+                                                        </tr>
+                                                        }
+                                                    }       
+                                                </tbody>
                                         </table>
                                     </div>
                                 </div>
