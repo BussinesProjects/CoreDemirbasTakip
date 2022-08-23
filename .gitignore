@@ -11,3 +11,5 @@ DemirbasTakipSistemi/obj/Debug/netcoreapp3.1/RazorDeclaration/Views/Shared/Compo
 *.pdb
 *.pdb
 *.cache
+*.cache
+*.dll
