@@ -21,3 +21,8 @@ DemirbasTakipSistemi/obj/Debug/netcoreapp3.1/RazorDeclaration/Views/Shared/Compo
 *.dll
 *.cache
 *.txt
+DemirbasTakipSistemi/bin/Debug/netcoreapp3.1/DemirbasTakipSistemi.dll
+DemirbasTakipSistemi/bin/Debug/netcoreapp3.1/DemirbasTakipSistemi.Views.dll
+DemirbasTakipSistemi/obj/Debug/netcoreapp3.1/DemirbasTakipSistemi.assets.cache
+DemirbasTakipSistemi/obj/Debug/netcoreapp3.1/DemirbasTakipSistemi.csproj.AssemblyReference.cache
+DemirbasTakipSistemi/obj/Debug/netcoreapp3.1/DemirbasTakipSistemi.GeneratedMSBuildEditorConfig.editorconfig
