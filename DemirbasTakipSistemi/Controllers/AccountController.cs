@@ -33,7 +33,7 @@ namespace DemirbasTakipSistemi.Controllers
             const string SessionName = "_Name";
 
             var user = accountRepository.getUser(username, password);
-            if (user != null)
+            if (user != null && user.isEnabled)
             {
                 var claims = new List<Claim>
                 {

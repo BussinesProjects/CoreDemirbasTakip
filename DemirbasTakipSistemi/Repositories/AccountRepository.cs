@@ -17,11 +17,6 @@ namespace DemirbasTakipSistemi.Repositories
             int id = (context.Set<Login>().Where(x => x.Username == username).FirstOrDefault().RoleId);
             return id;
         }
-        public int getIsUserAdmin(string username)
-        {
-            int id = (context.Set<Login>().Where(x => x.Username == username).FirstOrDefault().RoleId);
-            return id;
-        }
         public List<Login> getNotAdmin()
         {
             return context.Set<Login>().ToList();
