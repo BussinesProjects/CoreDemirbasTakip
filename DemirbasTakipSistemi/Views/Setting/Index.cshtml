@@ -1,6 +1,6 @@
 ﻿@using DemirbasTakipSistemi.Models.DataModel
 
-@model List<Login> 
+@model List<Login>
 
 
 @{ ViewData["Title"] = "Index";
@@ -92,10 +92,12 @@
                                                             {
                                                                 <td>User</td>
                                                             }
-                                                            <td>
-                                                                <button class="btn-flat  btn-warning ti-pencil" onclick="location.href='@Url.Action("UserUpdate", "Setting", new { id = @item.Id })';return false;"></button>
-                                                                <button class="btn-flat  btn-danger ti-trash" id="alert" ></button>
-                                                            </td>
+                                                        <td>
+                                                            <button class="btn-flat  btn-warning ti-pencil" style="height:35px" onclick="location.href='@Url.Action("UserUpdate", "Setting", new { id = @item.Id })';return false;"></button> &nbsp
+                                                            <button class="btn-flat  btn-danger" >@Html.ActionLink("", "UserDelete", new { id = item.Id }, new { @class = "btn-flat  btn-danger ti-trash", onclick = "return confirm('silmek istediğinize emin misiniz?')" })</button>
+
+</td>
+                             
                                                         </tr>
                                                     }
                                                 }
@@ -129,22 +131,5 @@
     </div>
 </div>
 <script>
-    $('#alert').click(function () {
-        swal({
-            title: "Emin Misiniz ?",
-            text: "veri silinecek",
-            icon: "warning",
-            buttons: true,
-            dangerMode: true,
-        })
-            .then((willDelete) => {
-                if (willDelete) {
-                    swal("Silme işlemi Başarılı", {
-                        icon: "success",
-                    });
-                } else {
-                    swal("silme iptal");
-                }
-            });
-    });
+  
 </script>

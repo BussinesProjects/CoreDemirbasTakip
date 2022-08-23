@@ -10,7 +10,7 @@ namespace DemirbasTakipSistemi.Repositories
         Context context = new Context();
         public Login getUser(string username,string password)
         {
-          return context.Set<Login>().Where(x=> x.Username==username && x.Password==password).FirstOrDefault();
+          return context.Set<Login>().Where(x=> x.Username==username && x.Password==password && x.isEnabled ).FirstOrDefault();
         }
         public List<Login> getNotAdmin()
         {
