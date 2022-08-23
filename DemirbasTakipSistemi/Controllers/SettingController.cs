@@ -11,14 +11,10 @@ namespace DemirbasTakipSistemi.Controllers
 {
     public class SettingController : Controller
     {
-<<<<<<< Updated upstream
         const string SessionName = "_Name";// have to change SessionController as well if changed
 
         private AccountRepository accountRepository = new AccountRepository();
 
-=======
-        private readonly AccountRepository accountRepository = new AccountRepository();
->>>>>>> Stashed changes
         public IActionResult Index()
         {
             var list = accountRepository.getNotAdmin();
