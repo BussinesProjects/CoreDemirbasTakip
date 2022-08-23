@@ -1,8 +1,11 @@
 ﻿@using DemirbasTakipSistemi.Models.DataModel
-@model List<Login>
+
+@model List<Login> 
+
 
 @{ ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml"; }
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
 <h1 style="color:green">Hesap Ayarları</h1>
 <br />
@@ -19,8 +22,6 @@
     </form>
 </div>
 
-
-
 <div class="col-lg-12">
 
     <h4 style="color:green">Admin Ayarları</h4>
@@ -32,7 +33,6 @@
     <link href="~/Content/assets/css/lib/menubar/sidebar.css" rel="stylesheet">
     <link href="~/Content/assets/css/lib/helper.css" rel="stylesheet">
     <link href="~/Content/assets/css/lib/sweetalert/sweetalert.css" rel="stylesheet">
-
 
     <div class="content-wrap">
         <div class="main">
@@ -50,7 +50,7 @@
                         <div class="page-header">
                             <div class="page-title">
                                 <ol class="breadcrumb">
-                                    <li class="breadcrumb-item">   <button class="btn-flat  btn-success  ti-plus" onclick="location.href='@Url.Action("UserAdd", "Setting", new {code = "", prev = 2})';return false;"> EKLE</button></li>
+                                    <li class="breadcrumb-item">   <button class="btn-flat  btn-success  ti-plus" onclick="location.href='@Url.Action("UserAdd", "Setting", new { code = "", prev = 2 })';return false;"> EKLE</button></li>
                                 </ol>
                             </div>
                         </div>
@@ -94,12 +94,12 @@
                                                             }
                                                             <td>
                                                                 <button class="btn-flat  btn-warning ti-pencil" onclick="location.href='@Url.Action("UserUpdate", "Setting", new { id = @item.Id })';return false;"></button>
-                                                                <button class="btn-flat  btn-danger ti-trash" onclick="location.href='@Url.Action("UserDelete", "Setting", new { id = @item.Id })';return false;"></button>
+                                                                <button class="btn-flat  btn-danger ti-trash" id="alert" ></button>
                                                             </td>
                                                         </tr>
-                                                        }
-                                                    }       
-                                                </tbody>
+                                                    }
+                                                }
+                                            </tbody>
                                         </table>
                                     </div>
                                 </div>
@@ -128,3 +128,23 @@
 
     </div>
 </div>
+<script>
+    $('#alert').click(function () {
+        swal({
+            title: "Emin Misiniz ?",
+            text: "veri silinecek",
+            icon: "warning",
+            buttons: true,
+            dangerMode: true,
+        })
+            .then((willDelete) => {
+                if (willDelete) {
+                    swal("Silme işlemi Başarılı", {
+                        icon: "success",
+                    });
+                } else {
+                    swal("silme iptal");
+                }
+            });
+    });
+</script>

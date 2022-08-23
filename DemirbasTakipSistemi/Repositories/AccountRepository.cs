@@ -14,7 +14,7 @@ namespace DemirbasTakipSistemi.Repositories
         }
         public List<Login> getNotAdmin()
         {
-          return context.Set<Login>().ToList();
+            return context.Set<Login>().ToList();
         }
         
     }
