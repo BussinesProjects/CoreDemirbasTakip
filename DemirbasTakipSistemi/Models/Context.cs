@@ -7,7 +7,7 @@ namespace DemirbasTakipSistemi.Models
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("server=LAPTOP-9MP8H8TU\\CEMILE; Database=DTS;integrated security=true;");
+            optionsBuilder.UseSqlServer("server=. \\sqlexpress; Database=DTS;integrated security=true;");
         }
 
         public DbSet<Category> Categories { get; set; }
