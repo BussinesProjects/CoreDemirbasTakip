@@ -8237,19 +8237,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\drbya\\.nuget\\packages\\": {}
+    "C:\\Users\\Cemile Gül\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\cs\\staj1\\CoreDemirbasTakip\\DemirbasTakipSistemi\\DemirbasTakipSistemi.csproj",
+      "projectUniqueName": "C:\\Users\\Cemile Gül\\Desktop\\CoreDemirbasTakip\\DemirbasTakipSistemi\\DemirbasTakipSistemi.csproj",
       "projectName": "DemirbasTakipSistemi",
-      "projectPath": "D:\\cs\\staj1\\CoreDemirbasTakip\\DemirbasTakipSistemi\\DemirbasTakipSistemi.csproj",
-      "packagesPath": "C:\\Users\\drbya\\.nuget\\packages\\",
-      "outputPath": "D:\\cs\\staj1\\CoreDemirbasTakip\\DemirbasTakipSistemi\\obj\\",
+      "projectPath": "C:\\Users\\Cemile Gül\\Desktop\\CoreDemirbasTakip\\DemirbasTakipSistemi\\DemirbasTakipSistemi.csproj",
+      "packagesPath": "C:\\Users\\Cemile Gül\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Cemile Gül\\Desktop\\CoreDemirbasTakip\\DemirbasTakipSistemi\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\drbya\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Cemile Gül\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -8318,7 +8318,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.410\\RuntimeIdentifierGraph.json"
       }
     }
   }
