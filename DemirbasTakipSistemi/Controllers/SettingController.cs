@@ -107,7 +107,7 @@ namespace DemirbasTakipSistemi.Controllers
                 accountRepository.TUpdate(person);
                 return RedirectToAction("ProductList", "Product"); // change to options or sth later
             }// if nothing has been changed,
-            else if (!(ViewBag.Error == null || ViewBag.Error == "") && prevPass != null)
+            else if ((ViewBag.Error == null || ViewBag.Error == "") && prevPass != null)
             {
                 ViewBag.Error = "Girilen yeni kullanıcı adı veya yeni şifre hatalı!";
                 return View();
@@ -116,9 +116,13 @@ namespace DemirbasTakipSistemi.Controllers
                 return View();
             }
         }
-        public IActionResult UserDelete()
+        public IActionResult UserDelete(int id)
         {
-            return View();
+            //personRepository.TDelete( personRepository.TGet(id));
+            Login login = accountRepository.TGet(id);
+            login.isEnabled = false;
+            accountRepository.TUpdate(login);
+           return RedirectToAction("Index");
         }
 
     }
