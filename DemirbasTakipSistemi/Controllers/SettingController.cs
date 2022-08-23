@@ -103,7 +103,7 @@ namespace DemirbasTakipSistemi.Controllers
                 accountRepository.TUpdate(person);
                 return RedirectToAction("ProductList", "Product"); // change to options or sth later
             }// if nothing has been changed,
-            else if ((ViewBag.Error == null || ViewBag.Error == "") && prevPass != null)
+            else if (!(ViewBag.Error == null || ViewBag.Error == "") && prevPass != null)
             {
                 ViewBag.Error = "Girilen yeni kullanıcı adı veya yeni şifre hatalı!";
                 return View();
