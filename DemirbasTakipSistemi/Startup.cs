@@ -16,6 +16,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.Authorization;
+using Microsoft.AspNetCore.Http;
 
 namespace DemirbasTakipSistemi
 {
@@ -30,8 +31,15 @@ namespace DemirbasTakipSistemi
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
-
         {
+
+
+            services.AddDistributedMemoryCache();
+            services.AddSession(options => {
+                options.IdleTimeout = TimeSpan.FromMinutes(1);//You can set Time   
+            });
+
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 
             //services.AddControllersWithViews();
             services.AddMvc();
@@ -68,6 +76,8 @@ namespace DemirbasTakipSistemi
             }
             app.UseHttpsRedirection();
             app.UseStaticFiles();
+
+            app.UseSession();
 
             app.UseRouting();
 

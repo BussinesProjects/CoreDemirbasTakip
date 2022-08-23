@@ -9,6 +9,7 @@ using System.Security.Claims;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Authorization;
 using DemirbasTakipSistemi.Models.DataModel;
+using Microsoft.AspNetCore.Http;
 
 namespace DemirbasTakipSistemi.Controllers
 {
@@ -29,6 +30,7 @@ namespace DemirbasTakipSistemi.Controllers
         [HttpPost]
         public async Task<IActionResult> Login(string username, string password)
         {
+            const string SessionName = "_Name";
 
             var user = accountRepository.getUser(username, password);
             if (user != null)
@@ -39,6 +41,8 @@ namespace DemirbasTakipSistemi.Controllers
                 };
                 var useridentity = new ClaimsIdentity(claims, "Login");
                 ClaimsPrincipal principal = new ClaimsPrincipal(useridentity);
+                HttpContext.Session.SetString(SessionName, username);
+
                 await HttpContext.SignInAsync(principal);
                 return Redirect("/Product/ProductList"); //????
             }

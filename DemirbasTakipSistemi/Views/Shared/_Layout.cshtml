@@ -1,6 +1,10 @@
-﻿<!DOCTYPE html>
-<html lang="en">
+﻿
+@using Microsoft.AspNetCore.Http
+@inject Microsoft.AspNetCore.Http.IHttpContextAccessor HttpContextAccessor
 
+
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8" />
@@ -62,12 +66,12 @@
                         <div class="dropdown dib">
                             <div class="header-icon" data-toggle="dropdown">
                                 <span class="user-avatar">
-                                    Sümeyye
-                                    <i class="ti-angle-down f-s-10"></i>
+                                    @HttpContextAccessor.HttpContext.Session.GetString("_Name")
+                                    <i class="ti-angle-down f-s-10"> </i>
                                 </span>
                                 <div class="drop-down dropdown-profile dropdown-menu dropdown-menu-right">
                                     <div class="dropdown-content-heading">
-                                        <span>Sümeyye Kula</span>
+                                        <span>@HttpContextAccessor.HttpContext.Session.GetString("_Name")</span>
                                     </div>
                                     <div class="dropdown-content-body">
                                         <ul>

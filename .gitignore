@@ -5,3 +5,9 @@ DemirbasTakipSistemi/obj/Debug/netcoreapp3.1/RazorDeclaration/Views/Shared/Compo
 .vs/DemirbasTakipSistemi/v17/.suo
 *.v2
 *.v1
+*.vsidx
+*.vsidx
+*.dll
+*.pdb
+*.pdb
+*.cache
