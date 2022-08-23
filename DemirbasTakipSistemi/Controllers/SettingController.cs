@@ -11,10 +11,14 @@ namespace DemirbasTakipSistemi.Controllers
 {
     public class SettingController : Controller
     {
+<<<<<<< Updated upstream
         const string SessionName = "_Name";// have to change SessionController as well if changed
 
         private AccountRepository accountRepository = new AccountRepository();
 
+=======
+        private readonly AccountRepository accountRepository = new AccountRepository();
+>>>>>>> Stashed changes
         public IActionResult Index()
         {
             var list = accountRepository.getNotAdmin();
@@ -29,6 +33,14 @@ namespace DemirbasTakipSistemi.Controllers
         {
             return View(accountRepository.TGet(id));
         }
+        [HttpPost]
+        public ActionResult UserUpdate(Login login)
+        {
+            login.isEnabled = true;
+            accountRepository.TUpdate(login);
+            return RedirectToAction("Index");
+        }
+
 
         [HttpGet]
         public IActionResult UserAdd()
@@ -39,7 +51,9 @@ namespace DemirbasTakipSistemi.Controllers
         [HttpPost]
         public IActionResult UserAdd(Login login)
         {
-            return View();
+            login.isEnabled = true;
+            accountRepository.TAdd(login);
+            return RedirectToAction("Index");
         }
 
         [HttpPost]
