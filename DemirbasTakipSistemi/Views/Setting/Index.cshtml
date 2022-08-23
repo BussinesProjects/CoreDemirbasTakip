@@ -1,5 +1,5 @@
 ﻿@using DemirbasTakipSistemi.Models.DataModel
-@model List<Login>
+@model dynamic
 
 @{ ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml"; }
@@ -75,8 +75,10 @@
                                                     <th>İşlem</th>
                                                 </tr>
                                             </thead>
-                                            <tbody>
-                                                @foreach (var item in Model)
+                                            @if ( ((int)Model.role) == 1)
+                                            {
+                                                <tbody>
+                                                @foreach (var item in Model.list)
                                                 {
                                                     @if (item.isEnabled)
                                                     {
@@ -97,9 +99,11 @@
                                                                 <button class="btn-flat  btn-danger ti-trash" onclick="location.href='@Url.Action("UserDelete", "Setting", new { id = @item.Id })';return false;"></button>
                                                             </td>
                                                         </tr>
-                                                        }
-                                                    }       
-                                                </tbody>
+                                                    }
+                                                }       
+                                            </tbody>
+                                            }
+                                            
                                         </table>
                                     </div>
                                 </div>
