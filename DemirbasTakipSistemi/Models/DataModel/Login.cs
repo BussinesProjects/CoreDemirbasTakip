@@ -17,6 +17,7 @@ namespace DemirbasTakipSistemi.Models.DataModel
         public string Username { get; set; }
         public string Password { get; set; }
         public int RoleId { get; set; }
+        public bool isEnabled { get; set; }
         public virtual Role Role { get; set; }
    
         public virtual ICollection<PatchNote> PatchNotes { get; set; }

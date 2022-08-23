@@ -38,20 +38,16 @@
                                 <div class="row">
                                     <div class="col-lg-12">
                                         <div class="form-group">
+                                            <input type="hidden" class="form-control" name="PersonID" value=@Model.Id>
                                             <label class="col-lg-4 control-label">Kullanıcı Adı</label>
                                             <div class="col-lg-8">
-                                                <input type="text" class="form-control" name="PersonName" value="">
+                                                <input type="text" class="form-control" name="Username" value=@Model.Username>
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-lg-3 control-label">Kullanıcı Rolü</label>
+                                            <label class="col-lg-3 control-label">Kullanıcı Rolü Id (<h7>1-Admin 2-User</h7>)</label>
                                             <div class="col-lg-9">
-                                                <select class="form-control" name="Role">
-
-                                                    <option value="Admin">Admin</option>
-                                                    <option value="User">User</option>
-                                                    }
-                                                </select>
+                                                <input type="number" class="form-control" name="RoleId" min="1" max="2" value=@Model.RoleId>
                                             </div>
                                         </div>
 
@@ -60,9 +56,7 @@
                                                 <a asp-controller="Setting" asp-action="Index" type="submit" class="btn btn-danger" style="width:150px">
                                                     Listeye Dön
                                                 </a>
-                                                <a asp-controller="Setting" asp-action="Index" type="submit" class="btn btn-primary" style="width:150px">
-                                                    Güncelle
-                                                </a>
+                                                <button class="btn btn-primary" type="submit"> Güncelle </button>
                                             </div>
                                         </div>
 
