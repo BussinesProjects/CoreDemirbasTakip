@@ -644,7 +644,6 @@ D:\cs\staj1\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\tr\Mi
 D:\cs\staj1\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 D:\cs\staj1\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
 D:\cs\staj1\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\Razor\Views\Setting\Index.cshtml.g.cs
-D:\cs\staj1\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\Razor\Views\Setting\PasswordUpdate.cshtml.g.cs
 C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip-main\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\appsettings.Development.json
 C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip-main\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\appsettings.json
 C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip-main\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\DemirbasTakipSistemi.exe
@@ -949,3 +948,6 @@ C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip2\DemirbasTakipSistemi\obj\Debug\n
 C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip2\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\DemirbasTakipSistemi.dll
 C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip2\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\DemirbasTakipSistemi.pdb
 C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip2\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\DemirbasTakipSistemi.genruntimeconfig.cache
+D:\cs\staj1\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\Razor\Views\Setting\UserAdd.cshtml.g.cs
+D:\cs\staj1\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\Razor\Views\Setting\UsernamePasswordUpdate.cshtml.g.cs
+D:\cs\staj1\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\Razor\Views\Setting\UserUpdate.cshtml.g.cs

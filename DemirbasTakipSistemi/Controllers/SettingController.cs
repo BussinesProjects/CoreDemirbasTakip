@@ -1,9 +1,6 @@
 ﻿using DemirbasTakipSistemi.Models.DataModel;
 using DemirbasTakipSistemi.Repositories;
-<<<<<<< Updated upstream
-=======
 using Microsoft.AspNetCore.Http;
->>>>>>> Stashed changes
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -14,14 +11,10 @@ namespace DemirbasTakipSistemi.Controllers
 {
     public class SettingController : Controller
     {
-<<<<<<< Updated upstream
-        AccountRepository accountRepository = new AccountRepository();
-=======
         const string SessionName = "_Name";// have to change SessionController as well if changed
 
         private AccountRepository accountRepository = new AccountRepository();
 
->>>>>>> Stashed changes
         public IActionResult Index()
         {
             var list = accountRepository.getNotAdmin();
@@ -32,7 +25,6 @@ namespace DemirbasTakipSistemi.Controllers
         {
             return View();
         }
-<<<<<<< Updated upstream
         public IActionResult UserUpdate(int id)
         {
             return View(accountRepository.TGet(id));
@@ -48,14 +40,7 @@ namespace DemirbasTakipSistemi.Controllers
         public IActionResult UserAdd(Login login)
         {
             return View();
-=======
-
-        //[HttpGet]
-        //public ActionResult UsernamePasswordUpdate()
-        //{
-
-        //    return View();
-        //}
+        }
 
         [HttpPost]
         public ActionResult UsernamePasswordUpdate(string prevPass, string newUserName, string newPass, string newPass2)
@@ -63,13 +48,13 @@ namespace DemirbasTakipSistemi.Controllers
             bool nameChange = false;
             bool passwordChange = false;
             string name = HttpContext.Session.GetString(SessionName);
-            var person = accountRepository.getUser( name, prevPass);
+            var person = accountRepository.getUser(name, prevPass);
             if (person != null && person.Password == prevPass) // person var, geçerli
             {
                 // username kontrol ediliyor
                 if (newUserName != person.Username) // username geçerli
                 {
-                    if (! (newUserName == "" || newUserName == null)) // username geçersiz
+                    if (!(newUserName == "" || newUserName == null)) // username geçersiz
                     {
                         nameChange = true;
                     }
@@ -86,7 +71,7 @@ namespace DemirbasTakipSistemi.Controllers
                     {
                         ViewBag.Error = "İki yeni şifre uyuşmuyor!";
                     }
-                    else if ( !(newPass == "" || newPass == null)) // password değişti
+                    else if (!(newPass == "" || newPass == null)) // password değişti
                     {
                         passwordChange = true;
                     }
@@ -100,7 +85,7 @@ namespace DemirbasTakipSistemi.Controllers
             // if there is anything changed,
             if (passwordChange || nameChange)
             {
-                if (nameChange) { 
+                if (nameChange) {
                     person.Username = newUserName;
                     HttpContext.Session.SetString(SessionName, newUserName);
                 }
@@ -108,15 +93,14 @@ namespace DemirbasTakipSistemi.Controllers
                 accountRepository.TUpdate(person);
                 return RedirectToAction("ProductList", "Product"); // change to options or sth later
             }// if nothing has been changed,
-            else if ((ViewBag.Error== null || ViewBag.Error == "") && prevPass != null)
+            else if ((ViewBag.Error == null || ViewBag.Error == "") && prevPass != null)
             {
                 ViewBag.Error = "Girilen yeni kullanıcı adı veya yeni şifre hatalı!";
                 return View();
             }
-            else { 
+            else {
                 return View();
             }
->>>>>>> Stashed changes
         }
         public IActionResult UserDelete()
         {
@@ -124,4 +108,5 @@ namespace DemirbasTakipSistemi.Controllers
         }
 
     }
+
 }
