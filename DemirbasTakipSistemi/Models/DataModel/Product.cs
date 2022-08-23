@@ -24,6 +24,7 @@ namespace DemirbasTakipSistemi.Models.DataModel
         public int PersonID { get; set; }// **
         public int ProductAmount { get; set; }// **
         public string ProductSerialNumber { get; set; }// **
+        public string ProjectCode { get; set; }// **
         public string ProductModel { get; set; }//
         public string ServiceContact { get; set; }//
         public string ProductBrand { get; set; }// 
@@ -36,13 +37,11 @@ namespace DemirbasTakipSistemi.Models.DataModel
         public System.DateTime ProductWarrantyStartDate { get; set; }//
         public System.DateTime ProductWarrantyFinishDate { get; set; }//
 
+
         public int previous { get; set; }//
         public virtual Category Category { get; set; }// // not used
         public virtual Person Person { get; set; }// // not used
-        //project
-        public int ProjectIdGet { get; set; }// **
-        public string ProjectCode { get; set; }// **
-        public string ProjectName { get; set; }// **
+        public virtual Project Project { get; set; } // not used
 
     }
 }

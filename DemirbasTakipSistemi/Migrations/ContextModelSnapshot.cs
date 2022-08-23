@@ -189,12 +189,6 @@ namespace DemirbasTakipSistemi.Migrations
                     b.Property<int?>("ProjectId")
                         .HasColumnType("int");
 
-                    b.Property<int>("ProjectIdGet")
-                        .HasColumnType("int");
-
-                    b.Property<string>("ProjectName")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<DateTime>("RegisterDateTime")
                         .HasColumnType("datetime2");
 
@@ -329,7 +323,7 @@ namespace DemirbasTakipSistemi.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("DemirbasTakipSistemi.Models.DataModel.Project", null)
+                    b.HasOne("DemirbasTakipSistemi.Models.DataModel.Project", "Project")
                         .WithMany("ProjectProducts")
                         .HasForeignKey("ProjectId");
                 });
