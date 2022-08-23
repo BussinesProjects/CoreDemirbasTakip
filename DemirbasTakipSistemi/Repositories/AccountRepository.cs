@@ -12,6 +12,11 @@ namespace DemirbasTakipSistemi.Repositories
         {
           return context.Set<Login>().Where(x=> x.Username==username && x.Password==password && x.isEnabled ).FirstOrDefault();
         }
+        public int getIsUserAdmin(string username)
+        {
+            int id = (context.Set<Login>().Where(x => x.Username == username).FirstOrDefault().RoleId);
+            return id;
+        }
         public List<Login> getNotAdmin()
         {
             return context.Set<Login>().ToList();

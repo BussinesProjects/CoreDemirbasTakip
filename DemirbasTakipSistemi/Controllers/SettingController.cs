@@ -17,14 +17,17 @@ namespace DemirbasTakipSistemi.Controllers
 
         public IActionResult Index()
         {
-            var list = accountRepository.getNotAdmin();
-
-            return View(list);
+            dynamic model = new System.Dynamic.ExpandoObject();
+            model.list = accountRepository.getNotAdmin();
+            string name = HttpContext.Session.GetString(SessionName);
+            int role = accountRepository.getIsUserAdmin(name);
+            model.role = role;
+            return View(model);
         }
-        public IActionResult UsernamePasswordUpdate()
-        {
-            return View();
-        }
+        //public IActionResult UsernamePasswordUpdate()
+        //{
+        //    return View();
+        //}
         public IActionResult UserUpdate(int id)
         {
             return View(accountRepository.TGet(id));
@@ -95,6 +98,7 @@ namespace DemirbasTakipSistemi.Controllers
             // if there is anything changed,
             if (passwordChange || nameChange)
             {
+                person.isEnabled = true;
                 if (nameChange) {
                     person.Username = newUserName;
                     HttpContext.Session.SetString(SessionName, newUserName);
