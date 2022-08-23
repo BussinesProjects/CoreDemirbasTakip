@@ -568,7 +568,6 @@ C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\ne
 C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\Razor\Views\Setting\Index.cshtml.g.cs
-C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\Razor\Views\Setting\PasswordUpdate.cshtml.g.cs
 D:\cs\staj1\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\DemirbasTakipSistemi.StaticWebAssets.xml
 D:\cs\staj1\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Razor.Language.dll
 D:\cs\staj1\CoreDemirbasTakip\DemirbasTakipSistemi\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.dll
@@ -951,3 +950,6 @@ C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip2\DemirbasTakipSistemi\obj\Debug\n
 D:\cs\staj1\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\Razor\Views\Setting\UserAdd.cshtml.g.cs
 D:\cs\staj1\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\Razor\Views\Setting\UsernamePasswordUpdate.cshtml.g.cs
 D:\cs\staj1\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\Razor\Views\Setting\UserUpdate.cshtml.g.cs
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\Razor\Views\Setting\UserAdd.cshtml.g.cs
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\Razor\Views\Setting\UsernamePasswordUpdate.cshtml.g.cs
+C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\Razor\Views\Setting\UserUpdate.cshtml.g.cs

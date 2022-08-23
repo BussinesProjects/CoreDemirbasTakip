@@ -13,3 +13,11 @@ DemirbasTakipSistemi/obj/Debug/netcoreapp3.1/RazorDeclaration/Views/Shared/Compo
 *.cache
 *.cache
 *.dll
+*.config
+.vs/DemirbasTakipSistemi/v16/.suo
+*.json
+*.exe
+*.pdb
+*.dll
+*.cache
+*.txt
