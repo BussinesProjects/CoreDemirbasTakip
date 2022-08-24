@@ -93,10 +93,11 @@ color!-- Styles -->
                                                         @*
                                                         <td>@item.ProjectProducts.Where(x=>x.isEnabled).ToArray().Length</td>*@
 
-                                                        <td>
-                                                            <button class="btn-flat  btn-warning ti-pencil" onclick="location.href='@Url.Action("ProjectUpdate","Project",new{id=@item.Id})';return false;"></button>
-                                                            <button class="btn-flat  btn-danger ti-trash" onclick="location.href='@Url.Action("ProjectDelete","Project",new{id=@item.Id})';return false;"></button>
-                                                        </td>
+                                                    <td>
+                                                        <button class="btn-flat  btn-warning ti-pencil" style="height:35px; width:40px " onclick="location.href='@Url.Action("ProjectUpdate","Project",new{id=@item.Id})';return false;"></button>
+                                                        @*<button class="btn-flat  btn-danger ti-trash" onclick="location.href='@Url.Action("ProjectDelete","Project",new{id=@item.Id})';return false;"></button>*@
+                                                        <button class="btn-flat  btn-danger " style="width:40px; height:35px ">@Html.ActionLink("", "ProjectDelete", new { id = item.Id }, new { @class = "btn - flat  btn - danger ti-trash", onclick = "return confirm('Silmek istediğinize emin misiniz ?')" })</button>
+                                                    </td>
                                                     </tr>
                                                 }
                                             }

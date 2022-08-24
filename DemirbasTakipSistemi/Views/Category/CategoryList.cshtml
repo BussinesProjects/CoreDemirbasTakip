@@ -76,10 +76,10 @@
                                                         <td>@item.CategoryName</td>
                                                         <td>@item.ProductCount</td>
                                                         <td>
-                                                            <button class="btn-flat  btn-warning ti-pencil" onclick="location.href='@Url.Action("CategoryUpdate", "Category",new{id=@item.CategoryID})';return false;"></button>
+                                                            <button class="btn-flat  btn-warning ti-pencil" style="width:40px; height:35px " onclick="location.href='@Url.Action("CategoryUpdate", "Category",new{id=@item.CategoryID})';return false;"></button>
                                                             @*<button class="btn-flat btn-danger  sweet-confirm ti-trash" onclick="location.href='@Url.Action("CategoryDelete", "Category",new{id=@item.CategoryID})';return false;"></button>
                                                             *@
-                                                            <button class="btn-flat btn-danger  ti-trash" @*id="btn-sa-confirm"*@ onclick="location.href='@Url.Action("CategoryDelete", "Category",new{id=@item.CategoryID})';return false;"></button>
+                                                            <button class="btn-flat  btn-danger " style="width:40px; height:35px" >@Html.ActionLink("","CategoryDelete", new { id = item.CategoryID }, new { @class = "btn - flat  btn - danger ti-trash", onclick = "return confirm('Silmek istediğinize emin misiniz ?')" })</button>
                                                         </td>
 
                                                     </tr>
