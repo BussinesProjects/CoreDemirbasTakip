@@ -20,6 +20,7 @@ namespace DemirbasTakipSistemi.Controllers
         private readonly PersonRepository personRepository = new PersonRepository();
 
         private readonly ProjectRepository projectRepository = new ProjectRepository();
+        //private readonly PhotoRepository photoRepository = new PhotoRepository();
         //private readonly ProjectProductRepository projectProductRepository = new ProjectProductRepository();
 
         //private readonly ProjectProductRepository projectProductRepository = new ProjectProductRepository();
@@ -86,6 +87,11 @@ namespace DemirbasTakipSistemi.Controllers
 
             string uniqueFileName = UploadedFile(p);
             p.product.ProductPicture = uniqueFileName;
+            //PhotoMap photo = new PhotoMap();
+            //photo.PictureKey = p.ProductImage.FileName;
+            //photo.PictureUrl = uniqueFileName;
+            //photoRepository.TAdd( photo);
+
             p.product.isEnabled = true;
             productRepository.TAdd(p.product);
             //p.Category.Products.Add(p); // added recently
@@ -147,6 +153,10 @@ namespace DemirbasTakipSistemi.Controllers
             pc.Prev = pre;
             ProductViewModel prodView = new ProductViewModel();
             prodView.product = product;
+            //if (product.ProductPicture != null || product.ProductPicture != "")
+            //{ // get it from somewhere?
+            //    prodView.ProductImage = photoRepository.Find(product.ProductPicture).PictureUrl;
+            //}
             return View(Tuple.Create<ProductViewModel, PeopleAndCategoryViewModel>(prodView, pc));
         }
         public ActionResult ProductInfo(int id, int pre)
@@ -160,10 +170,6 @@ namespace DemirbasTakipSistemi.Controllers
             pc.Prev = pre;
             ProductViewModel prodView = new ProductViewModel();
             prodView.product = product;
-            //if (product.ProductPicture != null || product.ProductPicture != "")
-            //{
-            //    prodView.ProductImage = product.ProductPicture
-            //}
             return View(Tuple.Create<ProductViewModel, PeopleAndCategoryViewModel>(prodView, pc));
         }
 
@@ -172,10 +178,12 @@ namespace DemirbasTakipSistemi.Controllers
         {
 
             p.product.isEnabled = true;
-            string uniqueFileName = UploadedFile(p);
-            p.product.ProductPicture = uniqueFileName;
+            if (p.ProductImage != null)
+            {
+                string uniqueFileName = UploadedFile(p);
+                p.product.ProductPicture = uniqueFileName;
+            }
             productRepository.TUpdate(p.product);
-
             return redirectToPrev(p);
         }
 
