@@ -73,8 +73,18 @@
                                             @*<input type="number" class="form-control" name="ProductAmount" placeholder="Adet giriniz..." min="0">*@
                                         </div>
                                         <div class="form-group">
-                                            <span>Ürün Fotoğrafı:</span>
-                                             <input type="file" name="postedFiles" multiple />
+                                            <label class="control-label">Employee Image</label>
+                                            <input  class="form-control"  type="file" name="ProductFile" accept="image/*"/>
+                                            
+                                            @*<span>Ürün Fotoğrafı:</span>
+                                            <label class="control-label"  name="ProductFile"></label>  
+                                            <div class="custom-file">  
+                                                <input name="ProductFile" class="custom-file-input" id="customFile">  
+                                                <label class="custom-file-label" for="ProductFile">Ürün fotoğrafı yükle</label>  
+                                            </div>  
+                                                <span asp-validation-for="@Model.Item1.ProductFile" class="text-danger"></span>  
+                                            </div>
+                                            </div>*@
                                         </div>
                                     </div>
 

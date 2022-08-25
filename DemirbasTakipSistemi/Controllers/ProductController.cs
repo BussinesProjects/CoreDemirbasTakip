@@ -59,7 +59,8 @@ namespace DemirbasTakipSistemi.Controllers
             return View(pc);
         }
         [HttpPost]
-        public ActionResult ProductAdd(Product p, List<IFormFile> postedFiles)
+        //public ActionResult ProductAdd(Product p, List<IFormFile> postedFiles)
+        public ActionResult ProductAdd(Product p)
         {
             p.RegisterDateTime = DateTime.Now;
             string wwwPath = this.Environment.WebRootPath;
@@ -71,17 +72,19 @@ namespace DemirbasTakipSistemi.Controllers
                 Directory.CreateDirectory(path);
             }
 
-            List<string> uploadedFiles = new List<string>();
-            foreach (IFormFile postedFile in postedFiles)
-            {
-                string fileName = Path.GetFileName(postedFile.FileName);
-                using (FileStream stream = new FileStream(Path.Combine(path, fileName), FileMode.Create))
-                {
-                    postedFile.CopyTo(stream);
-                    uploadedFiles.Add(fileName);
-                    ViewBag.Message += string.Format("<b>{0}</b> uploaded.<br />", fileName);
-                }
-            }
+            //List<string> uploadedFiles = new List<string>();
+            //foreach (IFormFile postedFile in postedFiles)
+            //{
+            //    string fileName = Path.GetFileName(postedFile.FileName);
+            //    using (FileStream stream = new FileStream(Path.Combine(path, fileName), FileMode.Create))
+            //    {
+            //        postedFile.CopyTo(stream);
+            //        uploadedFiles.Add(fileName);
+            //        ViewBag.Message += string.Format("<b>{0}</b> uploaded.<br />", fileName);
+            //    }
+            //}
+            string uniqueFileName = UploadedFile(p);
+            p.ProductImage = uniqueFileName;
             p.isEnabled = true;
             productRepository.TAdd(p);
             //p.Category.Products.Add(p); // added recently
@@ -169,6 +172,8 @@ namespace DemirbasTakipSistemi.Controllers
             //product.ProductBrand = p.ProductBrand;
             //product.
             p.isEnabled = true;
+            string uniqueFileName = UploadedFile(p);
+            p.ProductImage = uniqueFileName;
             productRepository.TUpdate(p);
             //projectProductRepository.TUpdate(p);
             /*
