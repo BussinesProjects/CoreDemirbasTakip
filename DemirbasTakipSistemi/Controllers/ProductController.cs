@@ -24,6 +24,7 @@ namespace DemirbasTakipSistemi.Controllers
 
         //private readonly ProjectProductRepository projectProductRepository = new ProjectProductRepository();
         private IHostingEnvironment Environment;
+        //private readonly IWebHostEnvironment webHostEnvironment;
         // GET: Product
         public ProductController(IHostingEnvironment _environment)
         {
@@ -189,6 +190,25 @@ namespace DemirbasTakipSistemi.Controllers
             //projectProductRepository.TUpdate(product);
 
             return redirectToPrev(product);
+        }
+
+
+
+        private string UploadedFile(Product model)
+        {
+            string uniqueFileName = null;
+
+            if (model.ProductFile != null)
+            {
+                string uploadsFolder = Path.Combine(Environment.WebRootPath, "images");
+                uniqueFileName = Guid.NewGuid().ToString() + "_" + model.ProductFile.FileName;
+                string filePath = Path.Combine(uploadsFolder, uniqueFileName);
+                using (var fileStream = new FileStream(filePath, FileMode.Create))
+                {
+                    model.ProductFile.CopyTo(fileStream);
+                }
+            }
+            return uniqueFileName;
         }
     }
 }

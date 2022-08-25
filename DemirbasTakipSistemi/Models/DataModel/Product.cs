@@ -7,6 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using Microsoft.AspNetCore.Http;
 using System.ComponentModel.DataAnnotations;
 
 namespace DemirbasTakipSistemi.Models.DataModel
@@ -31,6 +32,7 @@ namespace DemirbasTakipSistemi.Models.DataModel
         public string ProductFeatures { get; set; }//
         public string ProductProvider { get; set; }//
         public string ProductImage { get; set; }
+        public IFormFile ProductFile { get; set; }
         public string ProductServiceContact { get; set; }//
         public System.DateTime RegisterDateTime { get; set; } // **
         public System.DateTime ProductWarrantyDate { get; set; }
