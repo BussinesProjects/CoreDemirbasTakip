@@ -49,3 +49,6 @@ DemirbasTakipSistemi/bin/Debug/netcoreapp3.1/DemirbasTakipSistemi.dll
 .vs/DemirbasTakipSistemi/v17/HierarchyCache.v1.txt
 .vs/DemirbasTakipSistemi/v17/.suo
 .vs/DemirbasTakipSistemi/DesignTimeBuild/.dtbcache.v2
+DemirbasTakipSistemi/obj/Debug/netcoreapp3.1/DemirbasTakipSistemi.GeneratedMSBuildEditorConfig.editorconfig
+DemirbasTakipSistemi/obj/Debug/netcoreapp3.1/DemirbasTakipSistemi.csproj.AssemblyReference.cache
+DemirbasTakipSistemi/obj/Debug/netcoreapp3.1/DemirbasTakipSistemi.assets.cache
