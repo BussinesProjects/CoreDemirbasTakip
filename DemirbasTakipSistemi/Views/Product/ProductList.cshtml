@@ -14,7 +14,7 @@
 <link href="~/Content/assets/css/lib/sweetalert/sweetalert.css" rel="stylesheet">
 
 
-<div class="content-wrap">
+<div class="content-wrap" style="font-size:15px; font-style:normal">
     <div class="main">
         <div class="container-fluid">
             <div class="row">
@@ -30,7 +30,7 @@
                     <div class="page-header">
                         <div class="page-title">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item">   <button class="btn-flat  btn-success  ti-plus" onclick="location.href='@Url.Action("ProductAdd", "Product", new {code = "", prev = 2})';return false;"> EKLE</button></li>
+                                <li class="breadcrumb-item">   <button class="btn-flat  btn-success ti-plus"  onclick="location.href='@Url.Action("ProductAdd", "Product", new {code = "", prev = 2})';return false;"> EKLE</button></li>
                             </ol>
                         </div>
                     </div>
@@ -75,10 +75,10 @@
                                                         <td>@item.RegisterDateTime.Date.ToString("dd-MM-yyyy")</td>
                                                         <td>@item.ProductAmount</td>
                                                         <td>
-                                                            <button class="btn-flat  btn-warning ti-pencil" style="height:35px; width:40px " onclick="location.href='@Url.Action("ProductUpdate", "Product",new{id=@item.Id, pre = 2})';return false;"></button>
-                                                            <button class="btn-flat  btn-info ti-info" style="height:35px; width:40px " onclick="location.href='@Url.Action("ProductInfo", "Product",new{id=@item.Id, pre = 2})';return false;"></button>
-                                                            @*<button class="btn-flat  btn-danger ti-trash"   onclick="location.href='@Url.Action("ProductDelete", "Product",new{id=@item.Id, pre = 2})';return false;"></button>*@
-                                                            <button class="btn-flat  btn-danger " style="width:40px; height:35px ">@Html.ActionLink("", "ProductDelete", new { id = item.Id }, new { @class = "btn - flat  btn - danger ti-trash", onclick = "return confirm('Silmek istediğinize emin misiniz ?')" })</button>
+                                                            <button class="btn-flat  btn-warning ti-pencil" style="width:40px; height:35px " onclick="location.href='@Url.Action("ProductUpdate", "Product",new{id=@item.Id, pre = 2})';return false;"></button>
+                                                            <button class="btn-flat  btn-info ti-info"  style="width:40px; height:35px " onclick="location.href='@Url.Action("ProductInfo", "Product",new{id=@item.Id, pre = 2})';return false;"></button>
+                                                            <button class="btn-flat  btn-danger "  style="width:40px; height:35px "> @Html.ActionLink("", "ProductDelete", new { id = item.Id }, new { @class = "ti-trash", onclick = "return confirm('Silmek istediğinize emin misiniz ?')" })</button>
+                                                            @*<button class="btn-flat  btn-danger ti-trash " style="width:40px; height:35px " onclick=" "return confirm('Silmek istediğinize emin misiniz ?')"">@Html.ActionLink("", "ProductDelete", new { id = item.Id }, new { @class = "btn - flat  btn - danger ti-trash", onclick = "return confirm('Silmek istediğinize emin misiniz ?')"})</button>*@
                                                         </td>
                                                     </tr>
                                                 }
