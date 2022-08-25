@@ -5,7 +5,6 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2></h2>
 <link rel="shortcut icon" href="http://placehold.it/64.png/000/fff">
 <!-- Retina iPad Touch Icon-->
 <link rel="apple-touch-icon" sizes="144x144" href="http://placehold.it/144.png/000/fff">
@@ -23,7 +22,7 @@
 <link href="~/Content/assets/css/lib/bootstrap.min.css" rel="stylesheet">
 <link href="~/Content/assets/css/lib/helper.css" rel="stylesheet">
 <link href="~/Content/assets/css/style.css" rel="stylesheet">
-<div class="card-body">
+<div class="card-body" style="font-size:15px; font-style:normal; color:black">
     <div class="basic-elements">
         <div class="row">
             <div class="col-lg-12">
@@ -37,8 +36,8 @@
                             <form method="post" class="form-horizontal" asp-action="ProductAdd" id="confirmationForm" name="confirmationForm">
                                 <div class="row">
                                     <div class="col-lg-4">
-                                        <input type="hidden" class="form-control" name="previous" value="@Model.Prev" >
-                                
+                                        <input type="hidden" class="form-control" name="previous" value="@Model.Prev">
+
                                         <div class="form-group">
                                             <label>Proje Kodu</label>
                                             @*<input class="form-control" name="ProjectCode" type="text" placeholder="Proje Kodu giriniz...">*@
@@ -46,21 +45,22 @@
                                                 <option name="data" value="" selected></option>
                                                 @foreach (var item in Model.Projects)
                                                 {
-                                                    
-                                                    if ( item.isEnabled)
+
+                                                    if (item.isEnabled)
                                                     {
                                                         <option name="data" value="@item.ProjectCode">@item.ProjectCode</option>
                                                     }
                                                 }
                                             </select>
                                         </div>
-                                        <div class="form-group">
+                                        <div class="form-group" style="font-size:12px; font-style:normal">
                                             <label>Demirbaş Sorumlusu</label>
                                             <select class="form-control" name="PersonID">
+                                                <option name="data" value="" selected></option>
                                                 @foreach (var item in Model.People)
                                                 {
-                                                    
-                                                    if ( item.isEnabled)
+
+                                                    if (item.isEnabled)
                                                     {
                                                         <option name="data" value="@item.PersonID">@item.PersonName</option>
                                                     }
@@ -69,40 +69,45 @@
                                         </div>
                                         <div class="form-group">
                                             <label>Adedi</label>
-                                            <input required type="number" min="0" maxlength="255" class="form-control" placeholder="Adet giriniz..." minlength=1 name="ProductAmount" oninvalid="this.setCustomValidity('Adet boş geçilemez.')" oninput="setCustomValidity('')"/>
+                                            <input required type="number" style="font-size:12px" min="0" maxlength="255" class="form-control" placeholder="Adet giriniz..." minlength=1 name="ProductAmount" oninvalid="this.setCustomValidity('Adet boş geçilemez.')" oninput="setCustomValidity('')" />
                                             @*<input type="number" class="form-control" name="ProductAmount" placeholder="Adet giriniz..." min="0">*@
                                         </div>
                                         <div class="form-group">
                                             <label class="control-label">Employee Image</label>
-                                            <input  class="form-control"  type="file" name="ProductFile" accept="image/*"/>
-                                            
+                                            <input class="form-control" style="font-size:12px" type="file" name="ProductFile" accept="image/*" />
+
                                             @*<span>Ürün Fotoğrafı:</span>
-                                            <label class="control-label"  name="ProductFile"></label>  
-                                            <div class="custom-file">  
-                                                <input name="ProductFile" class="custom-file-input" id="customFile">  
-                                                <label class="custom-file-label" for="ProductFile">Ürün fotoğrafı yükle</label>  
-                                            </div>  
-                                                <span asp-validation-for="@Model.Item1.ProductFile" class="text-danger"></span>  
-                                            </div>
-                                            </div>*@
+                                                <label class="control-label"  name="ProductFile"></label>
+                                                <div class="custom-file">
+                                                    <input name="ProductFile" class="custom-file-input" id="customFile">
+                                                    <label class="custom-file-label" for="ProductFile">Ürün fotoğrafı yükle</label>
+                                                </div>
+                                                    <span asp-validation-for="@Model.Item1.ProductFile" class="text-danger"></span>
+                                                </div>
+                                                </div>*@
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Özellikler/Açıklama</label>
+                                            <textarea class="form-control" rows="3" style="height:80px; font-size:12px" name="ProductFeatures" form="confirmationForm" placeholder="Açıklama giriniz..."></textarea>
                                         </div>
                                     </div>
 
                                     <div class="col-lg-4">
                                         <div class="form-group">
                                             <label>Marka</label>
-                                            <input class="form-control" name="ProductBrand" type="text" placeholder="Marka giriniz...">
+                                            <input class="form-control" style="font-size:12px" name="ProductBrand" type="text" placeholder="Marka giriniz...">
                                         </div>
                                         <div class="form-group">
                                             <label>Model</label>
-                                            <input class="form-control" name="ProductModel" type="text" placeholder="Model giriniz...">
+                                            <input class="form-control" style="font-size:12px" name="ProductModel" type="text" placeholder="Model giriniz...">
                                         </div>
                                         <div class="form-group">
                                             <label>Demirbaş Kategori</label>
                                             <select class="form-control" name="CategoryID">
+                                                <option name="data" value="" selected></option>
                                                 @foreach (var item in Model.Categories)
                                                 {
-                                                    if ( item.isEnabled)
+                                                    if (item.isEnabled)
                                                     {
                                                         <option name="data" value="@item.CategoryID">@item.CategoryName</option>
                                                     }
@@ -111,46 +116,44 @@
                                         </div>
                                         <div class="form-group">
                                             <label>Seri Numarası</label>
-                                                <input required maxlength="255" type="text" class="form-control" placeholder="Seri Numarası giriniz..." minlength=1 name="ProductSerialNumber" oninvalid="this.setCustomValidity('Seri numarası boş geçilemez.')" oninput="setCustomValidity('')"/>
+                                            <input required maxlength="255" type="text" style="font-size:12px" class="form-control" placeholder="Seri Numarası giriniz..." minlength=1 name="ProductSerialNumber" oninvalid="this.setCustomValidity('Seri numarası boş geçilemez.')" oninput="setCustomValidity('')" />
                                             @*<input class="form-control" name="ProductSerialNumber" type="text" placeholder="Seri Numarası giriniz...">*@
                                         </div>
-                                        <div class="form-group">
-                                            <label>Özellikler/Açıklama</label>
-                                            <textarea class="form-control" rows="3" style="height:80px;"  name="ProductFeatures" form="confirmationForm" placeholder="Açıklama giriniz..."></textarea>
-                                        </div>
-
-
                                     </div>
+
                                     <div class="col-lg-4">
                                         <div class="form-group">
                                             <label>Servis İletişim</label>
-                                            <input class="form-control" type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name="ServiceContact" placeholder="">
-                                            <small>Format:123-456-7890</small>
+                                            <input class="form-control" type="tel" style="font-size:12px" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name="ServiceContact" placeholder="123-456-7890">
                                         </div>
                                         <div class="form-group">
                                             <label>Ürün Dağıtıcısı</label>
-                                            <input class="form-control" name="ProductProvider" type="text" placeholder="Ürün Dağıtıcısı giriniz...">
+                                            <input class="form-control" style="font-size:12px" name="ProductProvider" type="text" placeholder="Ürün Dağıtıcısı giriniz...">
                                         </div>
 
                                         <div class="form-group">
                                             <label>Garanti Başlangıç Tarihi</label>
-                                            <input class="form-control" name="ProductWarrantyStartDate" type="date">
+                                            <input class="form-control" style="font-size:12px" name="ProductWarrantyStartDate" type="date">
                                         </div>
                                         <div class="form-group">
                                             <label>Garanti Bitiş Tarihi</label>
-                                            <input class="form-control" name="ProductWarrantyFinishDate" type="date">
+                                            <input class="form-control" style="font-size:12px" name="ProductWarrantyFinishDate" type="date">
                                         </div>
+                                        <br /><br /><br /><br />
+                                        <div class="" style="text-align:right;">
+                                          
+                                                <a asp-controller="Product" asp-action="ProductList" class="btn btn-danger" style="width:150px">
+                                                    Listeye Dön
+                                                </a>
+                                                <button class="btn btn-primary" type="submit"> Ekle </button>
+
+                                            
+                                        </div>
+
                                     </div>
+
                                 </div>
-                                <div class="row">
-                                    <div class="col-lg-4">
-                                        <a asp-controller="Product" asp-action="ProductList" class="btn btn-danger" style="width:150px">
-                                            Listeye Dön
-                                        </a>
-                                        <button class="btn btn-primary" type="submit" > Ekle </button>
-                                        
-                                    </div>
-                                </div>
+                                   
                             </form>
                         </div>
                     </div>

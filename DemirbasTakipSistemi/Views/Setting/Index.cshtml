@@ -95,7 +95,7 @@
                                                                 }
                                                                 <td>
                                                                     <button class="btn-flat  btn-warning ti-pencil"  style="height:35px; width:40px" onclick="location.href='@Url.Action("UserUpdate", "Setting", new { id = @item.Id })';return false;"></button>
-                                                                    <button class="btn-flat  btn-danger " style="height:35px; width:40px"  >@Html.ActionLink("", "UserDelete", new { id = item.Id }, new { @class = "btn - flat  btn - danger ti-trash", onclick= "return confirm('Silmek istediğinize emin misiniz ?')" })</button>
+                                                                    <button class="btn-flat  btn-danger " style="height:35px; width:40px"  >@Html.ActionLink("", "UserDelete", new { id = item.Id }, new { @class = "ti-trash", onclick= "return confirm('Silmek istediğinize emin misiniz ?')" })</button>
                                                                 </td>
                                                             </tr>
                                                         }
