@@ -33,15 +33,15 @@
                     </div>
                     <div class="card-body">
                         <div class="basic-elements">
-                            <form method="post" class="form-horizontal" asp-action="ProductAdd" id="confirmationForm" name="confirmationForm">
+                            <form method="post" class="form-horizontal" asp-action="ProductAdd" id="confirmationForm" name="product.confirmationForm">
                                 <div class="row">
                                     <div class="col-lg-4">
-                                        <input type="hidden" class="form-control" name="previous" value="@Model.Prev">
-
+                                        <input type="hidden" class="form-control" name="product.previous" value="@Model.Prev" >
+                                
                                         <div class="form-group">
                                             <label>Proje Kodu</label>
                                             @*<input class="form-control" name="ProjectCode" type="text" placeholder="Proje Kodu giriniz...">*@
-                                            <select class="form-control" name="ProjectCode">
+                                            <select class="form-control" name="product.ProjectCode">
                                                 <option name="data" value="" selected></option>
                                                 @foreach (var item in Model.Projects)
                                                 {
@@ -55,7 +55,7 @@
                                         </div>
                                         <div class="form-group" style="font-size:12px; font-style:normal">
                                             <label>Demirbaş Sorumlusu</label>
-                                            <select class="form-control" name="PersonID">
+                                            <select class="form-control" name="product.PersonID">
                                                 <option name="data" value="" selected></option>
                                                 @foreach (var item in Model.People)
                                                 {
@@ -69,13 +69,18 @@
                                         </div>
                                         <div class="form-group">
                                             <label>Adedi</label>
-                                            <input required type="number" style="font-size:12px" min="0" maxlength="255" class="form-control" placeholder="Adet giriniz..." minlength=1 name="ProductAmount" oninvalid="this.setCustomValidity('Adet boş geçilemez.')" oninput="setCustomValidity('')" />
+                                            <input required type="number" min="0" style="font-size:12px" maxlength="255" class="form-control" placeholder="Adet giriniz..." minlength=1 name="product.ProductAmount" oninvalid="this.setCustomValidity('Adet boş geçilemez.')" oninput="setCustomValidity('')"/>
                                             @*<input type="number" class="form-control" name="ProductAmount" placeholder="Adet giriniz..." min="0">*@
                                         </div>
                                         <div class="form-group">
-                                            <label class="control-label">Employee Image</label>
-                                            <input class="form-control" style="font-size:12px" type="file" name="ProductFile" accept="image/*" />
-
+                                            <dl>
+                                                <dt>
+                                                    <label style="font-size:12px" for="ProductImage">Image</label>
+                                                </dt>
+                                                <dd>
+                                                    <input type="file" name="ProductImage" multiple />
+                                                </dd>
+                                            </dl>
                                             @*<span>Ürün Fotoğrafı:</span>
                                                 <label class="control-label"  name="ProductFile"></label>
                                                 <div class="custom-file">
@@ -95,15 +100,15 @@
                                     <div class="col-lg-4">
                                         <div class="form-group">
                                             <label>Marka</label>
-                                            <input class="form-control" style="font-size:12px" name="ProductBrand" type="text" placeholder="Marka giriniz...">
+                                            <input class="form-control" style="font-size:12px" name="product.ProductBrand" type="text" placeholder="Marka giriniz...">
                                         </div>
                                         <div class="form-group">
                                             <label>Model</label>
-                                            <input class="form-control" style="font-size:12px" name="ProductModel" type="text" placeholder="Model giriniz...">
+                                            <input class="form-control" style="font-size:12px" name="product.ProductModel" type="text" placeholder="Model giriniz...">
                                         </div>
                                         <div class="form-group">
                                             <label>Demirbaş Kategori</label>
-                                            <select class="form-control" name="CategoryID">
+                                            <select class="form-control" name="product.CategoryID">
                                                 <option name="data" value="" selected></option>
                                                 @foreach (var item in Model.Categories)
                                                 {
@@ -116,16 +121,22 @@
                                         </div>
                                         <div class="form-group">
                                             <label>Seri Numarası</label>
-                                            <input required maxlength="255" type="text" style="font-size:12px" class="form-control" placeholder="Seri Numarası giriniz..." minlength=1 name="ProductSerialNumber" oninvalid="this.setCustomValidity('Seri numarası boş geçilemez.')" oninput="setCustomValidity('')" />
+                                                <input required maxlength="255" type="text" style="font-size:12px" class="form-control" placeholder="Seri Numarası giriniz..." minlength=1 name="product.ProductSerialNumber" oninvalid="this.setCustomValidity('Seri numarası boş geçilemez.')" oninput="setCustomValidity('')"/>
                                             @*<input class="form-control" name="ProductSerialNumber" type="text" placeholder="Seri Numarası giriniz...">*@
                                         </div>
+                                        <div class="form-group">
+                                            <label>Özellikler/Açıklama</label>
+                                            <textarea class="form-control" rows="3" style="height:80px;"  name="product.ProductFeatures" form="confirmationForm" placeholder="Açıklama giriniz..."></textarea>
+                                        </div>
+
+
                                     </div>
 
                                     <div class="col-lg-4">
                                         <div class="form-group">
                                             <label>Servis İletişim</label>
-                                            <input class="form-control" type="tel" style="font-size:12px" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name="ServiceContact" placeholder="123-456-7890">
-                                        </div>
+                                                                                        <input class="form-control" type="tel" style="font-size:12px" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name="ServiceContact" placeholder="123-456-7890">
+                                            </div>
                                         <div class="form-group">
                                             <label>Ürün Dağıtıcısı</label>
                                             <input class="form-control" style="font-size:12px" name="ProductProvider" type="text" placeholder="Ürün Dağıtıcısı giriniz...">
@@ -133,11 +144,11 @@
 
                                         <div class="form-group">
                                             <label>Garanti Başlangıç Tarihi</label>
-                                            <input class="form-control" style="font-size:12px" name="ProductWarrantyStartDate" type="date">
+                                            <input class="form-control"style="font-size:12px" name="product.ProductWarrantyStartDate" type="date">
                                         </div>
                                         <div class="form-group">
                                             <label>Garanti Bitiş Tarihi</label>
-                                            <input class="form-control" style="font-size:12px" name="ProductWarrantyFinishDate" type="date">
+                                            <input class="form-control"style="font-size:12px" name="product.ProductWarrantyFinishDate" type="date">
                                         </div>
                                         <br /><br /><br /><br />
                                         <div class="" style="text-align:right;">

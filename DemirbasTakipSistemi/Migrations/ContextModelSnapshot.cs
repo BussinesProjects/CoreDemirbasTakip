@@ -162,10 +162,10 @@ namespace DemirbasTakipSistemi.Migrations
                     b.Property<string>("ProductFeatures")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("ProductImage")
+                    b.Property<string>("ProductModel")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("ProductModel")
+                    b.Property<string>("ProductPicture")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ProductProvider")

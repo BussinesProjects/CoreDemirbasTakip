@@ -10,6 +10,7 @@
 using Microsoft.AspNetCore.Http;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.IO;
 
 namespace DemirbasTakipSistemi.Models.DataModel
 {
@@ -32,9 +33,7 @@ namespace DemirbasTakipSistemi.Models.DataModel
         public string ProductBrand { get; set; }// 
         public string ProductFeatures { get; set; }//
         public string ProductProvider { get; set; }//
-        public string ProductImage { get; set; }
-        [NotMapped]
-        public IFormFile ProductFile { get; set; }
+        public string ProductPicture { get; set; }
         public string ProductServiceContact { get; set; }//
         public System.DateTime RegisterDateTime { get; set; } // **
         public System.DateTime ProductWarrantyDate { get; set; }

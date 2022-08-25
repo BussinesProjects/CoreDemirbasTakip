@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.FileProviders;
 using System;
 using System.Collections.Generic;
-using System.IO;
+using System.IO; using Microsoft.AspNetCore.Hosting;
 
 namespace DemirbasTakipSistemi.Controllers
 {
@@ -60,9 +60,9 @@ namespace DemirbasTakipSistemi.Controllers
         }
         [HttpPost]
         //public ActionResult ProductAdd(Product p, List<IFormFile> postedFiles)
-        public ActionResult ProductAdd(Product p)
+        public ActionResult ProductAdd(ProductViewModel p)
         {
-            p.RegisterDateTime = DateTime.Now;
+            p.product.RegisterDateTime = DateTime.Now;
             string wwwPath = this.Environment.WebRootPath;
             string contentPath = this.Environment.ContentRootPath;
 
@@ -83,10 +83,11 @@ namespace DemirbasTakipSistemi.Controllers
             //        ViewBag.Message += string.Format("<b>{0}</b> uploaded.<br />", fileName);
             //    }
             //}
+
             string uniqueFileName = UploadedFile(p);
-            p.ProductImage = uniqueFileName;
-            p.isEnabled = true;
-            productRepository.TAdd(p);
+            p.product.ProductPicture = uniqueFileName;
+            p.product.isEnabled = true;
+            productRepository.TAdd(p.product);
             //p.Category.Products.Add(p); // added recently
             //projectProductRepository.TAdd(p);
             /*
@@ -119,15 +120,15 @@ namespace DemirbasTakipSistemi.Controllers
             }
         }
 
-        public ActionResult redirectToPrev(Product p)
+        public ActionResult redirectToPrev(ProductViewModel p)
         {
-            if (p.previous == 2)
+            if (p.product.previous == 2)
             {
                 return RedirectToAction("ProductList");
             }
-            else if (p.previous == 1)
+            else if (p.product.previous == 1)
             {
-                return RedirectToAction("Products", "Project", new { code = p.ProjectCode });
+                return RedirectToAction("Products", "Project", new { code = p.product.ProjectCode });
             }
             else
             {
@@ -144,9 +145,10 @@ namespace DemirbasTakipSistemi.Controllers
             pc.Projects = projectRepository.TList();
             pc.Proj = product.ProjectCode;
             pc.Prev = pre;
-            return View(Tuple.Create<Product, PeopleAndCategoryViewModel>(product, pc));
+            ProductViewModel prodView = new ProductViewModel();
+            prodView.product = product;
+            return View(Tuple.Create<ProductViewModel, PeopleAndCategoryViewModel>(prodView, pc));
         }
-
         public ActionResult ProductInfo(int id, int pre)
         {
             var product = productRepository.TGet(id);
@@ -156,31 +158,23 @@ namespace DemirbasTakipSistemi.Controllers
             pc.Projects = projectRepository.TList();
             pc.Proj = product.ProjectCode;
             pc.Prev = pre;
-            return View(Tuple.Create<Product, PeopleAndCategoryViewModel>(product, pc));
+            ProductViewModel prodView = new ProductViewModel();
+            prodView.product = product;
+            //if (product.ProductPicture != null || product.ProductPicture != "")
+            //{
+            //    prodView.ProductImage = product.ProductPicture
+            //}
+            return View(Tuple.Create<ProductViewModel, PeopleAndCategoryViewModel>(prodView, pc));
         }
 
         [HttpPost]
-        public ActionResult ProductUpdate(Product p)
+        public ActionResult ProductUpdate(ProductViewModel p)
         {
-            //Product product = productRepository.TGet(p.Id);
-            //product.ProductSerialNumber = p.ProductSerialNumber;
-            //product.CategoryID = p.CategoryID;
-            //product.PersonID = p.PersonID;
-            //p.ProductWarrantyStartDate= product.ProductWarrantyStartDate;
-            //p.ProductWarrantyFinishDate= product.ProductWarrantyFinishDate;
-            //p.RegisterDateTime = product.RegisterDateTime;
-            //product.ProductBrand = p.ProductBrand;
-            //product.
-            p.isEnabled = true;
+
+            p.product.isEnabled = true;
             string uniqueFileName = UploadedFile(p);
-            p.ProductImage = uniqueFileName;
-            productRepository.TUpdate(p);
-            //projectProductRepository.TUpdate(p);
-            /*
-            PeopleAndCategoryViewModel pc = new PeopleAndCategoryViewModel();
-            pc.People = personRepository.TList();
-            pc.Categories = categoryRepository.TList();
-            return View(Tuple.Create<Product, PeopleAndCategoryViewModel>(p, pc));*/
+            p.product.ProductPicture = uniqueFileName;
+            productRepository.TUpdate(p.product);
 
             return redirectToPrev(p);
         }
@@ -194,23 +188,25 @@ namespace DemirbasTakipSistemi.Controllers
             product.previous = pre;
             //projectProductRepository.TUpdate(product);
 
-            return redirectToPrev(product);
+            ProductViewModel prodView = new ProductViewModel();
+            prodView.product = product;
+            return redirectToPrev(prodView);
         }
 
 
 
-        private string UploadedFile(Product model)
+        private string UploadedFile(ProductViewModel model)
         {
             string uniqueFileName = null;
 
-            if (model.ProductFile != null)
+            if (model.ProductImage != null)
             {
                 string uploadsFolder = Path.Combine(Environment.WebRootPath, "images");
-                uniqueFileName = Guid.NewGuid().ToString() + "_" + model.ProductFile.FileName;
+                uniqueFileName = Guid.NewGuid().ToString() + "_" + model.ProductImage.FileName;
                 string filePath = Path.Combine(uploadsFolder, uniqueFileName);
                 using (var fileStream = new FileStream(filePath, FileMode.Create))
                 {
-                    model.ProductFile.CopyTo(fileStream);
+                    model.ProductImage.CopyTo(fileStream);
                 }
             }
             return uniqueFileName;
