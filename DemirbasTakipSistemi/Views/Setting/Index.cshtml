@@ -4,17 +4,16 @@
 @{ ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml"; }
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-
-<h1 style="color:green">Hesap Ayarları</h1>
 <br />
-
+<h3 style="color:green;font-family:Arial">Hesap Ayarları</h3>
+<br />
 <div class="col-lg-12">
-    <h4 style="color:green">Genel Ayarlar</h4>
+    <h5 style="color: green; font-family: Arial">Genel Ayarlar</h5>
 
     <form action="~/Setting/UsernamePasswordUpdate" method="post" class="form-horizontal">
         <div class="row">
             <div class="col-lg-6">
-                <button class="btn btn-group-right" type="submit"> Kullanıcı Adı ve Şifre Değiştir </button>
+                <button class="btn btn-group-right" style="font-size:15px ;font-family:Arial" type="submit"> Kullanıcı Adı ve Şifre Değiştir </button>
             </div>
         </div>
     </form>
@@ -24,8 +23,8 @@
 {
     <div class="col-lg-12">
 
-        <h4 style="color:green">Admin Ayarları</h4>
-
+        <h5 style="color: green; font-family: Arial">Admin Ayarları</h5>
+        <br />
         <!-- Styles -->
         <link href="~/Content/assets/css/lib/font-awesome.min.css" rel="stylesheet">
         <link href="~/Content/assets/css/lib/themify-icons.css" rel="stylesheet">
@@ -34,14 +33,14 @@
         <link href="~/Content/assets/css/lib/helper.css" rel="stylesheet">
         <link href="~/Content/assets/css/lib/sweetalert/sweetalert.css" rel="stylesheet">
 
-        <div class="content-wrap">
+        <div class="content-wrap" style="font-size:15px; font-family:Arial; color: black">
             <div class="main">
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-lg-06 p-r-0 title-margin-right">
                             <div class="page-header">
                                 <div class="page-title">
-                                    <h5>Kullanıcı Listesi</h5>
+                                    <h5 style="font-family:Arial">Kullanıcı Listesi</h5>
                                 </div>
                             </div>
                         </div>
@@ -51,7 +50,7 @@
                             <div class="page-header">
                                 <div class="page-title">
                                     <ol class="breadcrumb">
-                                        <li class="breadcrumb-item">   <button class="btn-flat  btn-success  ti-plus" onclick="location.href='@Url.Action("UserAdd", "Setting", new { code = "", prev = 2 })';return false;"> EKLE</button></li>
+                                        <li class="breadcrumb-item">   <button class="btn-flat  btn-success  ti-plus" onclick="location.href='@Url.Action("UserAdd", "Setting", new { code = "", prev = 2 })';return false;" style="font-size:15px; font-family:Arial"> EKLE</button></li>
                                     </ol>
                                 </div>
                             </div>

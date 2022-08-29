@@ -23,7 +23,8 @@
 <link href="~/Content/assets/css/lib/bootstrap.min.css" rel="stylesheet">
 <link href="~/Content/assets/css/lib/helper.css" rel="stylesheet">
 <link href="~/Content/assets/css/style.css" rel="stylesheet">
-<div class="card-body">
+
+<div class="card-body" style="font-size:15px; font-style:normal; color:black">
     <div class="basic-elements">
         <div class="row">
             <div class="col-lg-12">
@@ -38,76 +39,74 @@
                                 <div class="row">
                                     <div class="col-lg-6">
                                         <div class="form-group">
-                                            
+
                                             <input type="hidden" class="form-control" name="Id" value="@Model.Id">
-                                
+
                                             <label class="col-lg-3 control-label">Proje Kodu</label>
                                             <div class="col-lg-9">
-                                               
-                                                <input required maxlength="255" type="text" class="form-control" value="@Model.ProjectCode" minlength=1 name="ProjectCode" oninvalid="this.setCustomValidity('Proje kodu boş geçilemez.')" oninput="setCustomValidity('')"/>
+
+                                                <input required maxlength="255" type="text" style="font-size:13px" class="form-control" value="@Model.ProjectCode" minlength=1 name="ProjectCode" oninvalid="this.setCustomValidity('Proje kodu boş geçilemez.')" oninput="setCustomValidity('')" />
                                                 @*
-                                                <input type="text" class="form-control"  name="ProjectCode" value="@Model.ProjectCode">*@
+                <input type="text" class="form-control"  name="ProjectCode" value="@Model.ProjectCode">*@
                                             </div>
                                         </div>
-                                       
-                                              <div class="form-group">
+
+                                        <div class="form-group">
                                             <label class="col-lg-3 control-label">Proje Müşterisi </label>
                                             <div class="col-lg-9">
-                                                <input type="text" class="form-control" value="@Model.ProjectClient" name="ProjectClient">
-                                            </div>
-                                        </div>
-                                        
-                                        
-                                    </div>
-                                    <div class="col-lg-6">
-
-                                       <div class="form-group">
-                                            <label class="col-lg-3 control-label">Proje Adı</label>
-                                            <div class="col-lg-9">
-                                                <input required maxlength="255" type="text" class="form-control" value="@Model.ProjectName" minlength=1 name="ProjectName" oninvalid="this.setCustomValidity('Proje adı boş geçilemez.')" oninput="setCustomValidity('')"/>
-                                                @*
-                                                <input type="text" class="form-control" value="@Model.ProjectName"  name="ProjectName">*@
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="col-lg-3 control-label">Proje Tarihi</label>
-                                            <div class="col-lg-9">
-                                                <input type="date" class="form-control" value="@Model.ProjectStartDate.Date.ToString("yyyy-MM-dd")"autocomplete="off"  name="ProjectStartDate">
+                                                <input type="text" class="form-control" style="font-size:13px" value="@Model.ProjectClient" name="ProjectClient">
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label class="col-lg-3 control-label">Durum</label>
                                             <div class="col-lg-9">
-                                                  <select class="form-control" name="ProjectStatus">
-                                                   @if(@Model.ProjectStatus=="Aktif" )
+                                                <select class="form-control" style="font-size:13px" name="ProjectStatus">
+                                                    @if (@Model.ProjectStatus == "Aktif")
                                                     {
-                                                        <option  value="Aktif" selected>Aktif</option>
-                                                         <option  value="Pasif" >Pasif</option> 
+                                                        <option value="Aktif" selected>Aktif</option>
+                                                        <option value="Pasif">Pasif</option>
+
                                                     }
                                                     else
                                                     {
-                                                         <option  value="Pasif" selected>Pasif</option> 
-                                                         <option  value="Aktif">Aktif</option>
+                                                        <option value="Pasif" selected>Pasif</option>
+
+                                                        <option value="Aktif">Aktif</option>
                                                     }
-                                                  
-                                              }
-                                            </select>
+
+                                                    }
+                                                </select>
                                             </div>
                                         </div>
 
-                                        
+
+                                    </div>
+                                    <div class="col-lg-6">
+
+                                        <div class="form-group">
+                                            <label class="col-lg-3 control-label">Proje Adı</label>
+                                            <div class="col-lg-9">
+                                                <input required maxlength="255" type="text" style="font-size:13px" class="form-control" value="@Model.ProjectName" minlength=1 name="ProjectName" oninvalid="this.setCustomValidity('Proje adı boş geçilemez.')" oninput="setCustomValidity('')" />
+                                                @*
+                                                    <input type="text" class="form-control" value="@Model.ProjectName"  name="ProjectName">*@
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-lg-3 control-label">Proje Tarihi</label>
+                                            <div class="col-lg-9">
+                                                <input type="date" class="form-control" style="font-size:13px" value="@Model.ProjectStartDate.Date.ToString("yyyy-MM-dd")" autocomplete="off" name="ProjectStartDate">
+                                            </div>
                                         </div>
                                         
-                                </div>
-                                 <div class="row">
-                                    <div class="col-lg-6">
-                                        <a asp-controller="Project" asp-action="ProjectList" type="submit" class="btn btn-danger" style="width:150px">
-                                            Listeye Dön
-                                        </a>
-                                        <button class="btn btn-primary" type="submit"> Güncelle </button>
-                                        
+                                        <br /><br /><br />
+                                        <div class="" style="text-align:center;">
+                                            <a asp-controller="Project" asp-action="ProjectList" type="submit" class="btn btn-danger" style="width:150px;font-size:15px">
+                                                Listeye Dön
+                                            </a>
+                                            <button class="btn btn-primary" type="submit" style="font-size:15px"> Güncelle </button>
+                                        </div>
+
                                     </div>
-                                   
                                 </div>
                             </form>
                         </div>
@@ -125,4 +124,3 @@
 <!-- sidebar -->
 <!-- bootstrap -->
 <!-- scripit init-->
-

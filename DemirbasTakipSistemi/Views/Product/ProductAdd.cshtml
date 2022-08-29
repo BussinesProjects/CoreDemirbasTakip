@@ -42,7 +42,7 @@
                                         <div class="form-group">
                                             <label>Proje Kodu</label>
                                             @*<input class="form-control" name="ProjectCode" type="text" placeholder="Proje Kodu giriniz...">*@
-                                            <select class="form-control" name="product.ProjectCode">
+                                            <select class="form-control" style="font-size:13px" name="product.ProjectCode">
                                                 <option name="data" value="" selected></option>
                                                 @foreach (var item in Model.Projects)
                                                 {
@@ -54,9 +54,9 @@
                                                 }
                                             </select>
                                         </div>
-                                        <div class="form-group" style="font-size:12px; font-style:normal">
+                                        <div class="form-group">
                                             <label>Demirbaş Sorumlusu</label>
-                                            <select class="form-control" name="product.PersonID">
+                                            <select class="form-control" style="font-size:13px" name="product.PersonID">
                                                 @foreach (var item in Model.People)
                                                 {
 
@@ -69,16 +69,16 @@
                                         </div>
                                         <div class="form-group">
                                             <label>Adedi</label>
-                                            <input required type="number" min="0" style="font-size:12px" maxlength="255" class="form-control" placeholder="Adet giriniz..." minlength=1 name="product.ProductAmount" oninvalid="this.setCustomValidity('Adet boş geçilemez.')" oninput="setCustomValidity('')"/>
+                                            <input required type="number" min="0" style="font-size:13px" maxlength="255" class="form-control" placeholder="Adet giriniz..." minlength=1 name="product.ProductAmount" oninvalid="this.setCustomValidity('Adet boş geçilemez.')" oninput="setCustomValidity('')"/>
                                             @*<input type="number" class="form-control" name="ProductAmount" placeholder="Adet giriniz..." min="0">*@
                                         </div>
                                         <div class="form-group">
                                             <dl>
                                                 <dt>
-                                                    <label style="font-size:12px" for="ProductImage">Image</label>
+                                                    <label for="ProductImage">Image</label>
                                                 </dt>
                                                 <dd>
-                                                    <input type="file" name="ProductImage" multiple />
+                                                    <input type="file" style="font-size:13px" name="ProductImage" multiple />
                                                 </dd>
                                             </dl>
                                             @*<span>Ürün Fotoğrafı:</span>
@@ -96,15 +96,15 @@
                                     <div class="col-lg-4">
                                         <div class="form-group">
                                             <label>Marka</label>
-                                            <input class="form-control" style="font-size:12px" name="product.ProductBrand" type="text" placeholder="Marka giriniz...">
+                                            <input class="form-control" style="font-size:13px" name="product.ProductBrand" type="text" placeholder="Marka giriniz...">
                                         </div>
                                         <div class="form-group">
                                             <label>Model</label>
-                                            <input class="form-control" style="font-size:12px" name="product.ProductModel" type="text" placeholder="Model giriniz...">
+                                            <input class="form-control" style="font-size:13px" name="product.ProductModel" type="text" placeholder="Model giriniz...">
                                         </div>
                                         <div class="form-group">
                                             <label>Demirbaş Kategori</label>
-                                            <select class="form-control" name="product.CategoryID">
+                                            <select class="form-control" style="font-size:13px" name="product.CategoryID">
                                                 @foreach (var item in Model.Categories)
                                                 {
                                                     if (item.isEnabled)
@@ -116,12 +116,12 @@
                                         </div>
                                         <div class="form-group">
                                             <label>Seri Numarası</label>
-                                                <input required maxlength="255" type="text" style="font-size:12px" class="form-control" placeholder="Seri Numarası giriniz..." minlength=1 name="product.ProductSerialNumber" oninvalid="this.setCustomValidity('Seri numarası boş geçilemez.')" oninput="setCustomValidity('')"/>
+                                                <input required maxlength="255" type="text" style="font-size:13px" class="form-control" placeholder="Seri Numarası giriniz..." minlength=1 name="product.ProductSerialNumber" oninvalid="this.setCustomValidity('Seri numarası boş geçilemez.')" oninput="setCustomValidity('')"/>
                                             @*<input class="form-control" name="ProductSerialNumber" type="text" placeholder="Seri Numarası giriniz...">*@
                                         </div>
                                         <div class="form-group">
                                             <label>Özellikler/Açıklama</label>
-                                            <textarea class="form-control" rows="3" style="height:80px;"  name="product.ProductFeatures" form="confirmationForm" placeholder="Açıklama giriniz..."></textarea>
+                                            <textarea class="form-control" rows="3" style="height:80px;font-size:13px"  name="product.ProductFeatures" form="confirmationForm" placeholder="Açıklama giriniz..."></textarea>
                                         </div>
 
                                     </div>
@@ -129,29 +129,29 @@
                                     <div class="col-lg-4">
                                         <div class="form-group">
                                             <label>Servis İletişim</label>
-                                                <input class="form-control" type="tel" style="font-size:12px" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name="product.ServiceContact" placeholder="123-456-7890">
+                                                <input class="form-control" type="tel" style="font-size:13px" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name="product.ServiceContact" placeholder="123-456-7890">
                                             </div>
                                         <div class="form-group">
                                             <label>Ürün Dağıtıcısı</label>
-                                            <input class="form-control" style="font-size:12px" name="product.ProductProvider" type="text" placeholder="Ürün Dağıtıcısı giriniz...">
+                                            <input class="form-control" style="font-size:13px" name="product.ProductProvider" type="text" placeholder="Ürün Dağıtıcısı giriniz...">
                                         </div>
 
                                         <div class="form-group">
                                             <label>Garanti Başlangıç Tarihi</label>
-                                            <input class="form-control"style="font-size:12px" name="product.ProductWarrantyStartDate" type="date">
+                                            <input class="form-control"style="font-size:13px" name="product.ProductWarrantyStartDate" type="date">
                                         </div>
                                         <div class="form-group">
                                             <label>Garanti Bitiş Tarihi</label>
-                                            <input class="form-control"style="font-size:12px" name="product.ProductWarrantyFinishDate" type="date">
+                                            <input class="form-control" style="font-size:13px" name="product.ProductWarrantyFinishDate" type="date">
 
                                         </div>
                                         <br /><br /><br /><br />
                                         <div class="" style="text-align:right;">
                                           
-                                                <a asp-controller="Product" asp-action="ProductList" class="btn btn-danger" style="width:150px">
-                                                    Listeye Dön
-                                                </a>
-                                                <button class="btn btn-primary" type="submit"> Ekle </button>
+                                            <a asp-controller="Product" asp-action="ProductList" class="btn btn-danger" style="width:150px; font-size:15px">
+                                                Listeye Dön
+                                            </a>
+                                                <button class="btn btn-primary" type="submit" style="font-size:15px"> Ekle </button>
 
                                             
                                         </div>
@@ -171,7 +171,6 @@
     </div>
 </div>
 <script src="~/Content/assets/js/lib/jquery.nanoscroller.min.js"></script>
-
 <script src="~/Content/assets/js/lib/preloader/pace.min.js"></script>
 <!-- sidebar -->
 <!-- bootstrap -->

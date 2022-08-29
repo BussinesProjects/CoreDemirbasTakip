@@ -23,55 +23,55 @@
 <link href="~/Content/assets/css/lib/bootstrap.min.css" rel="stylesheet">
 <link href="~/Content/assets/css/lib/helper.css" rel="stylesheet">
 <link href="~/Content/assets/css/style.css" rel="stylesheet">
-<div class="card-body">
+<div class="card-body" style="font-size:15px; font-style:normal; color:black">
     <div class="basic-elements">
         <div class="row">
             <div class="col-lg-12">
                 <div class="card">
                     <div class="card-title">
                         <h4>Demirbaş Bilgi</h4>
-         
+
                     </div>
                     <div class="card-body">
                         <div class="basic-elements">
-                            <form action="~/Product/redirectToPrev"method="post" class="form-horizontal">
-                                <div class="row" >
+                            <form action="~/Product/redirectToPrev" method="post" class="form-horizontal">
+                                <div class="row">
                                     <div class="col-lg-4">
-                                
+
                                         <div class="form-group">
-                                            <input type="hidden" class="form-control" type="file" name="product.ProductImage" value="@Model.Item1.ProductImage"/>
-                                            <input type="hidden" class="form-control" name="product.previous" value="@Model.Item2.Prev" >
-                                            <input type="hidden" class="form-control" name="product.ProductPicture" value="@Model.Item1.product.ProductPicture" >
+                                            <input type="hidden" class="form-control" type="file" name="product.ProductImage" value="@Model.Item1.ProductImage" />
+                                            <input type="hidden" class="form-control" name="product.previous" value="@Model.Item2.Prev">
+                                            <input type="hidden" class="form-control" name="product.ProductPicture" value="@Model.Item1.product.ProductPicture">
 
                                             <label>Oluşturulma tarihi</label>
-                                           <input class="form-control" name="product.RegisterDateTime" type="date" value="@Model.Item1.product.RegisterDateTime.Date.ToString("yyyy-MM-dd")" readonly>
+                                            <input class="form-control" style="font-size:13px" name="product.RegisterDateTime" type="date" value="@Model.Item1.product.RegisterDateTime.Date.ToString("yyyy-MM-dd")" readonly>
                                         </div>
 
                                         <div class="form-group">
                                             <label>Proje Kodu</label>
-                                            <input class="form-control"  type="text" name="product.ProjectCode" value="@Model.Item1.product.ProjectCode" readonly>
+                                            <input class="form-control" type="text" style="font-size:13px" name="product.ProjectCode" value="@Model.Item1.product.ProjectCode" readonly>
                                         </div>
 
                                         <div class="form-group">
                                             <label>Demirbaş Sorumlusu</label>
-                                            <input class="form-control"  type="text" name="product.PersonID" value="@Model.Item1.product.PersonID" readonly>
+                                            <input class="form-control" type="text" style="font-size:13px" name="product.PersonID" value="@Model.Item1.product.PersonID" readonly>
                                         </div>
 
                                         <div class="form-group">
                                             <label>Adedi</label>
-                                           <input class="form-control"  name="product.ProductAmount" value="@Model.Item1.product.ProductAmount" readonly>
+                                            <input class="form-control" style="font-size:13px" name="product.ProductAmount" value="@Model.Item1.product.ProductAmount" readonly>
                                         </div>
 
-                                        
+
                                         <div class="form-group">
                                             <span>Ürün Fotoğrafı:</span>
                                             @* <input type="file" name="postedFiles" multiple readonly/>*@
                                         </div>
                                         @if (@Model.Item1.product.ProductPicture != null)
-                                        {<img src="~/images/@Model.Item1.product.ProductPicture"   
-                                         class="w3-round"   
-                                         height="200" width="200"   
-                                         asp-append-version="true" /> 
+                                        {<img src="~/images/@Model.Item1.product.ProductPicture"
+                                              class="w3-round"
+                                              height="200" width="200"
+                                              asp-append-version="true" />
                                         }
 
 
@@ -80,27 +80,27 @@
                                     <div class="col-lg-4">
                                         <div class="form-group">
                                             <label>Marka</label>
-                                            <input class="form-control" type="text" name="product.ProductBrand" value="@Model.Item1.product.ProductBrand" readonly>
+                                            <input class="form-control" type="text" style="font-size:13px" name="product.ProductBrand" value="@Model.Item1.product.ProductBrand" readonly>
 
                                         </div>
                                         <div class="form-group">
                                             <label>Model</label>
-                                            <input class="form-control" type="text" name="product.ProductModel" value="@Model.Item1.product.ProductModel" readonly>
+                                            <input class="form-control" type="text" style="font-size:13px" name="product.ProductModel" value="@Model.Item1.product.ProductModel" readonly>
 
                                         </div>
                                         <div class="form-group">
                                             <label>Demirbaş Kategori</label>
-                                                <input class="form-control" type="text" name="product.CategoryID" value="@Model.Item1.product.CategoryID" readonly>
+                                            <input class="form-control" type="text" style="font-size:13px" name="product.CategoryID" value="@Model.Item1.product.CategoryID" readonly>
                                         </div>
                                         <div class="form-group">
                                             <label>Seri Numarası</label>
-                                            <input type="hidden" class="form-control" name="product.Id" value=@Model.Item1.product.Id >
-                                            <input class="form-control" name="product.ProductSerialNumber" type="text" value="@Model.Item1.product.ProductSerialNumber" readonly>
+                                            <input type="hidden" class="form-control" name="product.Id" value=@Model.Item1.product.Id>
+                                            <input class="form-control" style="font-size:13px" name="product.ProductSerialNumber" type="text" value="@Model.Item1.product.ProductSerialNumber" readonly>
                                         </div>
-                                        
+
                                         <div class="form-group">
                                             <label>Özellikler/Açıklama</label>
-                                            <textarea class="form-control"  name="product.ProductFeatures" style="height: 80px;" readonly>@Model.Item1.product.ProductFeatures</textarea>
+                                            <textarea class="form-control" name="product.ProductFeatures" style="height: 80px; font-size: 13px" readonly>@Model.Item1.product.ProductFeatures</textarea>
                                         </div>
 
 
@@ -109,33 +109,31 @@
                                     <div class="col-lg-4">
                                         <div class="form-group">
                                             <label>Servis İletişim</label>
-                                            <input class="form-control" type="text"  name="product.ServiceContact" value="@Model.Item1.product.ServiceContact" readonly>
+                                            <input class="form-control" type="text" style="font-size:13px" name="product.ServiceContact" value="@Model.Item1.product.ServiceContact" readonly>
                                         </div>
                                         <div class="form-group">
                                             <label>Ürün Dağıtıcısı</label>
-                                            <input class="form-control" type="text"  name="product.ProductProvider" value="@Model.Item1.product.ProductProvider" readonly>
+                                            <input class="form-control" type="text" style="font-size:13px" name="product.ProductProvider" value="@Model.Item1.product.ProductProvider" readonly>
                                         </div>
-                                        
+
                                         <div class="form-group">
                                             <label>Garanti Başlangıç Tarihi</label>
-                                            <input class="form-control" type="date" name="product.ProductWarrantyStartDate" value="@Model.Item1.product.ProductWarrantyStartDate.Date.ToString("yyyy-MM-dd")" readonly>
+                                            <input class="form-control" type="date" style="font-size:13px" name="product.ProductWarrantyStartDate" value="@Model.Item1.product.ProductWarrantyStartDate.Date.ToString("yyyy-MM-dd")" readonly>
                                         </div>
                                         <div class="form-group">
                                             <label>Garanti Bitiş Tarihi</label>
-                                            <input class="form-control" type="date" name="product.ProductWarrantyFinishDate" value="@Model.Item1.product.ProductWarrantyFinishDate.Date.ToString("yyyy-MM-dd")" readonly>
+                                            <input class="form-control" type="date" style="font-size:13px" name="product.ProductWarrantyFinishDate" value="@Model.Item1.product.ProductWarrantyFinishDate.Date.ToString("yyyy-MM-dd")" readonly>
+                                        </div>
+                                        <br /><br /><br />
+                                        <div class="" style="text-align:right;">
+
+                                            <button class="btn btn-danger" type="submit"> Listeye Dön </button>
+                                            @*<a asp-controller="Product" asp-action="redirectToPrev" asp-route-p="@Model.Item1" type="submit" class="btn btn-danger" style="width:150px">
+                                                    Listeye Dön
+                                                </a>*@
+
                                         </div>
 
-
-                                    </div>
-                                </div>
-                                <div class="row">
-                                  
-                                    <div class="col-lg-4">
-                                        
-                                        <button class="btn btn-danger" type="submit"> Listeye Dön </button>
-                                        @*<a asp-controller="Product" asp-action="redirectToPrev" asp-route-p="@Model.Item1" type="submit" class="btn btn-danger" style="width:150px">
-                                            Listeye Dön
-                                        </a>*@
                                     </div>
                                 </div>
                             </form>
@@ -146,11 +144,11 @@
             <!-- /# column -->
             <!-- /# column -->
         </div>
-        </div>
     </div>
-        <script src="~/Content/assets/js/lib/jquery.nanoscroller.min.js"></script>
+</div>
+<script src="~/Content/assets/js/lib/jquery.nanoscroller.min.js"></script>
 
-        <script src="~/Content/assets/js/lib/preloader/pace.min.js"></script>
-        <!-- sidebar -->
-        <!-- bootstrap -->
-        <!-- scripit init-->
+<script src="~/Content/assets/js/lib/preloader/pace.min.js"></script>
+<!-- sidebar -->
+<!-- bootstrap -->
+<!-- scripit init-->
