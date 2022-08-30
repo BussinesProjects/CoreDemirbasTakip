@@ -76,19 +76,19 @@
                                     <div class="dropdown-content-body">
                                         <ul>
 
-                                            <li>
-                                                <a href="~/Setting/Index">
+                                            <li onclick="location.href='@Url.Action("Index", "Setting")';return false;">
+                                                <a href="#">
                                                 <i class="ti-settings"></i>
-                                                <span onclick="location.href='@Url.Action("Index", "Setting")';return false;">Hesap Ayarları</span>
+                                                <span>Hesap Ayarları</span>
                                                 </a>
                                             </li>
 
 
 
-                                            <li>
+                                            <li onclick="location.href='@Url.Action("Logout", "Account")';return false;">
                                                 <a href="#">
                                                     <i class="ti-power-off"></i>
-                                                    <span onclick="location.href='@Url.Action("Logout", "Account")';return false;">Çıkış</span>
+                                                    <span >Çıkış</span>
                                                 </a>
                                             </li>
                                         </ul>

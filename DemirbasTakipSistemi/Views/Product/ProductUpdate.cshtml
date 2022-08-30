@@ -111,7 +111,17 @@
                                                     <label for="ProductImage">Image</label>
                                                 </dt>
                                                 <dd>
-                                                    <input type="file" name="ProductImage" multiple />
+                                                    <input type="file" name="ProductImage" accept="image/png, image/gif, image/jpeg" id="fileName" onchange="validateFileType()"/>
+                                                    <script type="text/javascript">
+                                                    function validateFileType(){
+                                                        var fileName = document.getElementById("fileName").value;
+                                                        var idxDot = fileName.lastIndexOf(".") + 1;
+                                                        var extFile = fileName.substr(idxDot, fileName.length).toLowerCase();
+                                                        if ( !( extFile=="jpg" || extFile=="jpeg" || extFile=="png" || extFile=="gif")){{
+                                                            alert("Eklenen dosya .png, .jpg, .jpeg veya .gif olmalı");
+                                                        }   
+                                                    }
+                                                </script>
                                                 </dd>
                                             </dl>
 

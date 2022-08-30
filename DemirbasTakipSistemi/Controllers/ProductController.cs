@@ -73,34 +73,12 @@ namespace DemirbasTakipSistemi.Controllers
                 Directory.CreateDirectory(path);
             }
 
-            //List<string> uploadedFiles = new List<string>();
-            //foreach (IFormFile postedFile in postedFiles)
-            //{
-            //    string fileName = Path.GetFileName(postedFile.FileName);
-            //    using (FileStream stream = new FileStream(Path.Combine(path, fileName), FileMode.Create))
-            //    {
-            //        postedFile.CopyTo(stream);
-            //        uploadedFiles.Add(fileName);
-            //        ViewBag.Message += string.Format("<b>{0}</b> uploaded.<br />", fileName);
-            //    }
-            //}
 
             string uniqueFileName = UploadedFile(p);
             p.product.ProductPicture = uniqueFileName;
-            //PhotoMap photo = new PhotoMap();
-            //photo.PictureKey = p.ProductImage.FileName;
-            //photo.PictureUrl = uniqueFileName;
-            //photoRepository.TAdd( photo);
 
             p.product.isEnabled = true;
             productRepository.TAdd(p.product);
-            //p.Category.Products.Add(p); // added recently
-            //projectProductRepository.TAdd(p);
-            /*
-            PeopleAndCategoryViewModel pc = new PeopleAndCategoryViewModel();
-            pc.People = personRepository.TList();
-            pc.Categories = categoryRepository.TList();
-            return View(pc);*/
             return redirectToPrev(p);
         }
         public ActionResult redirectByInt( int previous, string projCode)
@@ -153,6 +131,8 @@ namespace DemirbasTakipSistemi.Controllers
             pc.Prev = pre;
             ProductViewModel prodView = new ProductViewModel();
             prodView.product = product;
+            //prodView.category = product.CategoryID;
+            //prodView.person = ;
             //if (product.ProductPicture != null || product.ProductPicture != "")
             //{ // get it from somewhere?
             //    prodView.ProductImage = photoRepository.Find(product.ProductPicture).PictureUrl;

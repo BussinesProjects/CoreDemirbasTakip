@@ -787,7 +787,7 @@ a.dt-button.active:not(.disabled) {
   color: #5873fe;
 }
 .dropdown-content-body li {
-  padding: 15px;
+  padding-left: 15px;
   border-top: 1px solid #eef5f9;
 }
 .dropdown-content-body li.active,
@@ -802,7 +802,7 @@ a.dt-button.active:not(.disabled) {
   color: #868e96;
 }
 .dropdown-content-body li:last-child {
-  padding: 5px 15px;
+    padding-left: 15px;
 }
 .notification-heading {
   font-size: 13px;
