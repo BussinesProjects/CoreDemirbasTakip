@@ -23,53 +23,54 @@
 <link href="~/Content/assets/css/lib/bootstrap.min.css" rel="stylesheet">
 <link href="~/Content/assets/css/lib/helper.css" rel="stylesheet">
 <link href="~/Content/assets/css/style.css" rel="stylesheet">
-<div class="card-body">
+<div class="card-body" style="font-size:15px; font-style:normal; color:black">
     <div class="basic-elements">
         <div class="row">
             <div class="col-lg-12">
                 <div class="card">
                     <div class="card-title">
                         <h4>Demirbaş Güncelle</h4>
-         
+
                     </div>
                     <div class="card-body">
                         <div class="basic-elements">
-                            <form action="~/Product/ProductUpdate"method="post" class="form-horizontal" enctype="multipart/form-data">
-                                <div class="row" >
+                            <form action="~/Product/ProductUpdate" method="post" class="form-horizontal" enctype="multipart/form-data">
+                                <div class="row">
                                     <div class="col-lg-4">
-                                        
-                                        <div class="form-group">
-                                            <input type="hidden" class="form-control" name="product.previous" value="@Model.Item2.Prev" >
-                                            <input type="hidden" class="form-control" name="product.isEnabled" value="@Model.Item1.product.isEnabled" >
-                                            <input type="hidden" class="form-control" name="product.ProductPicture" value="@Model.Item1.product.ProductPicture" >
+
+                                        <div class="form-group" >
+                                            <input type="hidden" class="form-control" name="product.previous" value="@Model.Item2.Prev">
+                                            <input type="hidden" class="form-control" name="product.isEnabled" value="@Model.Item1.product.isEnabled">
+                                            <input type="hidden" class="form-control" name="product.ProductPicture" value="@Model.Item1.product.ProductPicture">
 
                                             <label>Oluşturulma tarihi</label>
-                                           <input class="form-control" name="product.RegisterDateTime" type="date" value="@Model.Item1.product.RegisterDateTime.Date.ToString("yyyy-MM-dd")" readonly>
+                                            <input class="form-control" style="font-size:13px" name="product.RegisterDateTime" type="date" value="@Model.Item1.product.RegisterDateTime.Date.ToString("yyyy-MM-dd")" readonly>
                                         </div>
-                                        
+
                                         <label>Proje Kodu</label>
-                                        <select class="form-control" name="product.ProjectCode">
+                                        <select class="form-control" name="product.ProjectCode" style="font-size:13px">
                                             <option name="data" value=""></option>
                                             @foreach (var item in Model.Item2.Projects)
                                             {
-                                                    
-                                                if ( item.isEnabled)
+
+                                                if (item.isEnabled)
                                                 {
-                                                    if (item.ProjectCode==Model.Item1.product.ProjectCode)
+                                                    if (item.ProjectCode == Model.Item1.product.ProjectCode)
                                                     {
                                                         <option name="data" value="@item.ProjectCode" selected>@item.ProjectCode</option>
-                                                    
+
                                                     }
-                                                    else {
+                                                    else
+                                                    {
                                                         <option name="data" value="@item.ProjectCode">@item.ProjectCode</option>
-                                                    }                                                    
+                                                    }
                                                 }
                                             }
                                         </select>
 
                                         <div class="form-group">
                                             <label>Demirbaş Sorumlusu</label>
-                                            <select class="form-control"  name="product.PersonID">
+                                            <select class="form-control" style="font-size:13px" name="product.PersonID">
                                                 @foreach (var item in Model.Item2.People)
                                                 {
                                                     if (item.isEnabled)
@@ -90,28 +91,28 @@
 
                                         <div class="form-group">
                                             <label>Adedi</label>
-                                            <input required type="number" min="0" maxlength="255" class="form-control" value="@Model.Item1.product.ProductAmount" minlength=1 name="product.ProductAmount" oninvalid="this.setCustomValidity('Adet boş geçilemez.')" oninput="setCustomValidity('')"/>
-                                           @*<input type="number" class="form-control" name="ProductAmount" value="@Model.Item1.ProductAmount" min="0">*@
+                                            <input required type="number" min="0" maxlength="255" style="font-size:13px" class="form-control" value="@Model.Item1.product.ProductAmount" minlength=1 name="product.ProductAmount" oninvalid="this.setCustomValidity('Adet boş geçilemez.')" oninput="setCustomValidity('')" />
+                                            @*<input type="number" class="form-control" name="ProductAmount" value="@Model.Item1.ProductAmount" min="0">*@
                                         </div>
                                         @*<div class="form-group">
-                                            <span>Ürün Fotoğrafı:</span>
-                                             <input type="file" name="postedFiles" multiple />
-                                        </div>*@
+                                                <span>Ürün Fotoğrafı:</span>
+                                                 <input type="file" name="postedFiles" multiple />
+                                            </div>*@
 
-                                        <div class="form-group">  
+                                        <div class="form-group">
                                             @*
-                                            <fieldset>
-                                              <legend> Upload Image </legend>
-                                              <label for="ProductImage">Image</label>
-                                              <input class="form-control" type="file" name="ProductImage" id="ProductImage" accept="image/*" multiple/>
-                                              <br/>
-                                            </fieldset>*@
+                                                <fieldset>
+                                                  <legend> Upload Image </legend>
+                                                  <label for="ProductImage">Image</label>
+                                                  <input class="form-control" type="file" name="ProductImage" id="ProductImage" accept="image/*" multiple/>
+                                                  <br/>
+                                                </fieldset>*@
                                             <dl>
                                                 <dt>
                                                     <label for="ProductImage">Image</label>
                                                 </dt>
                                                 <dd>
-                                                    <input type="file" name="ProductImage" accept="image/png, image/gif, image/jpeg" id="fileName" onchange="validateFileType()"/>
+                                                    <input type="file" style="font-size:13px" name="ProductImage" accept="image/png, image/gif, image/jpeg" id="fileName" onchange="validateFileType()"/>
                                                     <script type="text/javascript">
                                                     function validateFileType(){
                                                         var fileName = document.getElementById("fileName").value;
@@ -126,42 +127,42 @@
                                             </dl>
 
                                             @if (@Model.Item1.product.ProductPicture != null)
-                                            {<img src="~/images/@Model.Item1.product.ProductPicture"   
-                                             class="w3-round"   
-                                             height="200" width="200"   
-                                             asp-append-version="true" /> 
+                                            {<img src="~/images/@Model.Item1.product.ProductPicture"
+                                                  class="w3-round"
+                                                  height="200" width="200"
+                                                  asp-append-version="true" />
                                             }
-                                            @*<label asp-for="@Model.Item1.ProductImage" class="control-label"></label>  
-                                            <div class="custom-file">  
-                                                <input asp-for="@Model.Item1.ProductImage" class="custom-file-input" id="customFile">  
-                                                <label class="custom-file-label" for="customFile">Ürün fotoğrafı yükle</label>  
-                                            </div>  *@
-                                            @*<span asp-validation-for="@Model.Item1.ProductImage" class="text-danger"></span>   
-                                            @if (@Model.Item1.ProductImage != null)
-                                            {
-                                                <img src="~/images/@Model.Item1.product.ProductPicture"   
-                                                class="rounded-circle"   
-                                                height="40" width="40"   
-                                                asp-append-version="true" /> 
-                                            }*@
-                                            
-                                        </div> 
+                                            @*<label asp-for="@Model.Item1.ProductImage" class="control-label"></label>
+                                                <div class="custom-file">
+                                                    <input asp-for="@Model.Item1.ProductImage" class="custom-file-input" id="customFile">
+                                                    <label class="custom-file-label" for="customFile">Ürün fotoğrafı yükle</label>
+                                                </div>  *@
+                                            @*<span asp-validation-for="@Model.Item1.ProductImage" class="text-danger"></span>
+                                                @if (@Model.Item1.ProductImage != null)
+                                                {
+                                                    <img src="~/images/@Model.Item1.product.ProductPicture"
+                                                    class="rounded-circle"
+                                                    height="40" width="40"
+                                                    asp-append-version="true" />
+                                                }*@
+
+                                        </div>
                                     </div>
 
                                     <div class="col-lg-4">
                                         <div class="form-group">
                                             <label>Marka</label>
-                                            <input class="form-control" type="text" name="product.ProductBrand" value="@Model.Item1.product.ProductBrand">
+                                            <input class="form-control" type="text" style="font-size:13px" name="product.ProductBrand" value="@Model.Item1.product.ProductBrand">
 
                                         </div>
                                         <div class="form-group">
                                             <label>Model</label>
-                                            <input class="form-control" type="text" name="product.ProductModel" value="@Model.Item1.product.ProductModel">
+                                            <input class="form-control" type="text" style="font-size:13px" name="product.ProductModel" value="@Model.Item1.product.ProductModel">
 
                                         </div>
                                         <div class="form-group">
                                             <label>Demirbaş Kategori</label>
-                                            <select class="form-control" name="product.CategoryID">
+                                            <select class="form-control" style="font-size:13px" name="product.CategoryID">
                                                 @foreach (var item in Model.Item2.Categories)
                                                 {
                                                     if (item.isEnabled)
@@ -172,7 +173,7 @@
                                                         }
                                                         else
                                                         {
-                                                            <option name="data" value="@item.CategoryID" >@item.CategoryName</option>
+                                                            <option name="data" value="@item.CategoryID">@item.CategoryName</option>
                                                         }
                                                     }
                                                 }
@@ -180,14 +181,14 @@
                                         </div>
                                         <div class="form-group">
                                             <label>Seri Numarası</label>
-                                            <input type="hidden" class="form-control" name="product.Id" value=@Model.Item1.product.Id >
-                                            <input required maxlength="255" type="text" class="form-control" value="@Model.Item1.product.ProductSerialNumber" minlength=1 name="product.ProductSerialNumber" oninvalid="this.setCustomValidity('Seri numarası boş geçilemez.')" oninput="setCustomValidity('')"/>
+                                            <input type="hidden" class="form-control" name="product.Id" value=@Model.Item1.product.Id>
+                                            <input required maxlength="255" type="text" style="font-size:13px" class="form-control" value="@Model.Item1.product.ProductSerialNumber" minlength=1 name="product.ProductSerialNumber" oninvalid="this.setCustomValidity('Seri numarası boş geçilemez.')" oninput="setCustomValidity('')" />
                                             @*<input class="form-control" name="ProductSerialNumber" type="text" value="@Model.Item1.ProductSerialNumber">*@
                                         </div>
-                                        
+
                                         <div class="form-group">
                                             <label>Özellikler/Açıklama</label>
-                                            <textarea class="form-control" style="height: 80px;"  name="product.ProductFeatures" >@Model.Item1.product.ProductFeatures</textarea>
+                                            <textarea class="form-control" style="height: 80px;font-size:13px" name="product.ProductFeatures">@Model.Item1.product.ProductFeatures</textarea>
                                         </div>
 
 
@@ -196,35 +197,37 @@
                                     <div class="col-lg-4">
                                         <div class="form-group">
                                             <label>Servis İletişim</label>
-                                            <input class="form-control" type="text"  name="product.ServiceContact" value="@Model.Item1.product.ServiceContact">
+                                            <input class="form-control" type="text" style="font-size:13px" name="product.ServiceContact" value="@Model.Item1.product.ServiceContact">
                                         </div>
                                         <div class="form-group">
                                             <label>Ürün Dağıtıcısı</label>
-                                            <input class="form-control" type="text"  name="product.ProductProvider" value="@Model.Item1.product.ProductProvider">
+                                            <input class="form-control" type="text" style="font-size:13px" name="product.ProductProvider" value="@Model.Item1.product.ProductProvider">
                                         </div>
-                                        
+
                                         <div class="form-group">
                                             <label>Garanti Başlangıç Tarihi</label>
-                                            <input class="form-control" type="date" name="product.ProductWarrantyStartDate" value="@Model.Item1.product.ProductWarrantyStartDate.Date.ToString("yyyy-MM-dd")" >
+                                            <input class="form-control" type="date" style="font-size:13px" name="product.ProductWarrantyStartDate" value="@Model.Item1.product.ProductWarrantyStartDate.Date.ToString("yyyy-MM-dd")">
                                         </div>
                                         <div class="form-group">
                                             <label>Garanti Bitiş Tarihi</label>
-                                            <input class="form-control" type="date" name="product.ProductWarrantyFinishDate" value="@Model.Item1.product.ProductWarrantyFinishDate.Date.ToString("yyyy-MM-dd")" >
+                                            <input class="form-control" type="date" style="font-size:13px" name="product.ProductWarrantyFinishDate" value="@Model.Item1.product.ProductWarrantyFinishDate.Date.ToString("yyyy-MM-dd")">
                                         </div>
 
+                                        <br /><br /><br />
+                                        <div class="" style="text-align:right;">
+
+                                            <a asp-controller="Product" asp-action="redirectByInt" asp-route-previous="@Model.Item2.Prev" asp-route-projCode="@Model.Item2.Proj" type="submit" class="btn btn-danger" style="width:150px; font-size:15px">
+                                                Listeye Dön
+                                            </a>
+                                            <button class="btn btn-primary" type="submit" style="font-size:15px"> Güncelle </button>
+
+
+                                        </div>
 
                                     </div>
                                 </div>
-                                <div class="row">
-                                  
-                                    <div class="col-lg-4">
-                                        
-                                        <a asp-controller="Product" asp-action="redirectByInt" asp-route-previous="@Model.Item2.Prev" asp-route-projCode="@Model.Item2.Proj" type="submit" class="btn btn-danger" style="width:150px">
-                                            Listeye Dön
-                                        </a>
-                                        <button class="btn btn-primary" type="submit" > Güncelle </button>
-                                    </div>
-                                </div>
+                              
+                             
                             </form>
                         </div>
                     </div>
@@ -233,21 +236,21 @@
             <!-- /# column -->
             <!-- /# column -->
         </div>
-        </div>
     </div>
-        <script src="~/Content/assets/js/lib/jquery.nanoscroller.min.js"></script>
+</div>
+<script src="~/Content/assets/js/lib/jquery.nanoscroller.min.js"></script>
 
-        <script src="~/Content/assets/js/lib/preloader/pace.min.js"></script>
-        <!-- sidebar -->
-        <!-- bootstrap -->
-        <!-- scripit init-->
-        @*
-@section scripts{  
-    <script type="text/javascript">  
-        // Add the following code if you want the name of the file appear on select  
-        $(".custom-file-input").on("change", function () {  
-            var fileName = $(this).val().split("\\").pop();  
-            $(this).siblings(".custom-file-label").addClass("selected").html(fileName);  
-        });  
-    </script>  
-}  *@
+<script src="~/Content/assets/js/lib/preloader/pace.min.js"></script>
+<!-- sidebar -->
+<!-- bootstrap -->
+<!-- scripit init-->
+@*
+    @section scripts{
+        <script type="text/javascript">
+            // Add the following code if you want the name of the file appear on select
+            $(".custom-file-input").on("change", function () {
+                var fileName = $(this).val().split("\\").pop();
+                $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+            });
+        </script>
+    }  *@

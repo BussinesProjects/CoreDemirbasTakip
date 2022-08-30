@@ -18,7 +18,7 @@ namespace DemirbasTakipSistemi.Repositories
                       .Include(x => x.Category)
                       .Include(x => x.Person).AsNoTracking();
 
-            return data.ToList();
+                      return data.ToList();
 
         }
         public List<Product> List(string code)
