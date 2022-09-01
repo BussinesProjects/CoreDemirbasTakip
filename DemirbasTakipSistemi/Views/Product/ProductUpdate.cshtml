@@ -213,7 +213,7 @@
                                             <input class="form-control" type="date" style="font-size:13px" name="product.ProductWarrantyFinishDate" value="@Model.Item1.product.ProductWarrantyFinishDate.Date.ToString("yyyy-MM-dd")">
                                         </div>
 
-                                        <br /><br /><br />
+                                        @*<br /><br /><br />*@
                                         <div class="" style="text-align:right;">
 
                                             <a asp-controller="Product" asp-action="redirectByInt" asp-route-previous="@Model.Item2.Prev" asp-route-projCode="@Model.Item2.Proj" type="submit" class="btn btn-danger" style="width:150px; font-size:15px">
