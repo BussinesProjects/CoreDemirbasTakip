@@ -32,9 +32,11 @@
                         <div class="page-title">
                             <ol class="breadcrumb">
                                @* <li class="breadcrumb-item">*@
-                                    <a asp-controller="Product" asp-action="ProductAdd" asp-route-code="@(Model.projectCode)" asp-route-prev="@(Model.prev)" class="btn btn-flat btn-success ti-plus" >
-                                        EKLE
-                                    </a>
+                                   <li class="breadcrumb-item">  <button class="btn-flat  btn-success" onclick="location.href='@Url.Action("ProductAdd", "Product", new {code = (Model.projectCode), prev = (Model.prev)})';return false;" style="font-size:15px; font-family:Arial">&#xFF0B; EKLE</button></li>
+                           
+                                   @*<a asp-controller="Product" asp-action="ProductAdd" asp-route-code="@(Model.projectCode)" asp-route-prev="@(Model.prev)" class="btn btn-flat btn-success ti-plus" >
+                                        &#xFF0B; EKLE
+                                    </a>*@
                             </ol>
                         </div>
                     </div>

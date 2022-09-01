@@ -33,7 +33,7 @@
                               
                                     @*<button class="" href="#myModal" data-toggle="modal"></button>*@
                                 <li class="breadcrumb-item">  
-                                <button class="btn-flat  btn-success  ti-plus" onclick="location.href='@Url.Action("ProjectAdd", "Project")';return false;" style="font-size:15px; font-family:Arial"> EKLE</button>
+                                <button class="btn-flat  btn-success" onclick="location.href='@Url.Action("ProjectAdd", "Project")';return false;" style="font-size:15px; font-family:Arial">&#xFF0B; EKLE</button>
                                 </li>
 
 
@@ -72,7 +72,7 @@
                                                 {
                                                     <tr>
                                                         <td> @*<a href="~/Project/Products/" style="color:blue">Ürünler</a>*@
-                                                            <button class="btn-outline-success" type="button" onclick="location.href='@Url.Action("Products", "Project", new { code = @item.ProjectCode })'"/>
+                                                            <button class="btn-outline-success" type="button" onclick="location.href='@Url.Action("Products", "Project", new { code = @item.ProjectCode })'">Proje Ürünleri</button>
 
 
                                                         </td>
