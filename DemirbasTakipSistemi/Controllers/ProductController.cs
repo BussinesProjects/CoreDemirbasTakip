@@ -178,8 +178,8 @@ namespace DemirbasTakipSistemi.Controllers
 
             ProductViewModel prodView = new ProductViewModel();
             prodView.product = product;
-            //    return redirectToPrev(prodView);
-            return RedirectToAction("ProductList");
+            return redirectToPrev(prodView);
+            //return redirectToPrev("ProductList"); // wrong
         }
 
 
