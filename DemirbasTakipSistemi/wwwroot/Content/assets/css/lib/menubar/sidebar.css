@@ -566,8 +566,8 @@ html.rtl .sidebar-hide .sidebar.sidebar-shrink.sidebar-hide-to-small~.content-wr
     left: 0px;
     position: relative;
     top: 10px;
-    -webkit-transition: all 0.3s ease-in-out 0s;
-    transition: all 0.3s ease-in-out 0s;
+    /*-webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;*/
     width: 37px;
     z-index: 999;
 }
@@ -578,8 +578,8 @@ html.rtl .sidebar-hide .sidebar.sidebar-shrink.sidebar-hide-to-small~.content-wr
     height: 3px;
     margin: 4px auto;
     width: 22px;
-    -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
+    /*-webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;*/
 }
 
 .hamburger:hover {
@@ -593,23 +593,23 @@ html.rtl .sidebar-hide .sidebar.sidebar-shrink.sidebar-hide-to-small~.content-wr
 */
 
 .hamburger.is-active .line:nth-child(1), .hamburger.is-active .line:nth-child(3) {
-    width: 10px;
-    height: 3px;
+    /*width: 10px;
+    height: 3px;*/
 }
 
 .hamburger.is-active .line:nth-child(2) {
-    -webkit-transform: translateX(-5px);
+    /*-webkit-transform: translateX(-5px);
     transform: translateX(-5px);
     width: 20px;
-    height: 3px;
+    height: 3px;*/
 }
 
 .hamburger.is-active .line:nth-child(1) {
-    -webkit-transform: translateY(3px) rotate(45deg);
-    transform: translateY(3px) rotate(45deg);
+    /*-webkit-transform: translateY(3px) rotate(45deg);
+    transform: translateY(3px) rotate(45deg);*/
 }
 
 .hamburger.is-active .line:nth-child(3) {
-    -webkit-transform: translateY(-3px) rotate(-45deg);
-    transform: translateY(-3px) rotate(-45deg);
+    /*-webkit-transform: translateY(-3px) rotate(-45deg);
+    transform: translateY(-3px) rotate(-45deg);*/
 }
