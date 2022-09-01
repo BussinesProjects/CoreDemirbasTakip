@@ -892,23 +892,24 @@ a.dt-button.active:not(.disabled) {
 .main .page-header {
     min-height: 50px;
     /*  margin: 15px 0 5px;*/
-    padding: 0 15px;
+    padding-right: 15px;
     border-bottom: 0;
     border-radius: 3px;
 }
 .main .page-header h1 {
   font-size: 18px;
-  padding: 14px 0;
+  padding-top: 20px;
   margin: 0;
 }
 .main .page-header h1 span {
   font-size: 14px;
 }
 .main .page-header .breadcrumb {
-  margin: 0;
-  padding: 15px;
-  background: transparent;
-  float: right;
+    margin: 0;
+    padding: 15px;
+    padding-bottom: 0px;
+    background: transparent;
+    float: right;
 }
 .main .page-header .breadcrumb li.active {
   font-family: 'Roboto', sans-serif;
