@@ -77,7 +77,7 @@
                                                         <td>
                                                             <button class="btn-flat  btn-warning ti-pencil" style="width:40px; height:35px " onclick="location.href='@Url.Action("ProductUpdate", "Product",new{id=@item.Id, pre = 2})';return false;"></button>
                                                             <button class="btn-flat  btn-info ti-info"  style="width:40px; height:35px " onclick="location.href='@Url.Action("ProductInfo", "Product",new{id=@item.Id, pre = 2})';return false;"></button>
-                                                            <button class="btn-flat  btn-danger "  style="width:40px; height:35px "> @Html.ActionLink("", "ProductDelete", new { id = item.Id, pre = 2}, new { @class = "ti-trash", onclick = "return confirm('Silmek istediğinize emin misiniz ?')" })</button>
+                                                            <button class="btn-flat  btn-danger "  style="width:40px; height:35px "> @Html.ActionLink("", "ProductDelete", new { id = item.Id }, new { @class = "ti-trash", onclick = "return confirm('Silmek istediğinize emin misiniz ?')" })</button>
                                                             @*<button class="btn-flat  btn-danger ti-trash " style="width:40px; height:35px " onclick=" "return confirm('Silmek istediğinize emin misiniz ?')"">@Html.ActionLink("", "ProductDelete", new { id = item.Id }, new { @class = "btn - flat  btn - danger ti-trash", onclick = "return confirm('Silmek istediğinize emin misiniz ?')"})</button>*@
                                                         </td>
                                                     </tr>

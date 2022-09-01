@@ -19,9 +19,9 @@ namespace DemirbasTakipSistemi.Controllers
         {
             person.isEnabled = true;
             personRepository.TAdd(person);
-            return RedirectToAction("PersonList");
+            return RedirectToAction("PersonsList");
         }
-        public ActionResult PersonList()
+        public ActionResult PersonsList()
         {
             return View(personRepository.TList());
         }
@@ -39,7 +39,7 @@ namespace DemirbasTakipSistemi.Controllers
        {
             person.isEnabled = true;
             personRepository.TUpdate(person);
-            return RedirectToAction("PersonList");
+            return RedirectToAction("PersonsList");
         }
         public ActionResult PersonDelete(int id)
         {
@@ -48,7 +48,7 @@ namespace DemirbasTakipSistemi.Controllers
             person.isEnabled = false;
             personRepository.TUpdate(person);
 
-            return RedirectToAction("PersonList");
+            return RedirectToAction("PersonsList");
         }
     }
 }

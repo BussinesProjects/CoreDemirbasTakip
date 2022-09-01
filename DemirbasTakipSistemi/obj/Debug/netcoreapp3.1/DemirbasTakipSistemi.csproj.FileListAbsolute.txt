@@ -320,7 +320,6 @@ D:\cs\staj1\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\Razor
 D:\cs\staj1\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
 D:\cs\staj1\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
 D:\cs\staj1\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\Razor\Views\Person\PersonAdd.cshtml.g.cs
-D:\cs\staj1\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\Razor\Views\Person\PersonList.cshtml.g.cs
 D:\cs\staj1\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\Razor\Views\Person\PersonUpdate.cshtml.g.cs
 D:\cs\staj1\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\Razor\Views\Product\ProductAdd.cshtml.g.cs
 D:\cs\staj1\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\Razor\Views\Product\ProductList.cshtml.g.cs
@@ -953,3 +952,4 @@ D:\cs\staj1\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\Razor
 C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\Razor\Views\Setting\UserAdd.cshtml.g.cs
 C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\Razor\Views\Setting\UsernamePasswordUpdate.cshtml.g.cs
 C:\Users\Cemile Gül\Desktop\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\Razor\Views\Setting\UserUpdate.cshtml.g.cs
+D:\cs\staj1\CoreDemirbasTakip\DemirbasTakipSistemi\obj\Debug\netcoreapp3.1\Razor\Views\Person\PersonsList.cshtml.g.cs

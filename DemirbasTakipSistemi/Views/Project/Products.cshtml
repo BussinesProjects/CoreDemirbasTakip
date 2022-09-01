@@ -80,7 +80,7 @@
                                                         <td>
                                                              <button class="btn-flat  btn-warning ti-pencil" style="height:35px; width:40px "  onclick="location.href='@Url.Action("ProductUpdate", "Product",new{Id=@item.Id, pre = 1})';return false;"></button>
                                                              <button class="btn-flat  btn-info ti-info"      style="height:35px; width:40px "  onclick="location.href='@Url.Action("ProductInfo", "Product", new{id=@item.Id, pre = 1})';return false;"></button>
-                                                             <button class="btn-flat  btn-danger " style="height:35px; width:40px ">@Html.ActionLink("", "ProductDelete", "Product", new { id = item.Id , pre = 1}, new { @class = "ti-trash", onclick = "return confirm('Silmek istediğinize emin misiniz ?')" })</button>
+                                                             <button class="btn-flat  btn-danger " style="height:35px; width:40px ">@Html.ActionLink("", "ProductDelete", new { id = item.Id }, new { @class = "ti-trash", onclick = "return confirm('Silmek istediğinize emin misiniz ?')" })</button>
                                                         </td>
                                                     </tr>
                                                     }

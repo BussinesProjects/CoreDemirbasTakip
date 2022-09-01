@@ -41,7 +41,7 @@
                     <li><a href="~/Product/ProductList"><i class="ti-list"></i> Demirbaş Listesi</a></li>
                     <li><a href="~/Project/ProjectList"><i class="ti-layout-accordion-list"></i> Proje - Ürün Listesi</a></li>
                     <li><a href="~/Category/CategoryList"><i class="ti-layout-grid2"></i>Ürün Kategorileri</a></li>
-                    <li><a href="~/Person/PersonList"><i class="ti-id-badge"></i>Personel Listesi</a></li>
+                    <li><a href="~/Person/PersonsList"><i class="ti-id-badge"></i>Personel Listesi</a></li>
 
                 </ul>
             </div>
@@ -67,6 +67,54 @@
                             <div class="header-icon" data-toggle="dropdown">
                                 <span class="user-avatar">
                                     @HttpContextAccessor.HttpContext.Session.GetString("_Name")
+                                    <script>
+                                        (function() {
+                                            //const IDLE_TIMEOUT = 30; //600=10min//seconds
+                                            //var _idleSecondsCounter = 0;
+
+                                            //document.onclick = function () {
+                                            //    _idleSecondsCounter = 0;
+                                            //};
+                                            //document.onmousemove = function () {
+                                            //    _idleSecondsCounter = 0;
+                                            //};
+                                            //document.onkeypress = function () {
+                                            //    _idleSecondsCounter = 0;
+                                            //};
+                                            //window.setInterval(CheckIdleTime, 1000);
+                                            //function CheckIdleTime() {
+                                            //    _idleSecondsCounter++;
+                                            //    if (_idleSecondsCounter >= IDLE_TIMEOUT) {
+                                            //        alert("your session has expired!");
+                                            //    }
+                                            //}
+
+
+
+                                            const idleDurationSecs = 30;    // X number of seconds
+                                            const redirectUrl = '/Account/Logout';  // Redirect idle users to this URL
+                                            let idleTimeout; // variable to hold the timeout, do not modify
+
+                                            const resetIdleTimeout = function() {
+
+                                                // Clears the existing timeout
+                                                if(idleTimeout) clearTimeout(idleTimeout);
+
+                                                // Set a new idle timeout to load the redirectUrl after idleDurationSecs
+                                                idleTimeout = setTimeout(() => location.href = redirectUrl, idleDurationSecs * 1000);
+                                            };
+
+                                            // Init on page load
+                                            resetIdleTimeout();
+
+                                            // Reset the idle timeout on any of the events listed below
+                                            //['click', 'touchstart', 'mousemove'].forEach(evt =>
+                                            ['click', 'touchstart', ].forEach(evt =>
+                                                document.addEventListener(evt, resetIdleTimeout, false)
+                                            );
+
+                                         })();
+                                    </script>
                                     <i class="ti-angle-down f-s-10"> </i>
                                 </span>
                                 <div class="drop-down dropdown-profile dropdown-menu dropdown-menu-right">
