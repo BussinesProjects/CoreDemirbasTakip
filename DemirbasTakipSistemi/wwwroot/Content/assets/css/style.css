@@ -705,7 +705,7 @@ a.dt-button.active:not(.disabled) {
 .header {
     background: #ffffff;
     z-index: 990;
-    margin-left: 250px;
+    margin-left: 200px;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
     transition: margin-left 300ms ease-in-out 0s;
     top: 0px;
@@ -728,7 +728,7 @@ a.dt-button.active:not(.disabled) {
     padding-bottom: 2.5px;
     padding-top: 10px;
     text-align: center;
-    width: 250px;
+    width: 200px;
     transition: width 300ms ease-in-out;
    
 }

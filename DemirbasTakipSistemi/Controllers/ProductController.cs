@@ -76,6 +76,7 @@ namespace DemirbasTakipSistemi.Controllers
 
             string uniqueFileName = UploadedFile(p);
             p.product.ProductPicture = uniqueFileName;
+            
 
             p.product.isEnabled = true;
             productRepository.TAdd(p.product);
