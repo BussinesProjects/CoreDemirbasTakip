@@ -48,7 +48,9 @@
                                 </div>
                             </div>
                         </div>
-                        <li class="breadcrumb-item">   <button class="btn-flat  btn-success" onclick="location.href='@Url.Action("UserAdd", "Setting", new { code = "", prev = 2 })';return false;" style="font-size:15px; font-family:Arial">&#xFF0B; EKLE</button></li>
+                        <li class="breadcrumb-item">   <button class="btn-flat  btn-success" onclick="location.href='@Url.Action("UserAdd", "Setting", new { code = "", prev = 2 })';return false;" style="width:40px; height:35px " >
+                            <img src="~/Content/assets/svg/add.svg" class="filter-white" alt="Ekle" width="25" height="25">
+                        </button></li>
                         
                         @* <!-- /# column -->
                         <div class="col-lg-10 p-l-0 title-margin-left">
@@ -98,7 +100,7 @@
                                                                 }
                                                                 <td>
                                                                     <button class="btn-flat  btn-warning ti-pencil"  style="height:35px; width:40px" onclick="location.href='@Url.Action("UserUpdate", "Setting", new { id = @item.Id })';return false;"></button>
-                                                                    <button class="btn-flat  btn-danger " style="height:35px; width:40px"  >@Html.ActionLink("", "UserDelete", new { id = item.Id }, new { @class = "ti-trash", onclick= "return confirm('Silmek istediğinize emin misiniz ?')" })</button>
+                                                                    <button class="btn-flat  btn-danger " style="height:35px; width:40px; color:white"  >@Html.ActionLink("", "UserDelete", new { id = item.Id }, new { @class = "ti-trash", onclick= "return confirm('Silmek istediğinize emin misiniz ?')" })</button>
                                                                 </td>
                                                             </tr>
                                                         }

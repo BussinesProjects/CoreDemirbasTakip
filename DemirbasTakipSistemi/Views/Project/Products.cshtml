@@ -32,7 +32,9 @@
                         <div class="page-title">
                             <ol class="breadcrumb">
                                @* <li class="breadcrumb-item">*@
-                                   <li class="breadcrumb-item">  <button class="btn-flat  btn-success" onclick="location.href='@Url.Action("ProductAdd", "Product", new {code = (Model.projectCode), prev = (Model.prev)})';return false;" style="font-size:15px; font-family:Arial">&#xFF0B; EKLE</button></li>
+                                   <li class="breadcrumb-item">  <button class="btn-flat  btn-success" onclick="location.href='@Url.Action("ProductAdd", "Product", new {code = (Model.projectCode), prev = (Model.prev)})';return false;" style="width:40px; height:35px ">
+                                    <img src="~/Content/assets/svg/add.svg" class="filter-white" alt="Ekle" width="25" height="25">
+                                   </button></li>
                            
                                    @*<a asp-controller="Product" asp-action="ProductAdd" asp-route-code="@(Model.projectCode)" asp-route-prev="@(Model.prev)" class="btn btn-flat btn-success ti-plus" >
                                         &#xFF0B; EKLE
@@ -70,19 +72,19 @@
                                            {
                                                if ( @item.isEnabled) {
                                                     <tr>
-                                                        <td>@item.ProductSerialNumber</td> 
-                                                        <td>@item.ProductBrand</td>
-                                                        <td>@item.ProductModel</td>
-                                                        <td>@item.ProductProvider</td>
+                                                        <td><div class="blob">@item.ProductSerialNumber</div></td> 
+                                                        <td><div class="blob">@item.ProductBrand</div></td>
+                                                        <td><div class="blob">@item.ProductModel</div></td>
+                                                        <td><div class="blob">@item.ProductProvider</div></td>
                                                         <td>@item.ProductAmount</td>
                                                         <td>@item.RegisterDateTime.Date.ToString("dd-MM-yyyy")</td>
-                                                        <td>@item.ServiceContact</td> @*doesn't work?*@
+                                                        <td><div class="blob">@item.ServiceContact</div></td> @*doesn't work?*@
                                                         <td>@item.ProductWarrantyStartDate.Date.ToString("dd-MM-yyyy")</td>
                                                         <td>@item.ProductWarrantyFinishDate.Date.ToString("dd-MM-yyyy")</td>
                                                         <td>
                                                              <button class="btn-flat  btn-warning ti-pencil" style="height:35px; width:40px "  onclick="location.href='@Url.Action("ProductUpdate", "Product",new{Id=@item.Id, pre = 1})';return false;"></button>
                                                              <button class="btn-flat  btn-info ti-info"      style="height:35px; width:40px "  onclick="location.href='@Url.Action("ProductInfo", "Product", new{id=@item.Id, pre = 1})';return false;"></button>
-                                                             <button class="btn-flat  btn-danger " style="height:35px; width:40px ">@Html.ActionLink("", "ProductDelete", new { id = item.Id }, new { @class = "ti-trash", onclick = "return confirm('Silmek istediğinize emin misiniz ?')" })</button>
+                                                             <button class="btn-flat  btn-danger " style="height:35px; width:40px; color:white">@Html.ActionLink("", "ProductDelete", new { id = item.Id }, new { @class = "ti-trash", onclick = "return confirm('Silmek istediğinize emin misiniz ?')" })</button>
                                                         </td>
                                                     </tr>
                                                     }

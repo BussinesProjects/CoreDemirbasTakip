@@ -33,7 +33,9 @@
                               
                                     @*<button class="" href="#myModal" data-toggle="modal"></button>*@
                                 <li class="breadcrumb-item">  
-                                <button class="btn-flat  btn-success" onclick="location.href='@Url.Action("ProjectAdd", "Project")';return false;" style="font-size:15px; font-family:Arial">&#xFF0B; EKLE</button>
+                                    <button class="btn-flat  btn-success" onclick="location.href='@Url.Action("ProjectAdd", "Project")';return false;" style="width:40px; height:35px ">
+                                        <img src="~/Content/assets/svg/add.svg" class="filter-white" alt="Ekle" width="25" height="25">
+                                    </button>
                                 </li>
 
 
@@ -85,10 +87,10 @@
                                                             <td style="color:green">@item.ProjectStatus</td>
                                                         }
 
-                                                        <td>@item.ProjectName</td>
-                                                        <td>@item.ProjectCode</td>
+                                                        <td><div class="blob">@item.ProjectName</div></td>
+                                                        <td><div class="blob">@item.ProjectCode</div></td>
                                                         <td>@item.ProjectStartDate.Date.ToString("dd-MM-yyyy")</td>
-                                                        <td>@item.ProjectClient</td>
+                                                        <td><div class="blob">@item.ProjectClient</div></td>
                                                         <td>@item.ProjectCount</td>
                                                         @*
                                                         <td>@item.ProjectProducts.Where(x=>x.isEnabled).ToArray().Length</td>*@
@@ -96,7 +98,7 @@
                                                     <td>
                                                         <button class="btn-flat  btn-warning ti-pencil" style="height:35px; width:40px " onclick="location.href='@Url.Action("ProjectUpdate","Project",new{id=@item.Id})';return false;"></button>
                                                         @*<button class="btn-flat  btn-danger ti-trash" onclick="location.href='@Url.Action("ProjectDelete","Project",new{id=@item.Id})';return false;"></button>*@
-                                                        <button class="btn-flat  btn-danger " style="height:35px; width:40px ">@Html.ActionLink("", "ProjectDelete", new { id = item.Id }, new { @class = "ti-trash", onclick = "return confirm('Silmek istediğinize emin misiniz ?')" })</button>
+                                                        <button class="btn-flat  btn-danger " style="height:35px; width:40px; color:white">@Html.ActionLink("", "ProjectDelete", new { id = item.Id }, new { @class = "ti-trash", onclick = "return confirm('Silmek istediğinize emin misiniz ?')" })</button>
                                                     </td>
                                                     </tr>
                                                 }

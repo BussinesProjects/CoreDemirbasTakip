@@ -30,7 +30,9 @@
                     <div class="page-header">
                         <div class="page-title">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item">   <button class="btn-flat  btn-success"  onclick="location.href='@Url.Action("ProductAdd", "Product", new {code = "", prev = 2})';return false;" style="font-size:15px; font-family:Arial">&#xFF0B; EKLE</button></li>
+                                <li class="breadcrumb-item"> <button class="btn-flat  btn-success"  onclick="location.href='@Url.Action("ProductAdd", "Product", new {code = "", prev = 2})';return false;" style="width:40px; height:35px ">
+                                    <img src="~/Content/assets/svg/add.svg" class="filter-white" alt="Ekle" width="25" height="25">
+                                </button></li>
                             </ol>
                         </div>
                     </div>
@@ -49,9 +51,8 @@
                                     <table id="bootstrap-data-table-export" class="table table-striped table-bordered">
                                         <thead>
                                             <tr>
-                                                <th class="ti-list"></th>
+                                                <th>Seri Numarası</th>
                                                 <th>Proje Kodu</th>
-                                                <th>Ürün Seri No</th>
                                                 <th>Marka</th>
                                                 <th>Sorumlu</th>
                                                 <th>Kategori</th>
@@ -66,18 +67,17 @@
                                                 @if (item.isEnabled)
                                                 {
                                                     <tr>
-                                                        <td>@item.Id</td>
-                                                        <td>@item.ProjectCode</td>
-                                                        <td>@item.ProductSerialNumber</td>
-                                                        <td>@item.ProductBrand</td>
-                                                        <td>@item.Person.PersonName</td>
-                                                        <td>@item.Category.CategoryName</td>
-                                                        <td>@item.RegisterDateTime.Date.ToString("dd-MM-yyyy")</td>
+                                                        <td> <div class="blob">@item.ProductSerialNumber</div></td>
+                                                        <td> <div class="blob">@item.ProjectCode</div></td>
+                                                        <td> <div class="blob">@item.ProductBrand</div></td>
+                                                        <td> <div class="blob">@item.Person.PersonName</div></td>
+                                                        <td> <div class="blob">@item.Category.CategoryName</div></td>
+                                                        <td> <div class="blob">@item.RegisterDateTime.Date.ToString("dd-MM-yyyy")</div></td>
                                                         <td>@item.ProductAmount</td>
                                                         <td>
                                                             <button class="btn-flat  btn-warning ti-pencil" style="width:40px; height:35px " onclick="location.href='@Url.Action("ProductUpdate", "Product",new{id=@item.Id, pre = 2})';return false;"></button>
                                                             <button class="btn-flat  btn-info ti-info"  style="width:40px; height:35px " onclick="location.href='@Url.Action("ProductInfo", "Product",new{id=@item.Id, pre = 2})';return false;"></button>
-                                                            <button class="btn-flat  btn-danger "  style="width:40px; height:35px "> @Html.ActionLink("", "ProductDelete", new { id = item.Id }, new { @class = "ti-trash", onclick = "return confirm('Silmek istediğinize emin misiniz ?')" })</button>
+                                                            <button class="btn-flat  btn-danger "  style="width:40px; height:35px; color:white"> @Html.ActionLink("", "ProductDelete", new { id = item.Id }, new { @class = "ti-trash", onclick = "return confirm('Silmek istediğinize emin misiniz ?')" })</button>
                                                             @*<button class="btn-flat  btn-danger ti-trash " style="width:40px; height:35px " onclick=" "return confirm('Silmek istediğinize emin misiniz ?')"">@Html.ActionLink("", "ProductDelete", new { id = item.Id }, new { @class = "btn - flat  btn - danger ti-trash", onclick = "return confirm('Silmek istediğinize emin misiniz ?')"})</button>*@
                                                         </td>
                                                     </tr>

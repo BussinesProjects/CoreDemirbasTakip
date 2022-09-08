@@ -33,7 +33,7 @@
                     </div>
                     <div class="card-body">
                         <div class="basic-elements">
-                            <form method="post" class="form-horizontal" asp-action="ProductAdd" id="confirmationForm" name="product.confirmationForm">
+                            <form method="post" action="~/Product/ProductAdd" method="post" class="form-horizontal" enctype="multipart/form-data"  id="confirmationForm" name="confirmationForm">
                                 <div class="row">
                                     <div class="col-lg-4">
                                         <input type="hidden" class="form-control" name="product.previous" value="@Model.Prev" >

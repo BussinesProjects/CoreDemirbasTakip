@@ -38,7 +38,9 @@
                         <div class="page-title">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item">
-                                    <button class="btn-flat  btn-success" data-toggle="modal" data-target="#createCategoryModal"  onclick="location.href='@Url.Action("CategoryAdd", "Category")';return false;" style="font-size:15px; font-family:Arial">&#xFF0B; EKLE</button>
+                                    <button class="btn-flat  btn-success" style="width:40px; height:35px " data-toggle="modal" data-target="#createCategoryModal"  onclick="location.href='@Url.Action("CategoryAdd", "Category")';return false;">
+                                        <img src="~/Content/assets/svg/bookmark-plus.svg" class="filter-white" alt="Ekle" width="25" height="25">
+                                    </button> 
                                 </li>
                             </ol>
                         </div>
@@ -58,7 +60,6 @@
                                     <table id="bootstrap-data-table-export" class="table table-striped table-bordered">
                                         <thead>
                                             <tr>
-                                                <th>Kategori No</th>
                                                 <th>Kategori Adı</th>
                                                 <th>Kayıtlı Ürün Sayısı</th>
                                                 <th>İşlem</th>
@@ -72,14 +73,13 @@
                                                 @if ( item.isEnabled)
                                                 {
                                                     <tr>
-                                                        <td>@item.CategoryID</td>
-                                                        <td>@item.CategoryName</td>
+                                                        <td><div class="blobLonger">@item.CategoryName</div></td>
                                                         <td>@item.ProductCount</td>
                                                         <td>
                                                             <button class="btn-flat  btn-warning ti-pencil" style="width:40px; height:35px " onclick="location.href='@Url.Action("CategoryUpdate", "Category",new{id=@item.CategoryID})';return false;"></button>
                                                             @*<button class="btn-flat btn-danger  sweet-confirm ti-trash" onclick="location.href='@Url.Action("CategoryDelete", "Category",new{id=@item.CategoryID})';return false;"></button>
                                                             *@
-                                                            <button class="btn-flat  btn-danger " style="width:40px; height:35px" >@Html.ActionLink("","CategoryDelete", new { id = item.CategoryID }, new { @class = "ti-trash", onclick = "return confirm('Silmek istediğinize emin misiniz ?')" })</button>
+                                                            <button class="btn-flat  btn-danger " style="width:40px; height:35px; color:white" >@Html.ActionLink("","CategoryDelete", new { id = item.CategoryID }, new { @class = "ti-trash", onclick = "return confirm('Silmek istediğinize emin misiniz ?')" })</button>
                                                         </td>
 
                                                     </tr>
