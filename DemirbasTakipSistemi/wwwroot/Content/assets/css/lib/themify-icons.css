@@ -103,6 +103,7 @@
 }
 .ti-trash:before {
 	content: "\e605";
+	color: white;
 }
 .ti-thought:before {
 	content: "\e606";
